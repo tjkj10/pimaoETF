@@ -68,6 +68,102 @@
             border-radius: 2px;
         }
 
+        /* 筛选栏 */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: white;
+            color: #666;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            border-color: #07c160;
+            color: #07c160;
+        }
+
+        .filter-btn.active {
+            background: #07c160;
+            border-color: #07c160;
+            color: white;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #07c160;
+        }
+
+        /* 月份分组 */
+        .month-group {
+            margin-bottom: 20px;
+        }
+
+        .month-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+            margin-bottom: 12px;
+        }
+
+        .month-header:hover {
+            background: #f0f0f0;
+        }
+
+        .month-title {
+            font-weight: 600;
+            color: #333;
+            flex: 1;
+        }
+
+        .month-count {
+            font-size: 12px;
+            color: #999;
+            margin-left: 8px;
+        }
+
+        .month-toggle {
+            font-size: 18px;
+            color: #07c160;
+            transition: transform 0.3s;
+        }
+
+        .month-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        .month-content {
+            max-height: 2000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .month-content.collapsed {
+            max-height: 0;
+        }
+
         /* 日期列表样式 */
         .date-list {
             display: flex;
@@ -172,6 +268,46 @@
             margin-top: 4px;
         }
 
+        /* 分页 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .page-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            border-color: #07c160;
+            color: #07c160;
+        }
+
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .page-btn.active {
+            background: #07c160;
+            border-color: #07c160;
+            color: white;
+        }
+
+        .page-info {
+            font-size: 13px;
+            color: #999;
+        }
+
         /* 最新报告预览 */
         .latest-preview {
             background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
@@ -231,6 +367,36 @@
             font-size: 12px;
         }
 
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #07c160;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background: #05a050;
+            transform: translateY(-3px);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
         @media (max-width: 480px) {
             .header h1 { font-size: 22px; }
             .header { padding: 30px 16px; }
@@ -238,6 +404,7 @@
             .card { padding: 16px; }
             .stats-grid { grid-template-columns: 1fr; }
             .date-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .back-to-top { width: 45px; height: 45px; font-size: 18px; }
         }
     </style>
 </head>
@@ -278,8 +445,28 @@
             <!-- 历史报告列表 -->
             <div class="card">
                 <h2>历史报告</h2>
+
+                <!-- 筛选按钮 -->
+                <div class="filter-bar" id="filter-bar">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="latest">最新</button>
+                    <button class="filter-btn" data-filter="trading">交易日</button>
+                    <button class="filter-btn" data-filter="holiday">非交易日</button>
+                </div>
+
+                <!-- 搜索框 -->
+                <input type="text" class="search-box" id="search-box" placeholder="搜索日期（如：2026-02-08）...">
+
+                <!-- 报告列表 -->
                 <div id="report-list" class="loading">
                     正在加载报告列表...
+                </div>
+
+                <!-- 分页 -->
+                <div class="pagination" id="pagination" style="display: none;">
+                    <button class="page-btn" id="prev-btn" onclick="changePage(-1)">上一页</button>
+                    <span class="page-info" id="page-info">第 1 页</span>
+                    <button class="page-btn" id="next-btn" onclick="changePage(1)">下一页</button>
                 </div>
             </div>
 
@@ -305,8 +492,15 @@
         </footer>
     </div>
 
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()">↑</button>
+
     <script src="js/reports-config.js"></script>
     <script>
+        // 分页配置
+        const ITEMS_PER_PAGE = 5;
+        let currentPage = 1;
+        let filteredReports = [];
 
         // 格式化日期
         function formatChineseDate(dateStr) {
@@ -317,10 +511,68 @@
             return `${year}年${monthNames[parseInt(month) - 1]}${parseInt(day)}日`;
         }
 
+        // 按月分组
+        function groupByMonth(reports) {
+            const groups = {};
+            reports.forEach(report => {
+                const month = report.date.substring(0, 6); // YYYYMM
+                if (!groups[month]) {
+                    groups[month] = [];
+                }
+                groups[month].push(report);
+            });
+            return groups;
+        }
+
+        // 格式化月份标题
+        function formatMonthTitle(monthStr) {
+            const year = monthStr.substring(0, 4);
+            const month = monthStr.substring(4, 6);
+            const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+            return `${year}年${monthNames[parseInt(month) - 1]}`;
+        }
+
         // 生成报告类型标签HTML
         function generateReportTags(types) {
             if (!types || types.length === 0) return '';
             return types.map(type => `<span class="report-tag">${type}</span>`).join('');
+        }
+
+        // 应用筛选
+        function applyFilter(filterType) {
+            filteredReports = reportsConfig;
+
+            switch(filterType) {
+                case 'latest':
+                    // 只显示最新7天
+                    filteredReports = reportsConfig.slice(0, Math.min(7, reportsConfig.length));
+                    break;
+                case 'trading':
+                    // 包含"交易日"的
+                    filteredReports = reportsConfig.filter(r => r.meta.includes('交易日'));
+                    break;
+                case 'holiday':
+                    // 包含"非交易日"的
+                    filteredReports = reportsConfig.filter(r => r.meta.includes('非交易日'));
+                    break;
+            }
+
+            currentPage = 1;
+            renderReports();
+        }
+
+        // 应用搜索
+        function applySearch(keyword) {
+            if (!keyword.trim()) {
+                filteredReports = reportsConfig;
+            } else {
+                filteredReports = reportsConfig.filter(report => {
+                    const dateStr = `${report.date.substring(0, 4)}-${report.date.substring(4, 6)}-${report.date.substring(6, 8)}`;
+                    return dateStr.includes(keyword) || report.title.includes(keyword);
+                });
+            }
+            currentPage = 1;
+            renderReports();
         }
 
         // 渲染报告列表
@@ -329,6 +581,7 @@
             const latestCard = document.getElementById('latest-card');
             const latestContent = document.getElementById('latest-content');
             const statDays = document.getElementById('stat-days');
+            const pagination = document.getElementById('pagination');
 
             if (reportsConfig.length === 0) {
                 listContainer.innerHTML = `
@@ -344,32 +597,71 @@
             // 更新统计
             statDays.textContent = reportsConfig.length;
 
-            // 生成历史报告列表
-            let listHtml = '<div class="date-list">';
-            reportsConfig.forEach((report, index) => {
-                const isLatest = index === 0;
-                const badgeClass = isLatest ? 'badge-latest' : 'badge-archive';
-                const badgeText = isLatest ? '最新' : '查看';
-                const formattedDate = formatChineseDate(report.date);
+            // 分页
+            const totalPages = Math.ceil(filteredReports.length / ITEMS_PER_PAGE);
+            const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+            const endIdx = startIdx + ITEMS_PER_PAGE;
+            const pageReports = filteredReports.slice(startIdx, endIdx);
 
-                listHtml += `
-                    <a href="reports/${report.date}/index.html" class="date-item" style="text-decoration: none; color: inherit;">
-                        <div class="date-info">
-                            <div class="date-title">${formattedDate}</div>
-                            <div class="date-meta">${report.meta}</div>
-                            <div class="report-types">
-                                ${generateReportTags(report.types)}
+            // 按月分组
+            const monthGroups = groupByMonth(pageReports);
+
+            // 生成HTML
+            let html = '';
+            Object.keys(monthGroups).sort().reverse().forEach(month => {
+                const reports = monthGroups[month];
+                html += `
+                    <div class="month-group">
+                        <div class="month-header" onclick="toggleMonth(this)">
+                            <span class="month-title">${formatMonthTitle(month)}</span>
+                            <span class="month-count">${reports.length}份报告</span>
+                            <span class="month-toggle">▼</span>
+                        </div>
+                        <div class="month-content">
+                            <div class="date-list">
+                `;
+
+                reports.forEach((report, index) => {
+                    const isLatest = reportsConfig.indexOf(report) === 0;
+                    const badgeClass = isLatest ? 'badge-latest' : 'badge-archive';
+                    const badgeText = isLatest ? '最新' : '查看';
+                    const formattedDate = formatChineseDate(report.date);
+
+                    html += `
+                        <a href="reports/${report.date}/index.html" class="date-item" style="text-decoration: none; color: inherit;">
+                            <div class="date-info">
+                                <div class="date-title">${formattedDate}</div>
+                                <div class="date-meta">${report.meta}</div>
+                                <div class="report-types">
+                                    ${generateReportTags(report.types)}
+                                </div>
+                            </div>
+                            <span class="date-badge ${badgeClass}">${badgeText}</span>
+                        </a>
+                    `;
+                });
+
+                html += `
                             </div>
                         </div>
-                        <span class="date-badge ${badgeClass}">${badgeText}</span>
-                    </a>
+                    </div>
                 `;
             });
-            listHtml += '</div>';
-            listContainer.innerHTML = listHtml;
 
-            // 生成最新报告预览
-            if (reportsConfig.length > 0) {
+            listContainer.innerHTML = html;
+
+            // 更新分页
+            if (totalPages > 1) {
+                pagination.style.display = 'flex';
+                document.getElementById('prev-btn').disabled = currentPage === 1;
+                document.getElementById('next-btn').disabled = currentPage === totalPages;
+                document.getElementById('page-info').textContent = `第 ${currentPage} / ${totalPages} 页`;
+            } else {
+                pagination.style.display = 'none';
+            }
+
+            // 生成最新报告预览（仅在第一页显示）
+            if (currentPage === 1 && reportsConfig.length > 0) {
                 const latest = reportsConfig[0];
                 const formattedDate = formatChineseDate(latest.date);
 
@@ -393,11 +685,61 @@
                     </div>
                 `;
                 latestCard.style.display = 'block';
+            } else {
+                latestCard.style.display = 'none';
             }
         }
 
+        // 切换月份折叠
+        function toggleMonth(header) {
+            const content = header.nextElementSibling;
+            const toggle = header.querySelector('.month-toggle');
+            content.classList.toggle('collapsed');
+            toggle.classList.toggle('collapsed');
+        }
+
+        // 换页
+        function changePage(delta) {
+            currentPage += delta;
+            renderReports();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 返回顶部
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 筛选按钮点击
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                applyFilter(this.dataset.filter);
+            });
+        });
+
+        // 搜索框输入
+        document.getElementById('search-box').addEventListener('input', function() {
+            // 清除筛选按钮状态
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('[data-filter="all"]').classList.add('active');
+            applySearch(this.value);
+        });
+
+        // 返回顶部按钮显示/隐藏
+        window.addEventListener('scroll', function() {
+            const backBtn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backBtn.classList.add('show');
+            } else {
+                backBtn.classList.remove('show');
+            }
+        });
+
         // 页面加载时执行
         document.addEventListener('DOMContentLoaded', function() {
+            filteredReports = reportsConfig;
             renderReports();
         });
     </script>
