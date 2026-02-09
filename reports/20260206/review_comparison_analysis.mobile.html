@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="ETF复盘对比分析报告 - 2026年2月6日 - 2026年2月6日">
+    <meta name="format-detection" content="telephone=no">
+    <title>ETF复盘对比分析报告 - 2026年2月6日</title>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                font-size: 16px;
+                line-height: 1.8;
+                color: #333333;
+                background-color: #f5f5f5;
+                max-width: 100%;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            /* 头部样式 */
+            .header {
+                background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 20px 20px;
+                opacity: 0.3;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* 内容区域 */
+            .content {
+                padding: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            /* 标题样式 */
+            h1, h2, h3, h4 {
+                color: #333333;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 24px 0 16px 0;
+            }
+
+            h1 {
+                font-size: 22px;
+                border-bottom: 2px solid #07c160;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #07c160;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h2::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 20px;
+                background: #07c160;
+                border-radius: 2px;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #999999;
+            }
+
+            /* 段落和文本 */
+            p {
+                margin: 12px 0;
+                color: #666666;
+            }
+
+            strong, b {
+                color: #333333;
+                font-weight: 600;
+            }
+
+            /* 列表样式 */
+            ul, ol {
+                margin: 12px 0;
+                padding-left: 24px;
+            }
+
+            li {
+                margin: 8px 0;
+                color: #666666;
+            }
+
+            li::marker {
+                color: #07c160;
+            }
+
+            /* 表格样式 - 横向滚动 */
+            .table-wrapper {
+                overflow-x: auto;
+                margin: 16px 0;
+                border-radius: 8px;
+                border: 1px solid #e8e8e8;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+
+            th {
+                background: #f8f9fa;
+                color: #333333;
+                font-weight: 600;
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 2px solid #e8e8e8;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8e8e8;
+                color: #666666;
+                vertical-align: top;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover td {
+                background: #e8f5e9;
+            }
+
+            /* 特殊标签 */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+
+            .tag-primary {
+                background: #e8f5e9;
+                color: #07c160;
+            }
+
+            .tag-warning {
+                background: rgba(255, 149, 0, 0.1);
+                color: #ff9500;
+            }
+
+            .tag-danger {
+                background: rgba(250, 81, 81, 0.1);
+                color: #fa5151;
+            }
+
+            /* 信息卡片 */
+            .info-box {
+                background: #e8f5e9;
+                border-left: 4px solid #07c160;
+                padding: 16px;
+                border-radius: 0 8px 8px 0;
+                margin: 16px 0;
+            }
+
+            .warning-box {
+                background: rgba(255, 149, 0, 0.1);
+                border-left: 4px solid #ff9500;
+            }
+
+            .danger-box {
+                background: rgba(250, 81, 81, 0.1);
+                border-left: 4px solid #fa5151;
+            }
+
+            /* 分隔线 */
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 24px 0;
+            }
+
+            /* 代码块 */
+            code {
+                background: #f6f8fa;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'SF Mono', Monaco, monospace;
+                font-size: 14px;
+                color: #fa5151;
+            }
+
+            pre {
+                background: #f6f8fa;
+                padding: 16px;
+                border-radius: 8px;
+                overflow-x: auto;
+                margin: 16px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            pre code {
+                background: none;
+                padding: 0;
+                color: #333333;
+            }
+
+            /* 重点高亮 */
+            .highlight {
+                background: linear-gradient(120deg, #e8f5e9 0%, transparent 100%);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            /* 评分星星 */
+            .stars {
+                color: #ff9500;
+                letter-spacing: 2px;
+            }
+
+            /* 底部信息 */
+            .footer {
+                text-align: center;
+                padding: 30px 20px;
+                color: #999999;
+                font-size: 12px;
+            }
+
+            .footer .qr-hint {
+                margin-top: 10px;
+                padding: 10px;
+                background: #ffffff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            /* 主题切换按钮 */
+            .theme-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+            }
+
+            /* 快速导航 */
+            .quick-nav {
+                position: sticky;
+                top: 0;
+                background: #ffffff;
+                padding: 12px 16px;
+                margin: -20px -20px 20px -20px;
+                border-bottom: 1px solid #e0e0e0;
+                z-index: 10;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .quick-nav a {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-right: 8px;
+                background: #f5f5f5;
+                border-radius: 16px;
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+
+            .quick-nav a.active {
+                background: #07c160;
+                color: white;
+            }
+
+            /* 响应式优化 */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 15px;
+                }
+
+                .header h1 {
+                    font-size: 20px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .card {
+                    padding: 16px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                th, td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+            }
+
+            /* 打印样式 */
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .card {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+
+                .theme-toggle {
+                    display: none;
+                }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ETF复盘对比分析报告 - 2026年2月6日</h1>
+            <div class="subtitle">2026年2月6日 · 板块分析报告</div>
+            <div class="badge">PiMao ETF</div>
+        </header>
+
+        <main class="content">
+            
+
+<h2>一、两日对比总览</h2>
+
+<h3>1.1 市场整体对比</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>2月5日</th>
+<th>2月6日</th>
+<th>变化</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>上涨ETF数量</td>
+<td>8只 (30.8%)</td>
+<td>4只 (15.38%)</td>
+<td>⬇️ 减少4只</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>下跌ETF数量</td>
+<td>18只 (69.2%)</td>
+<td>22只 (84.62%)</td>
+<td>⬆️ 增加4只</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>平盘ETF数量</td>
+<td>0只</td>
+<td>0只</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>平均涨跌幅</td>
+<td>-1.38%</td>
+<td>-0.69%</td>
+<td>⬆️ 收窄0.69%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>最大涨幅</td>
+<td>+1.286% (红利低波)</td>
+<td>+2.641% (化工)</td>
+<td>⬆️ 扩大</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>最大跌幅</td>
+<td>-5.445% (光伏)</td>
+<td>-1.988% (军工)</td>
+<td>⬆️ 收窄</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>关键变化</strong>:
+<ul>
+<li>❌ 市场走弱：上涨ETF从8只降至4只</li>
+<li>✅ 跌幅收窄：平均跌幅从1.38%收窄至0.69%</li>
+<li>🔄 板块轮动：消费、医药领跌，化工、环保领涨</li>
+<li>🌪️ 波动加剧：最大涨幅扩大，最大跌幅收窄</li>
+</ul>
+<hr>
+<h2>二、板块轮动分析</h2>
+
+<h3>2.1 领涨板块变化</h3>
+
+<h4>2月5日领涨板块</h4>
+<ol>
+<li>红利低波ETF: +1.286%</li>
+<li>医药ETF: +1.053%</li>
+<li>消费ETF: +1.000%</li>
+</ol>
+<h4>2月6日领涨板块</h4>
+<ol>
+<li>化工ETF: +2.641%</li>
+<li>环保ETF: +0.986%</li>
+<li>光伏ETF: +0.731%</li>
+</ol>
+<strong>轮动特征</strong>:
+<ul>
+<li>🔀 <strong>消费→周期</strong>: 从防御性消费转向进攻性周期</li>
+<li>🔀 <strong>医药→环保</strong>: 从医药转向环保，政策主题轮动</li>
+<li>🔀 <strong>红利→化工</strong>: 从稳健红利转向高弹性化工</li>
+</ul>
+<h3>2.2 领跌板块变化</h3>
+
+<h4>2月5日领跌板块</h4>
+<ol>
+<li>光伏ETF: -5.445%</li>
+<li>环保ETF: -3.231%</li>
+<li>黄金ETF: -3.166%</li>
+</ol>
+<h4>2月6日领跌板块</h4>
+<ol>
+<li>军工龙头ETF: -1.988%</li>
+<li>酒ETF: -1.947%</li>
+<li>黄金ETF: -1.577%</li>
+</ol>
+<strong>变化特征</strong>:
+<ul>
+<li>✅ <strong>新能源企稳</strong>: 光伏从-5.445%反弹至+0.731%</li>
+<li>✅ <strong>环保反转</strong>: 环保从-3.231%反弹至+0.986%</li>
+<li>❌ <strong>消费走弱</strong>: 酒ETF从+0.534%转为-1.947%</li>
+<li>❌ <strong>军工走弱</strong>: 军工从-0.697%扩大至-1.988%</li>
+<li>⚠️ <strong>黄金持续承压</strong>: 黄金从-3.166%收窄至-1.577%，但仍下跌</li>
+</ul>
+<hr>
+<h2>三、重点ETF对比分析</h2>
+
+<h3>3.1 新能源板块</h3>
+
+<h4>光伏ETF (sh515790)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>-5.445%</td>
+<td>1.094元</td>
+<td>111.53亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>+0.731%</td>
+<td>1.102元</td>
+<td>76.92亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬆️ +6.176%</td>
+<td>+0.008元</td>
+<td>-34.61亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>✅ <strong>V型反转</strong>: 昨日暴跌，今日反弹</li>
+<li>📉 <strong>成交萎缩</strong>: 成交额减少34.61亿，观望情绪</li>
+<li>🎯 <strong>超跌反弹</strong>: 可能是技术性反弹，持续性待观察</li>
+</ul>
+<strong>操作建议</strong>: 不追高，等待企稳信号
+
+<hr>
+<h3>3.2 环保板块</h3>
+
+<h4>环保ETF (sh512580)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>-3.231%</td>
+<td>1.318元</td>
+<td>18.26亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>+0.986%</td>
+<td>1.331元</td>
+<td>126.20亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬆️ +4.217%</td>
+<td>+0.013元</td>
+<td>+107.94亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>🚀 <strong>强力反弹</strong>: 两日振幅超4%</li>
+<li>💰 <strong>资金涌入</strong>: 成交额暴增107.94亿，资金关注度大增</li>
+<li>🎯 <strong>政策催化</strong>: 可能受环保政策预期影响</li>
+</ul>
+<strong>操作建议</strong>: 短期关注，但不追高
+
+<hr>
+<h3>3.3 黄金板块</h3>
+
+<h4>黄金ETF (sh518880)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>-3.166%</td>
+<td>10.523元</td>
+<td>2005.74亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>-1.577%</td>
+<td>10.357元</td>
+<td>1903.43亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬆️ +1.589%</td>
+<td>-0.166元</td>
+<td>-102.31亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>📉 <strong>持续下跌</strong>: 连续两日大幅下跌</li>
+<li>💰 <strong>成交巨大</strong>: 两日成交额均超1900亿，分歧巨大</li>
+<li>🌪️ <strong>波动剧烈</strong>: 两日累计跌幅-4.743%</li>
+<li>🌍 <strong>全球联动</strong>: 受全球避险情绪降温影响</li>
+</ul>
+<strong>操作建议</strong>: 短期规避，等待金价企稳
+
+<hr>
+<h3>3.4 消费板块</h3>
+
+<h4>消费ETF (sz159928)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>+1.000%</td>
+<td>0.808元</td>
+<td>121.59亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>-1.238%</td>
+<td>0.798元</td>
+<td>51.49亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬇️ -2.238%</td>
+<td>-0.010元</td>
+<td>-70.10亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>🔀 <strong>涨跌转换</strong>: 从昨日领涨转为今日领跌</li>
+<li>💰 <strong>成交萎缩</strong>: 成交额减少70.10亿</li>
+<li>📉 <strong>消费疲软</strong>: 反映消费复苏不及预期</li>
+</ul>
+<strong>操作建议</strong>: 短期回避，等待消费数据改善
+
+<hr>
+<h3>3.5 酒类板块</h3>
+
+<h4>酒ETF (sh512690)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>+0.534%</td>
+<td>0.565元</td>
+<td>188.07亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>-1.947%</td>
+<td>0.554元</td>
+<td>119.21亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬇️ -2.481%</td>
+<td>-0.011元</td>
+<td>-68.86亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>🔀 <strong>大幅反转</strong>: 两日累计跌幅-1.413%</li>
+<li>💰 <strong>成交萎缩</strong>: 成交额减少68.86亿</li>
+<li>📉 <strong>去库存压力</strong>: 白酒行业去库存延续</li>
+</ul>
+<strong>操作建议</strong>: 短期回避
+
+<hr>
+<h3>3.6 化工板块</h3>
+
+<h4>化工ETF (sz159870)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>-2.135%</td>
+<td>0.871元</td>
+<td>158.76亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>+2.641%</td>
+<td>0.894元</td>
+<td>248.11亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬆️ +4.776%</td>
+<td>+0.023元</td>
+<td>+89.35亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>🚀 <strong>强势反弹</strong>: 两日振幅近5%</li>
+<li>💰 <strong>成交激增</strong>: 成交额增加89.35亿，资金大幅流入</li>
+<li>🎯 <strong>周期轮动</strong>: 周期板块轮动到化工</li>
+</ul>
+<strong>操作建议</strong>: 不追高，观察持续性
+
+<hr>
+<h3>3.7 可转债板块</h3>
+
+<h4>可转债ETF (sh511380)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>-0.630%</td>
+<td>14.354元</td>
+<td>1539.05亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>+0.502%</td>
+<td>14.426元</td>
+<td>1562.00亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬆️ +1.132%</td>
+<td>+0.072元</td>
+<td>+22.95亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>✅ <strong>逆势走强</strong>: 市场走弱时逆势上涨</li>
+<li>💰 <strong>成交稳定</strong>: 两日均超1500亿，流动性充裕</li>
+<li>🛡️ <strong>避险属性</strong>: 避险资金持续流入</li>
+</ul>
+<strong>操作建议</strong>: 核心防御配置
+
+<hr>
+<h3>3.8 宽基指数对比</h3>
+
+<h4>沪深300ETF (sh510300)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>-0.595%</td>
+<td>4.679元</td>
+<td>4364.50亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>-0.641%</td>
+<td>4.649元</td>
+<td>4106.57亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬇️ -0.046%</td>
+<td>-0.030元</td>
+<td>-257.93亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>📊 <strong>跟随大盘</strong>: 跟随市场调整</li>
+<li>💰 <strong>成交减少</strong>: 市场观望情绪浓厚</li>
+</ul>
+<h4>创业板ETF (sz159915)</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>日期</th>
+<th>涨跌幅</th>
+<th>收盘价</th>
+<th>成交额</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>2月5日</td>
+<td>-1.790%</td>
+<td>3.238元</td>
+<td>320.08亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2月6日</td>
+<td>-0.278%</td>
+<td>3.229元</td>
+<td>284.35亿</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>变化</td>
+<td>⬆️ +1.512%</td>
+<td>-0.009元</td>
+<td>-35.73亿</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>分析</strong>:
+<ul>
+<li>✅ <strong>抗跌性</strong>: 今日相对抗跌</li>
+<li>🎯 <strong>小盘优势</strong>: 小盘成长股相对抗跌</li>
+</ul>
+<hr>
+<h2>四、资金流向变化</h2>
+
+<h3>4.1 两日成交额对比TOP5</h3>
+
+<h4>2月5日成交额TOP5</h4>
+<ol>
+<li>黄金ETF: 2005.74亿</li>
+<li>A500ETF基金: 1568.20亿</li>
+<li>可转债ETF: 1539.05亿</li>
+<li>恒生科技ETF: 719.28亿</li>
+<li>香港证券ETF: 915.32亿</li>
+</ol>
+<h4>2月6日成交额TOP5</h4>
+<ol>
+<li>A500ETF基金: 1496.35亿</li>
+<li>黄金ETF: 1903.43亿</li>
+<li>可转债ETF: 1562.00亿</li>
+<li>恒生科技ETF: 649.14亿</li>
+<li>香港证券ETF: 506.52亿</li>
+</ol>
+<strong>变化特征</strong>:
+<ul>
+<li>💰 <strong>A500持续活跃</strong>: 两日均保持在1500亿左右</li>
+<li>📉 <strong>恒生科技成交萎缩</strong>: 从719亿降至649亿</li>
+<li>📉 <strong>香港证券成交萎缩</strong>: 从915亿降至507亿</li>
+<li>✅ <strong>可转债成交稳定</strong>: 两日均超1500亿</li>
+</ul>
+<h3>4.2 资金流向分析</h3>
+
+<h4>流入板块（成交额增加）</h4>
+<ul>
+<li>化工ETF: +89.35亿（周期轮动）</li>
+<li>环保ETF: +107.94亿（政策催化）</li>
+<li>可转债ETF: +22.95亿（避险资金）</li>
+</ul>
+<h4>流出板块（成交额减少）</h4>
+<ul>
+<li>黄金ETF: -102.31亿（避险降温）</li>
+<li>香港证券ETF: -408.80亿（港股调整）</li>
+<li>恒生科技ETF: -70.14亿（科技股调整）</li>
+<li>消费ETF: -70.10亿（消费疲软）</li>
+</ul>
+<hr>
+<h2>五、市场情绪变化</h2>
+
+<h3>5.1 恐慌指数</h3>
+<ul>
+<li><strong>2月5日</strong>: 高度恐慌（18只ETF下跌，光伏暴跌5.445%）</li>
+<li><strong>2月6日</strong>: 中度恐慌（22只ETF下跌，但跌幅收窄）</li>
+</ul>
+<h3>5.2 风险偏好</h3>
+<ul>
+<li><strong>2月5日</strong>: 偏防御（红利低波、医药、消费领涨）</li>
+<li><strong>2月6日</strong>: 偏进攻（化工、环保、光伏领涨）</li>
+</ul>
+<strong>解读</strong>:
+<ul>
+<li>市场从"极度恐慌"转向"中度恐慌"</li>
+<li>风险偏好从"防御"转向"进攻"</li>
+<li>板块轮动加速，资金寻找新热点</li>
+</ul>
+<hr>
+<h2>六、趋势判断</h2>
+
+<h3>6.1 短期趋势（1-3天）</h3>
+
+<h4>市场走势</h4>
+<ul>
+<li>📉 <strong>震荡筑底</strong>: 市场可能在寻底过程中</li>
+<li>🌪️ <strong>波动加剧</strong>: 板块轮动加快，波动加大</li>
+</ul>
+<h4>关注点</h4>
+<ul>
+<li>✅ 光伏、环保反弹持续性</li>
+<li>⚠️ 黄金是否企稳</li>
+<li>⚠️ 消费、酒类是否继续走弱</li>
+</ul>
+<h3>6.2 中期趋势（1-2周）</h3>
+
+<h4>市场走势</h4>
+<ul>
+<li>🔄 <strong>震荡分化</strong>: 结构性行情为主</li>
+<li>🎯 <strong>政策驱动</strong>: 关注两会预期</li>
+</ul>
+<h4>关注点</h4>
+<ul>
+<li>📊 春节消费数据</li>
+<li>🏛️ 政策落地情况</li>
+<li>🌍 全球市场走势</li>
+</ul>
+<h3>6.3 长期趋势（1-3个月）</h3>
+
+<h4>市场走势</h4>
+<ul>
+<li>📈 <strong>慢牛可期</strong>: 经济复苏预期</li>
+<li>🎯 <strong>结构分化</strong>: 优质资产表现更佳</li>
+</ul>
+<hr>
+<h2>七、投资策略调整</h2>
+
+<h3>7.1 基于2月5日的策略</h3>
+<strong>原策略</strong>: 防御为主，关注消费医药
+<ul>
+<li>✅ 红利低波ETF</li>
+<li>✅ 消费ETF</li>
+<li>✅ 医药ETF</li>
+</ul>
+<h3>7.2 基于2月6日的调整</h3>
+<strong>新策略</strong>: 攻守兼备，关注轮动机会
+<ul>
+<li>✅ <strong>核心防御</strong>: 红利低波、可转债</li>
+<li>🔄 <strong>卫星进攻</strong>: 化工、环保（不追高）</li>
+<li>⏸️ <strong>回避</strong>: 消费、酒类、军工</li>
+</ul>
+<h3>7.3 仓位调整建议</h3>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>投资者类型</th>
+<th>2月5日建议</th>
+<th>2月6日建议</th>
+<th>调整</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>保守型</td>
+<td>40-50%</td>
+<td>50-60%</td>
+<td>⬆️ +10%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>稳健型</td>
+<td>50-60%</td>
+<td>60-70%</td>
+<td>⬆️ +10%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>激进型</td>
+<td>60-70%</td>
+<td>60-70%</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>理由</strong>: 市场跌幅收窄，可适度加仓，但控制整体风险
+
+<hr>
+<h2>八、重点关注信号</h2>
+
+<h3>8.1 买入信号</h3>
+✅ <strong>黄金企稳</strong>: 金价止跌回升
+✅ <strong>消费数据改善</strong>: 春节消费超预期
+✅ <strong>政策落地</strong>: 两会政策明朗
+
+<h3>8.2 卖出信号</h3>
+⚠️ <strong>光伏反弹失败</strong>: 冲高回落
+⚠️ <strong>化工冲高回落</strong>: 资金撤离
+⚠️ <strong>全球市场大跌</strong>: 系统性风险
+
+<h3>8.3 观望信号</h3>
+⏸️ <strong>消费继续疲软</strong>: 数据持续低迷
+⏸️ <strong>军工继续下跌</strong>: 地缘风险降温
+⏸️ <strong>黄金持续下跌</strong>: 避险情绪降温
+
+<hr>
+<h2>九、总结</h2>
+
+<h3>9.1 市场特征</h3>
+<ol>
+<li><strong>弱势延续</strong>: 22只ETF下跌，市场仍偏弱</li>
+<li><strong>跌幅收窄</strong>: 平均跌幅从1.38%收窄至0.69%</li>
+<li><strong>板块轮动</strong>: 从消费医药转向周期环保</li>
+<li><strong>波动加剧</strong>: 热点切换频繁</li>
+</ol>
+<h3>9.2 投资启示</h3>
+<ol>
+<li><strong>控制仓位</strong>: 整体仓位60-70%</li>
+<li><strong>防御为主</strong>: 红利低波、可转债为核心</li>
+<li><strong>谨慎追高</strong>: 不追化工、环保等热点</li>
+<li><strong>耐心等待</strong>: 等待市场明确企稳信号</li>
+</ol>
+<h3>9.3 风险提示</h3>
+⚠️ 全球市场波动风险
+⚠️ 政策不确定性
+⚠️ 春节消费数据不及预期
+⚠️ 美股科技股继续大跌
+
+<hr>
+<strong>数据来源</strong>:
+<ul>
+<li>2月5日: ETF分析报告_20260205.md, ETF数据汇总_20260205.csv</li>
+<li>2月6日: top_etf_20260206.csv</li>
+</ul>
+<strong>生成时间</strong>: 2026-02-06
+<strong>报告有效期</strong>: 2026-02-06 至 2026-02-10
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-09 11:36:38</p>
+            <div class="qr-hint">
+                📱 扫码分享或收藏本文档
+            </div>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+        🌙
+    </button>
+
+    
+        <script>
+            // 主题切换
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // 重新加载页面以应用新主题
+                const url = new URL(window.location.href);
+                url.searchParams.set('theme', newTheme);
+                window.location.href = url.toString();
+            }
+
+            // 恢复主题设置
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+
+                // 添加平滑滚动
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 表格横向滚动提示
+            document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+                if (wrapper.scrollWidth > wrapper.clientWidth) {
+                    wrapper.style.position = 'relative';
+                    const hint = document.createElement('div');
+                    hint.innerHTML = '👈 左右滑动查看完整表格';
+                    hint.style.cssText = 'position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; pointer-events: none;';
+                    wrapper.appendChild(hint);
+
+                    setTimeout(() => {
+                        hint.style.opacity = '0';
+                        hint.style.transition = 'opacity 0.5s';
+                    }, 3000);
+                }
+            });
+        </script>
+        
+</body>
+</html>

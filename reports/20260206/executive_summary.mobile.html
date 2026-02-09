@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="ETF投资复盘执行摘要 - 2026年2月6日 - 2026年2月6日">
+    <meta name="format-detection" content="telephone=no">
+    <title>ETF投资复盘执行摘要 - 2026年2月6日</title>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                font-size: 16px;
+                line-height: 1.8;
+                color: #333333;
+                background-color: #f5f5f5;
+                max-width: 100%;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            /* 头部样式 */
+            .header {
+                background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 20px 20px;
+                opacity: 0.3;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* 内容区域 */
+            .content {
+                padding: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            /* 标题样式 */
+            h1, h2, h3, h4 {
+                color: #333333;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 24px 0 16px 0;
+            }
+
+            h1 {
+                font-size: 22px;
+                border-bottom: 2px solid #07c160;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #07c160;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h2::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 20px;
+                background: #07c160;
+                border-radius: 2px;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #999999;
+            }
+
+            /* 段落和文本 */
+            p {
+                margin: 12px 0;
+                color: #666666;
+            }
+
+            strong, b {
+                color: #333333;
+                font-weight: 600;
+            }
+
+            /* 列表样式 */
+            ul, ol {
+                margin: 12px 0;
+                padding-left: 24px;
+            }
+
+            li {
+                margin: 8px 0;
+                color: #666666;
+            }
+
+            li::marker {
+                color: #07c160;
+            }
+
+            /* 表格样式 - 横向滚动 */
+            .table-wrapper {
+                overflow-x: auto;
+                margin: 16px 0;
+                border-radius: 8px;
+                border: 1px solid #e8e8e8;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+
+            th {
+                background: #f8f9fa;
+                color: #333333;
+                font-weight: 600;
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 2px solid #e8e8e8;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8e8e8;
+                color: #666666;
+                vertical-align: top;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover td {
+                background: #e8f5e9;
+            }
+
+            /* 特殊标签 */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+
+            .tag-primary {
+                background: #e8f5e9;
+                color: #07c160;
+            }
+
+            .tag-warning {
+                background: rgba(255, 149, 0, 0.1);
+                color: #ff9500;
+            }
+
+            .tag-danger {
+                background: rgba(250, 81, 81, 0.1);
+                color: #fa5151;
+            }
+
+            /* 信息卡片 */
+            .info-box {
+                background: #e8f5e9;
+                border-left: 4px solid #07c160;
+                padding: 16px;
+                border-radius: 0 8px 8px 0;
+                margin: 16px 0;
+            }
+
+            .warning-box {
+                background: rgba(255, 149, 0, 0.1);
+                border-left: 4px solid #ff9500;
+            }
+
+            .danger-box {
+                background: rgba(250, 81, 81, 0.1);
+                border-left: 4px solid #fa5151;
+            }
+
+            /* 分隔线 */
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 24px 0;
+            }
+
+            /* 代码块 */
+            code {
+                background: #f6f8fa;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'SF Mono', Monaco, monospace;
+                font-size: 14px;
+                color: #fa5151;
+            }
+
+            pre {
+                background: #f6f8fa;
+                padding: 16px;
+                border-radius: 8px;
+                overflow-x: auto;
+                margin: 16px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            pre code {
+                background: none;
+                padding: 0;
+                color: #333333;
+            }
+
+            /* 重点高亮 */
+            .highlight {
+                background: linear-gradient(120deg, #e8f5e9 0%, transparent 100%);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            /* 评分星星 */
+            .stars {
+                color: #ff9500;
+                letter-spacing: 2px;
+            }
+
+            /* 底部信息 */
+            .footer {
+                text-align: center;
+                padding: 30px 20px;
+                color: #999999;
+                font-size: 12px;
+            }
+
+            .footer .qr-hint {
+                margin-top: 10px;
+                padding: 10px;
+                background: #ffffff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            /* 主题切换按钮 */
+            .theme-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+            }
+
+            /* 快速导航 */
+            .quick-nav {
+                position: sticky;
+                top: 0;
+                background: #ffffff;
+                padding: 12px 16px;
+                margin: -20px -20px 20px -20px;
+                border-bottom: 1px solid #e0e0e0;
+                z-index: 10;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .quick-nav a {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-right: 8px;
+                background: #f5f5f5;
+                border-radius: 16px;
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+
+            .quick-nav a.active {
+                background: #07c160;
+                color: white;
+            }
+
+            /* 响应式优化 */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 15px;
+                }
+
+                .header h1 {
+                    font-size: 20px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .card {
+                    padding: 16px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                th, td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+            }
+
+            /* 打印样式 */
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .card {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+
+                .theme-toggle {
+                    display: none;
+                }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ETF投资复盘执行摘要 - 2026年2月6日</h1>
+            <div class="subtitle">2026年2月6日 · 板块分析报告</div>
+            <div class="badge">PiMao ETF</div>
+        </header>
+
+        <main class="content">
+            
+
+<div class="card">
+
+<p><strong>报告日期</strong>: 2026年2月6日<br><strong>生成时间</strong>: 17:00:00<br><strong>下次复盘</strong>: 2026年2月7日</p>
+
+</div>
+
+<hr>
+<h2>📊 今日市场概况</h2>
+
+<h3>核心数据</h3>
+<ul>
+<li><strong>上涨ETF</strong>: 4只 (15.38%)</li>
+<li><strong>下跌ETF</strong>: 22只 (84.62%)</li>
+<li><strong>平均涨跌幅</strong>: -0.69%</li>
+<li><strong>成交总额</strong>: 约66万亿</li>
+</ul>
+<h3>市场特征</h3>
+✅ <strong>跌幅收窄</strong>: 从昨日-1.38%收窄至-0.69%
+❌ <strong>弱势延续</strong>: 84.62%的ETF下跌
+🔄 <strong>板块轮动</strong>: 消费医药→周期环保
+🌪️ <strong>波动加剧</strong>: 全球风险资产遭遇"抛售潮"
+
+<hr>
+<h2>🏆 今日TOP3</h2>
+
+<h3>涨幅榜</h3>
+<ol>
+<li><strong>化工ETF (sz159870)</strong>: +2.641% ⭐⭐⭐</li>
+<li><strong>环保ETF (sh512580)</strong>: +0.986% ⭐⭐⭐⭐</li>
+<li><strong>光伏ETF (sh515790)</strong>: +0.731% ⭐⭐⭐⭐</li>
+</ol>
+<h3>跌幅榜</h3>
+<ol>
+<li><strong>军工龙头ETF (sh512710)</strong>: -1.988% ⚠️</li>
+<li><strong>酒ETF (sh512690)</strong>: -1.947% ⚠️</li>
+<li><strong>黄金ETF (sh518880)</strong>: -1.577% ⚠️</li>
+</ol>
+<h3>成交额榜</h3>
+<ol>
+<li><strong>A500ETF基金</strong>: 1496亿</li>
+<li><strong>黄金ETF</strong>: 1903亿</li>
+<li><strong>可转债ETF</strong>: 1562亿</li>
+</ol>
+<hr>
+<h2>💡 投资建议</h2>
+
+<h3>整体策略</h3>
+<ul>
+<li><strong>市场阶段</strong>: 震荡筑底</li>
+<li><strong>风险偏好</strong>: 中低</li>
+<li><strong>建议仓位</strong>: 60-70%</li>
+<li><strong>配置思路</strong>: 攻守兼备，防御为主</li>
+</ul>
+<h3>核心推荐（必配）⭐⭐⭐⭐⭐</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>ETF代码</th>
+<th>ETF名称</th>
+<th>建议仓位</th>
+<th>止损价</th>
+<th>核心逻辑</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>sh512050</td>
+<td>A500ETF基金</td>
+<td>20%</td>
+<td>1.150</td>
+<td>流动性最佳，成交额第1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sh512890</td>
+<td>红利低波ETF</td>
+<td>20%</td>
+<td>1.120</td>
+<td>波动率最低，防御最强</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sh511380</td>
+<td>可转债ETF</td>
+<td>15%</td>
+<td>13.800</td>
+<td>逆势上涨，避险资金流入</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>小计</strong>: 55%仓位（核心持仓）
+
+<h3>卫星推荐（选配）⭐⭐⭐⭐</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>ETF代码</th>
+<th>ETF名称</th>
+<th>建议仓位</th>
+<th>止损价</th>
+<th>核心逻辑</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>sz159915</td>
+<td>创业板ETF</td>
+<td>5%</td>
+<td>3.000</td>
+<td>最抗跌，成长性突出</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sh512100</td>
+<td>中证1000ETF</td>
+<td>5%</td>
+<td>3.000</td>
+<td>相对抗跌，弹性大</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>小计</strong>: 10%仓位（卫星持仓）
+
+<h3>观望清单 ⏸️</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>ETF代码</th>
+<th>ETF名称</th>
+<th>等待信号</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>sh510300</td>
+<td>沪深300ETF</td>
+<td>市场企稳</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sh512580</td>
+<td>环保ETF</td>
+<td>回调至1.300</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sh515790</td>
+<td>光伏ETF</td>
+<td>确认企稳</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h3>回避清单 ❌</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>ETF代码</th>
+<th>ETF名称</th>
+<th>回避理由</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>sh512710</td>
+<td>军工龙头ETF</td>
+<td>今日跌幅最大</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sh512690</td>
+<td>酒ETF</td>
+<td>消费疲软</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sh518880</td>
+<td>黄金ETF</td>
+<td>连续大跌，波动剧烈</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sz159928</td>
+<td>消费ETF</td>
+<td>消费复苏不及预期</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>🚨 风险提示</h2>
+
+<h3>主要风险</h3>
+<ol>
+<li><strong>全球系统性风险</strong>: 美股科技股继续大跌（概率40%）</li>
+<li><strong>消费不及预期</strong>: 春节消费数据疲软（概率35%）</li>
+<li><strong>杠杆资金流出</strong>: 融资余额持续下降（概率35%）</li>
+</ol>
+<h3>风控措施</h3>
+<ul>
+<li>✅ 单ETF不超过20%</li>
+<li>✅ 单ETF止损-5%</li>
+<li>✅ 整体止损-10%</li>
+<li>✅ 保留35%现金储备</li>
+</ul>
+<hr>
+<h2>📈 明日关注</h2>
+
+<h3>市场信号</h3>
+<ul>
+<li>[ ] 市场止跌回升，连续3天上涨</li>
+<li>[ ] 成交额放大至70万亿以上</li>
+<li>[ ] 黄金ETF止跌回升</li>
+<li>[ ] 美股科技股企稳</li>
+</ul>
+<h3>政策信号</h3>
+<ul>
+<li>[ ] 两会政策超预期</li>
+<li>[ ] 央行降准降息</li>
+<li>[ ] 产业政策密集出台</li>
+</ul>
+<h3>国际信号</h3>
+<ul>
+<li>[ ] 美股科技股止跌回升</li>
+<li>[ ] 地缘政治风险缓和</li>
+<li>[ ] 美联储鸽派信号</li>
+</ul>
+<hr>
+<h2>🔄 操作计划</h2>
+
+<h3>建仓计划（3批）</h3>
+<ol>
+<li><strong>第一批（40%）</strong>: 核心防御品种</li>
+</ol><ul>
+<li>A500ETF基金: 20%</li>
+<li>红利低波ETF: 20%</li>
+</ul>
+<ol>
+<li><strong>第二批（20%）</strong>: 确认企稳后</li>
+</ol><ul>
+<li>可转债ETF: 15%</li>
+<li>创业板ETF: 5%</li>
+</ul>
+<ol>
+<li><strong>第三批（10%）</strong>: 市场明确企稳</li>
+</ol><ul>
+<li>中证1000ETF: 5%</li>
+<li>环保ETF: 5%（回调后）</li>
+</ul>
+<h3>建仓时机</h3>
+<ul>
+<li><strong>时间窗口</strong>: 2月7日-2月10日</li>
+<li><strong>信号</strong>: 市场跌幅收窄至-0.5%以内</li>
+</ul>
+<hr>
+<h2>📊 两日对比</h2>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>2月5日</th>
+<th>2月6日</th>
+<th>变化</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>上涨ETF</td>
+<td>8只</td>
+<td>4只</td>
+<td>⬇️</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>平均涨跌幅</td>
+<td>-1.38%</td>
+<td>-0.69%</td>
+<td>⬆️</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>领涨板块</td>
+<td>红利、医药、消费</td>
+<td>化工、环保、光伏</td>
+<td>🔄</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>领跌板块</td>
+<td>光伏、环保、黄金</td>
+<td>军工、酒、黄金</td>
+<td>🔄</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>结论</strong>: 市场跌幅收窄，但板块轮动加速，操作难度加大
+
+<hr>
+<h2>📞 联系方式</h2>
+<ul>
+<li><strong>策略总监</strong>: ETF投资策略总监Agent</li>
+<li><strong>数据来源</strong>: etf-data-collector, macro-analyst, sector-researcher</li>
+<li><strong>报告路径</strong>: <code>C:\pimao_etf\20260206\output\</code></li>
+</ul>
+<hr>
+<strong>免责声明</strong>: 本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。
+
+<hr>
+<em>本执行摘要由ETF投资策略总监Agent生成 - 2026年2月6日</em>
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-09 11:36:38</p>
+            <div class="qr-hint">
+                📱 扫码分享或收藏本文档
+            </div>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+        🌙
+    </button>
+
+    
+        <script>
+            // 主题切换
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // 重新加载页面以应用新主题
+                const url = new URL(window.location.href);
+                url.searchParams.set('theme', newTheme);
+                window.location.href = url.toString();
+            }
+
+            // 恢复主题设置
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+
+                // 添加平滑滚动
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 表格横向滚动提示
+            document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+                if (wrapper.scrollWidth > wrapper.clientWidth) {
+                    wrapper.style.position = 'relative';
+                    const hint = document.createElement('div');
+                    hint.innerHTML = '👈 左右滑动查看完整表格';
+                    hint.style.cssText = 'position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; pointer-events: none;';
+                    wrapper.appendChild(hint);
+
+                    setTimeout(() => {
+                        hint.style.opacity = '0';
+                        hint.style.transition = 'opacity 0.5s';
+                    }, 3000);
+                }
+            });
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="ETF分析报告 - 2026年2月5日 - 2026年2月5日">
+    <meta name="format-detection" content="telephone=no">
+    <title>ETF分析报告 - 2026年2月5日</title>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                font-size: 16px;
+                line-height: 1.8;
+                color: #333333;
+                background-color: #f5f5f5;
+                max-width: 100%;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            /* 头部样式 */
+            .header {
+                background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 20px 20px;
+                opacity: 0.3;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* 内容区域 */
+            .content {
+                padding: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            /* 标题样式 */
+            h1, h2, h3, h4 {
+                color: #333333;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 24px 0 16px 0;
+            }
+
+            h1 {
+                font-size: 22px;
+                border-bottom: 2px solid #07c160;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #07c160;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h2::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 20px;
+                background: #07c160;
+                border-radius: 2px;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #999999;
+            }
+
+            /* 段落和文本 */
+            p {
+                margin: 12px 0;
+                color: #666666;
+            }
+
+            strong, b {
+                color: #333333;
+                font-weight: 600;
+            }
+
+            /* 列表样式 */
+            ul, ol {
+                margin: 12px 0;
+                padding-left: 24px;
+            }
+
+            li {
+                margin: 8px 0;
+                color: #666666;
+            }
+
+            li::marker {
+                color: #07c160;
+            }
+
+            /* 表格样式 - 横向滚动 */
+            .table-wrapper {
+                overflow-x: auto;
+                margin: 16px 0;
+                border-radius: 8px;
+                border: 1px solid #e8e8e8;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+
+            th {
+                background: #f8f9fa;
+                color: #333333;
+                font-weight: 600;
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 2px solid #e8e8e8;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8e8e8;
+                color: #666666;
+                vertical-align: top;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover td {
+                background: #e8f5e9;
+            }
+
+            /* 特殊标签 */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+
+            .tag-primary {
+                background: #e8f5e9;
+                color: #07c160;
+            }
+
+            .tag-warning {
+                background: rgba(255, 149, 0, 0.1);
+                color: #ff9500;
+            }
+
+            .tag-danger {
+                background: rgba(250, 81, 81, 0.1);
+                color: #fa5151;
+            }
+
+            /* 信息卡片 */
+            .info-box {
+                background: #e8f5e9;
+                border-left: 4px solid #07c160;
+                padding: 16px;
+                border-radius: 0 8px 8px 0;
+                margin: 16px 0;
+            }
+
+            .warning-box {
+                background: rgba(255, 149, 0, 0.1);
+                border-left: 4px solid #ff9500;
+            }
+
+            .danger-box {
+                background: rgba(250, 81, 81, 0.1);
+                border-left: 4px solid #fa5151;
+            }
+
+            /* 分隔线 */
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 24px 0;
+            }
+
+            /* 代码块 */
+            code {
+                background: #f6f8fa;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'SF Mono', Monaco, monospace;
+                font-size: 14px;
+                color: #fa5151;
+            }
+
+            pre {
+                background: #f6f8fa;
+                padding: 16px;
+                border-radius: 8px;
+                overflow-x: auto;
+                margin: 16px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            pre code {
+                background: none;
+                padding: 0;
+                color: #333333;
+            }
+
+            /* 重点高亮 */
+            .highlight {
+                background: linear-gradient(120deg, #e8f5e9 0%, transparent 100%);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            /* 评分星星 */
+            .stars {
+                color: #ff9500;
+                letter-spacing: 2px;
+            }
+
+            /* 底部信息 */
+            .footer {
+                text-align: center;
+                padding: 30px 20px;
+                color: #999999;
+                font-size: 12px;
+            }
+
+            .footer .qr-hint {
+                margin-top: 10px;
+                padding: 10px;
+                background: #ffffff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            /* 主题切换按钮 */
+            .theme-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+            }
+
+            /* 快速导航 */
+            .quick-nav {
+                position: sticky;
+                top: 0;
+                background: #ffffff;
+                padding: 12px 16px;
+                margin: -20px -20px 20px -20px;
+                border-bottom: 1px solid #e0e0e0;
+                z-index: 10;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .quick-nav a {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-right: 8px;
+                background: #f5f5f5;
+                border-radius: 16px;
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+
+            .quick-nav a.active {
+                background: #07c160;
+                color: white;
+            }
+
+            /* 响应式优化 */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 15px;
+                }
+
+                .header h1 {
+                    font-size: 20px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .card {
+                    padding: 16px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                th, td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+            }
+
+            /* 打印样式 */
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .card {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+
+                .theme-toggle {
+                    display: none;
+                }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ETF分析报告 - 2026年2月5日</h1>
+            <div class="subtitle">2026年2月5日 · 宏观分析报告</div>
+            <div class="badge">PiMao ETF</div>
+        </header>
+
+        <main class="content">
+            
+
+<div class="card">
+
+<p><strong>报告生成时间</strong>: 2026-02-05 23:12:39<br><strong>分析日期</strong>: 2026-02-05<br><strong>ETF数量</strong>: 26支<br><strong>数据来源</strong>: 实时交易数据 + 静态数据库</p>
+
+</div>
+
+<hr>
+<h2>一、市场概况</h2>
+
+<h3>1.1 整体表现</h3>
+<ul>
+<li><strong>下跌ETF</strong>: 18支 (69.2%)</li>
+<li><strong>上涨ETF</strong>: 8支 (30.8%)</li>
+<li><strong>平盘ETF</strong>: 0支 (0%)</li>
+<li><strong>平均涨跌幅</strong>: -1.38%</li>
+</ul>
+<h3>1.2 板块分布</h3>
+<ul>
+<li><strong>科技创新</strong>: 3支 (恒生科技、科创50、恒生互联网)</li>
+<li><strong>金融地产</strong>: 3支 (香港证券、房地产、基建)</li>
+<li><strong>消费医药</strong>: 3支 (消费、医药、酒)</li>
+<li><strong>周期制造</strong>: 4支 (化工、中证1000、中证500、A500)</li>
+<li><strong>大盘蓝筹</strong>: 4支 (沪深300、上证180、上证50、A500)</li>
+<li><strong>避险资产</strong>: 3支 (黄金、债券、军工)</li>
+<li><strong>其他</strong>: 9支</li>
+</ul>
+<hr>
+<h2>二、涨跌幅排名</h2>
+
+<h3>2.1 涨幅榜TOP10</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>排名</th>
+<th>ETF代码</th>
+<th>ETF名称</th>
+<th>最新价</th>
+<th>涨跌幅</th>
+<th>成交额(万)</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>1</td>
+<td>sh512890</td>
+<td>红利低波ETF华泰柏瑞</td>
+<td>1.181</td>
+<td>+1.286%</td>
+<td>88,624</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>sh512010</td>
+<td>医药ETF易方达</td>
+<td>0.384</td>
+<td>+1.053%</td>
+<td>75,034</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>sz159928</td>
+<td>消费ETF</td>
+<td>0.808</td>
+<td>+1.000%</td>
+<td>121,593</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>sh512690</td>
+<td>酒ETF</td>
+<td>0.565</td>
+<td>+0.534%</td>
+<td>188,066</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>sh510900</td>
+<td>恒生中国企业ETF易方达</td>
+<td>1.143</td>
+<td>-0.349%</td>
+<td>47,528</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>6</td>
+<td>sh512200</td>
+<td>房地产ETF</td>
+<td>1.568</td>
+<td>-0.127%</td>
+<td>37,184</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>sh513330</td>
+<td>恒生互联网ETF</td>
+<td>0.506</td>
+<td>-0.394%</td>
+<td>440,693</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>8</td>
+<td>sz159901</td>
+<td>深证100ETF易方达</td>
+<td>3.450</td>
+<td>-0.576%</td>
+<td>179,502</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td>sh510300</td>
+<td>沪深300ETF华泰柏瑞</td>
+<td>4.679</td>
+<td>-0.595%</td>
+<td>4,364,498</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>10</td>
+<td>sh510180</td>
+<td>上证180ETF</td>
+<td>4.137</td>
+<td>-0.648%</td>
+<td>60,599</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h3>2.2 跌幅榜TOP10</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>排名</th>
+<th>ETF代码</th>
+<th>ETF名称</th>
+<th>最新价</th>
+<th>涨跌幅</th>
+<th>成交额(万)</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>1</td>
+<td>sh515790</td>
+<td>光伏ETF</td>
+<td>1.094</td>
+<td>-5.445%</td>
+<td>111,532</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>sh512580</td>
+<td>环保ETF</td>
+<td>1.318</td>
+<td>-3.231%</td>
+<td>18,264</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>sh518880</td>
+<td>黄金ETF</td>
+<td>10.523</td>
+<td>-3.166%</td>
+<td>20,057,436</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>sh516970</td>
+<td>基建ETF广发</td>
+<td>1.226</td>
+<td>-1.763%</td>
+<td>37,608</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>sh588460</td>
+<td>科创50增强ETF</td>
+<td>1.695</td>
+<td>-1.853%</td>
+<td>46,024</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>6</td>
+<td>sz159915</td>
+<td>创业板ETF易方达</td>
+<td>3.238</td>
+<td>-1.790%</td>
+<td>320,083</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>sh512100</td>
+<td>中证1000ETF</td>
+<td>3.232</td>
+<td>-1.733%</td>
+<td>2,297,231</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>8</td>
+<td>sh512050</td>
+<td>A500ETF基金</td>
+<td>1.223</td>
+<td>-1.371%</td>
+<td>15,682,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td>sh588000</td>
+<td>科创50ETF</td>
+<td>1.508</td>
+<td>-1.502%</td>
+<td>4,409,808</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>10</td>
+<td>sh513090</td>
+<td>香港证券ETF易方达</td>
+<td>2.062</td>
+<td>-1.198%</td>
+<td>9,153,226</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>三、成交量分析</h2>
+
+<h3>3.1 成交额TOP10</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>排名</th>
+<th>ETF代码</th>
+<th>ETF名称</th>
+<th>成交量(手)</th>
+<th>成交额(万)</th>
+<th>换手率估算</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>1</td>
+<td>sh518880</td>
+<td>黄金ETF</td>
+<td>1,909,045,495</td>
+<td>20,057,436</td>
+<td>190,606%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>sh512050</td>
+<td>A500ETF基金</td>
+<td>12,828,364,200</td>
+<td>15,681,979</td>
+<td>1,282,255%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>sh511380</td>
+<td>可转债ETF博时</td>
+<td>1,075,523,671</td>
+<td>15,390,482</td>
+<td>107,221%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>sh513180</td>
+<td>恒生科技指数ETF</td>
+<td>10,291,551,390</td>
+<td>7,192,836</td>
+<td>1,029,155%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>sh513090</td>
+<td>香港证券ETF易方达</td>
+<td>4,449,188,640</td>
+<td>9,153,226</td>
+<td>444,919%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>6</td>
+<td>sh512100</td>
+<td>中证1000ETF</td>
+<td>710,863,857</td>
+<td>2,297,231</td>
+<td>71,086%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>sh512690</td>
+<td>酒ETF</td>
+<td>3,317,409,874</td>
+<td>188,066</td>
+<td>331,741%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>8</td>
+<td>sh588000</td>
+<td>科创50ETF</td>
+<td>2,931,610,189</td>
+<td>4,409,808</td>
+<td>293,161%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td>sh512010</td>
+<td>医药ETF易方达</td>
+<td>1,956,298,693</td>
+<td>75,034</td>
+<td>195,630%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>10</td>
+<td>sz159915</td>
+<td>创业板ETF易方达</td>
+<td>985,289,360</td>
+<td>320,083</td>
+<td>98,529%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h3>3.2 成交活跃度分析</h3>
+<ul>
+<li><strong>极度活跃</strong>: 黄金ETF、A500ETF基金、恒生科技ETF</li>
+<li><strong>高度活跃</strong>: 可转债ETF、香港证券ETF、酒ETF</li>
+<li><strong>中度活跃</strong>: 科创50ETF、中证1000ETF、医药ETF</li>
+<li><strong>低度活跃</strong>: 基建ETF、上证180ETF、深证100ETF</li>
+</ul>
+<hr>
+<h2>四、板块表现分析</h2>
+
+<h3>4.1 科技创新板块</h3>
+<ul>
+<li><strong>表现</strong>: 整体下跌，恒生科技ETF微跌0.42%</li>
+<li><strong>特点</strong>: 成交活跃，但缺乏上涨动力</li>
+<li><strong>关注点</strong>: 关注科技股业绩和政策变化</li>
+</ul>
+<h3>4.2 金融地产板块</h3>
+<ul>
+<li><strong>表现</strong>: 房地产ETF微跌0.13%，表现相对抗跌</li>
+<li><strong>特点</strong>: 成交量适中，防御性较强</li>
+<li><strong>关注点</strong>: 关注地产政策和金融数据</li>
+</ul>
+<h3>4.3 消费医药板块</h3>
+<ul>
+<li><strong>表现</strong>: 消费ETF上涨1%，医药ETF上涨1.05%，表现突出</li>
+<li><strong>特点</strong>: 消费医药板块成为今日亮点</li>
+<li><strong>关注点</strong>: 关注消费复苏和医药政策</li>
+</ul>
+<h3>4.4 周期制造板块</h3>
+<ul>
+<li><strong>表现</strong>: 整体下跌，光伏ETF大跌5.45%</li>
+<li><strong>特点</strong>: 波动较大，风险较高</li>
+<li><strong>关注点</strong>: 关注行业周期和政策变化</li>
+</ul>
+<h3>4.5 大盘蓝筹板块</h3>
+<ul>
+<li><strong>表现</strong>: 沪深300ETF、上证180ETF小幅下跌</li>
+<li><strong>特点</strong>: 波动较小，防御性较强</li>
+<li><strong>关注点</strong>: 关注宏观经济数据</li>
+</ul>
+<h3>4.6 避险资产板块</h3>
+<ul>
+<li><strong>表现</strong>: 黄金ETF大跌3.17%，债券ETF微跌0.63%</li>
+<li><strong>特点</strong>: 黄金波动较大，债券相对稳定</li>
+<li><strong>关注点</strong>: 关注国际局势和通胀数据</li>
+</ul>
+<hr>
+<h2>五、投资建议</h2>
+
+<h3>5.1 积极策略</h3>
+<strong>推荐ETF</strong>:
+<ul>
+<li><strong>消费ETF (sz159928)</strong>: 上涨1%，消费板块表现突出</li>
+<li><strong>医药ETF (sh512010)</strong>: 上涨1.05%，医药板块表现良好</li>
+<li><strong>红利低波ETF (sh512890)</strong>: 上涨1.286%，高分红策略</li>
+</ul>
+<strong>理由</strong>: 消费医药板块今日表现突出，具有防御性和成长性
+
+<h3>5.2 观望策略</h3>
+<strong>关注ETF</strong>:
+<ul>
+<li><strong>沪深300ETF (sh510300)</strong>: 大盘蓝筹，波动较小</li>
+<li><strong>房地产ETF (sh512200)</strong>: 相对抗跌，政策受益</li>
+<li><strong>债券ETF (sh511380)</strong>: 避险属性，波动较小</li>
+</ul>
+<strong>理由</strong>: 市场调整期，建议观望为主
+
+<h3>5.3 风险提示</h3>
+<strong>高风险ETF</strong>:
+<ul>
+<li><strong>光伏ETF (sh515790)</strong>: 大跌5.45%，风险较高</li>
+<li><strong>环保ETF (sh512580)</strong>: 大跌3.23%，政策敏感</li>
+<li><strong>黄金ETF (sh518880)</strong>: 大跌3.16%，波动较大</li>
+</ul>
+<strong>建议</strong>: 控制仓位，设置止损
+
+<hr>
+<h2>六、技术分析要点</h2>
+
+<h3>6.1 支撑位分析</h3>
+<ul>
+<li><strong>黄金ETF</strong>: 10.30元附近有较强支撑</li>
+<li><strong>沪深300ETF</strong>: 4.60元附近有支撑</li>
+<li><strong>消费ETF</strong>: 0.80元附近有支撑</li>
+</ul>
+<h3>6.2 阻力位分析</h3>
+<ul>
+<li><strong>医药ETF</strong>: 0.39元附近有阻力</li>
+<li><strong>红利ETF</strong>: 1.19元附近有阻力</li>
+<li><strong>房地产ETF</strong>: 1.58元附近有阻力</li>
+</ul>
+<h3>6.3 交易建议</h3>
+<ul>
+<li><strong>短期交易</strong>: 关注成交量变化，把握波动机会</li>
+<li><strong>中期投资</strong>: 关注基本面变化，选择优质ETF</li>
+<li><strong>长期配置</strong>: 建议分散投资，降低风险</li>
+</ul>
+<hr>
+<h2>七、重点关注ETF</h2>
+
+<h3>7.1 今日重点关注</h3>
+<ol>
+<li><strong>消费ETF (sz159928)</strong>: 上涨1%，消费板块复苏信号</li>
+<li><strong>医药ETF (sh512010)</strong>: 上涨1.05%，医药板块表现良好</li>
+<li><strong>红利低波ETF (sh512890)</strong>: 上涨1.286%，高分红策略</li>
+</ol>
+<h3>7.2 后续关注</h3>
+<ol>
+<li><strong>黄金ETF (sh518880)</strong>: 大跌后是否企稳</li>
+<li><strong>光伏ETF (sh515790)</strong>: 是否止跌回升</li>
+<li><strong>恒生科技ETF (sh513180)</strong>: 港股科技走势</li>
+</ol>
+<hr>
+<h2>八、市场展望</h2>
+
+<h3>8.1 短期展望</h3>
+<ul>
+<li>市场可能继续调整，建议谨慎操作</li>
+<li>关注消费医药板块的持续性</li>
+<li>避险资产可能受到关注</li>
+</ul>
+<h3>8.2 中期展望</h3>
+<ul>
+<li>春节后行情值得期待</li>
+<li>关注政策面变化</li>
+<li>建议逐步布局优质ETF</li>
+</ul>
+<h3>8.3 长期展望</h3>
+<ul>
+<li>ETF投资仍是长期配置的良好选择</li>
+<li>建议定期定额投资</li>
+<li>关注宏观经济变化</li>
+</ul>
+<hr>
+<strong>免责声明</strong>: 本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-09 11:36:38</p>
+            <div class="qr-hint">
+                📱 扫码分享或收藏本文档
+            </div>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+        🌙
+    </button>
+
+    
+        <script>
+            // 主题切换
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // 重新加载页面以应用新主题
+                const url = new URL(window.location.href);
+                url.searchParams.set('theme', newTheme);
+                window.location.href = url.toString();
+            }
+
+            // 恢复主题设置
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+
+                // 添加平滑滚动
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 表格横向滚动提示
+            document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+                if (wrapper.scrollWidth > wrapper.clientWidth) {
+                    wrapper.style.position = 'relative';
+                    const hint = document.createElement('div');
+                    hint.innerHTML = '👈 左右滑动查看完整表格';
+                    hint.style.cssText = 'position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; pointer-events: none;';
+                    wrapper.appendChild(hint);
+
+                    setTimeout(() => {
+                        hint.style.opacity = '0';
+                        hint.style.transition = 'opacity 0.5s';
+                    }, 3000);
+                }
+            });
+        </script>
+        
+</body>
+</html>

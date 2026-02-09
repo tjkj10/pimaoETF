@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="ETF板块分析报告 - 20260205 - 2026-02-05">
+    <meta name="format-detection" content="telephone=no">
+    <title>ETF板块分析报告 - 20260205</title>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                font-size: 16px;
+                line-height: 1.8;
+                color: #333333;
+                background-color: #f5f5f5;
+                max-width: 100%;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            /* 头部样式 */
+            .header {
+                background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 20px 20px;
+                opacity: 0.3;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* 内容区域 */
+            .content {
+                padding: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            /* 标题样式 */
+            h1, h2, h3, h4 {
+                color: #333333;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 24px 0 16px 0;
+            }
+
+            h1 {
+                font-size: 22px;
+                border-bottom: 2px solid #07c160;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #07c160;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h2::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 20px;
+                background: #07c160;
+                border-radius: 2px;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #999999;
+            }
+
+            /* 段落和文本 */
+            p {
+                margin: 12px 0;
+                color: #666666;
+            }
+
+            strong, b {
+                color: #333333;
+                font-weight: 600;
+            }
+
+            /* 列表样式 */
+            ul, ol {
+                margin: 12px 0;
+                padding-left: 24px;
+            }
+
+            li {
+                margin: 8px 0;
+                color: #666666;
+            }
+
+            li::marker {
+                color: #07c160;
+            }
+
+            /* 表格样式 - 横向滚动 */
+            .table-wrapper {
+                overflow-x: auto;
+                margin: 16px 0;
+                border-radius: 8px;
+                border: 1px solid #e8e8e8;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+
+            th {
+                background: #f8f9fa;
+                color: #333333;
+                font-weight: 600;
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 2px solid #e8e8e8;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8e8e8;
+                color: #666666;
+                vertical-align: top;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover td {
+                background: #e8f5e9;
+            }
+
+            /* 特殊标签 */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+
+            .tag-primary {
+                background: #e8f5e9;
+                color: #07c160;
+            }
+
+            .tag-warning {
+                background: rgba(255, 149, 0, 0.1);
+                color: #ff9500;
+            }
+
+            .tag-danger {
+                background: rgba(250, 81, 81, 0.1);
+                color: #fa5151;
+            }
+
+            /* 信息卡片 */
+            .info-box {
+                background: #e8f5e9;
+                border-left: 4px solid #07c160;
+                padding: 16px;
+                border-radius: 0 8px 8px 0;
+                margin: 16px 0;
+            }
+
+            .warning-box {
+                background: rgba(255, 149, 0, 0.1);
+                border-left: 4px solid #ff9500;
+            }
+
+            .danger-box {
+                background: rgba(250, 81, 81, 0.1);
+                border-left: 4px solid #fa5151;
+            }
+
+            /* 分隔线 */
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 24px 0;
+            }
+
+            /* 代码块 */
+            code {
+                background: #f6f8fa;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'SF Mono', Monaco, monospace;
+                font-size: 14px;
+                color: #fa5151;
+            }
+
+            pre {
+                background: #f6f8fa;
+                padding: 16px;
+                border-radius: 8px;
+                overflow-x: auto;
+                margin: 16px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            pre code {
+                background: none;
+                padding: 0;
+                color: #333333;
+            }
+
+            /* 重点高亮 */
+            .highlight {
+                background: linear-gradient(120deg, #e8f5e9 0%, transparent 100%);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            /* 评分星星 */
+            .stars {
+                color: #ff9500;
+                letter-spacing: 2px;
+            }
+
+            /* 底部信息 */
+            .footer {
+                text-align: center;
+                padding: 30px 20px;
+                color: #999999;
+                font-size: 12px;
+            }
+
+            .footer .qr-hint {
+                margin-top: 10px;
+                padding: 10px;
+                background: #ffffff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            /* 主题切换按钮 */
+            .theme-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+            }
+
+            /* 快速导航 */
+            .quick-nav {
+                position: sticky;
+                top: 0;
+                background: #ffffff;
+                padding: 12px 16px;
+                margin: -20px -20px 20px -20px;
+                border-bottom: 1px solid #e0e0e0;
+                z-index: 10;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .quick-nav a {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-right: 8px;
+                background: #f5f5f5;
+                border-radius: 16px;
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+
+            .quick-nav a.active {
+                background: #07c160;
+                color: white;
+            }
+
+            /* 响应式优化 */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 15px;
+                }
+
+                .header h1 {
+                    font-size: 20px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .card {
+                    padding: 16px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                th, td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+            }
+
+            /* 打印样式 */
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .card {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+
+                .theme-toggle {
+                    display: none;
+                }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ETF板块分析报告 - 20260205</h1>
+            <div class="subtitle">2026-02-05 · 板块分析报告</div>
+            <div class="badge">PiMao ETF</div>
+        </header>
+
+        <main class="content">
+            
+
+<div class="card">
+
+<p><strong>报告生成时间</strong>: 2026-02-05 23:12:39**</p>
+
+<p><strong>分析ETF数量</strong>: 26**</p>
+
+</div>
+
+<h2>ETF列表</h2>
+<ul>
+<li>环保ETF</li>
+<li>恒生科技指数ETF</li>
+<li>A500指数ETF</li>
+<li>红利低波ETF华泰柏瑞</li>
+<li>基建ETF广发</li>
+<li>沪深300ETF华泰柏瑞</li>
+<li>房地产ETF</li>
+<li>香港证券ETF易方达</li>
+<li>深证100ETF易方达</li>
+<li>科创50增强ETF</li>
+<li>科创50ETF</li>
+<li>中证1000ETF</li>
+<li>黄金ETF</li>
+<li>医药ETF易方达</li>
+<li>军工龙头ETF</li>
+<li>A500ETF基金</li>
+<li>恒生互联网ETF</li>
+<li>上证180ETF</li>
+<li>光伏ETF</li>
+<li>恒生中国企业ETF易方达</li>
+<li>可转债ETF博时</li>
+<li>酒ETF</li>
+<li>传媒ETF</li>
+<li>消费ETF</li>
+<li>化工ETF</li>
+<li>创业板ETF易方达</li>
+</ul>
+<h2>板块概况</h2>
+
+<h3>环保产业政策驱动型ETF</h3>
+<ul>
+<li>环保ETF</li>
+</ul>
+<h3>科技创新成长型ETF</h3>
+<ul>
+<li>恒生科技指数ETF</li>
+</ul>
+<h3>行业主题ETF</h3>
+<ul>
+<li>A500指数ETF</li>
+<li>红利低波ETF华泰柏瑞</li>
+<li>基建ETF广发</li>
+<li>沪深300ETF华泰柏瑞</li>
+<li>房地产ETF</li>
+<li>深证100ETF易方达</li>
+<li>科创50增强ETF</li>
+<li>科创50ETF</li>
+<li>中证1000ETF</li>
+<li>黄金ETF</li>
+<li>军工龙头ETF</li>
+<li>A500ETF基金</li>
+<li>恒生互联网ETF</li>
+<li>上证180ETF</li>
+<li>恒生中国企业ETF易方达</li>
+<li>可转债ETF博时</li>
+<li>酒ETF</li>
+<li>传媒ETF</li>
+<li>化工ETF</li>
+<li>创业板ETF易方达</li>
+</ul>
+<h3>金融行业价值型ETF</h3>
+<ul>
+<li>香港证券ETF易方达</li>
+</ul>
+<h3>医疗健康ETF</h3>
+<ul>
+<li>医药ETF易方达</li>
+</ul>
+<h3>新能源清洁能源ETF</h3>
+<ul>
+<li>光伏ETF</li>
+</ul>
+<h3>消费升级主题ETF</h3>
+<ul>
+<li>消费ETF</li>
+</ul>
+<h2>重点ETF分析</h2>
+
+<h3>1. 黄金ETF (sh518880)</h3>
+
+<div class="card">
+
+<p><strong>主题</strong>: 黄金</p>
+
+</div>
+
+<h4>基础信息</h4>
+<ul>
+<li>最新价(元): 10.523</li>
+<li>涨跌幅: -3.166%</li>
+<li>涨跌额: -0.344</li>
+<li>最高价: 10.695</li>
+<li>最低价: 10.3</li>
+<li>成交量(手): 1909045495</li>
+<li>成交额(万): 20057436535.0</li>
+<li>基金全称: 华安黄金易ETF</li>
+<li>基金管理人: 华安基金</li>
+<li>基金托管人: 工商银行</li>
+<li>成立日期: 2013-07-18</li>
+<li>管理费率: 0.50%</li>
+<li>托管费率: 0.10%</li>
+<li>跟踪指数: 国内黄金现货价格收益率（Au99.99）</li>
+<li>投资范围: 黄金现货合约</li>
+</ul>
+<h4>技术分析</h4>
+<ul>
+<li>振幅(%): 3.6349</li>
+<li>价格区间(%): 3.7537</li>
+<li>成交额分级: 极高</li>
+<li>涨跌分级: 下跌</li>
+<li>换手估算(%): 190605.6879</li>
+<li>交易活跃度: 活跃</li>
+<li>单日涨跌幅度: 3.166</li>
+</ul>
+<h4>投资建议</h4>
+<ul>
+<li>投资期限: 中长期(6-12个月)</li>
+<li>仓位建议: 建议仓位5-15%</li>
+<li>建仓策略: 逢低布局机会，分批建仓</li>
+<li>止损设置: 9.997</li>
+<li>止盈设置: 12.101</li>
+<li>重点关注: ['行业政策', '业绩表现', '市场情绪']</li>
+</ul>
+<h3>2. A500ETF基金 (sh512050)</h3>
+
+<div class="card">
+
+<p><strong>主题</strong>: 中证500</p>
+
+</div>
+
+<h4>基础信息</h4>
+<ul>
+<li>最新价(元): 1.223</li>
+<li>涨跌幅: -1.371%</li>
+<li>涨跌额: -0.017</li>
+<li>最高价: 1.236</li>
+<li>最低价: 1.215</li>
+<li>成交量(手): 12828364200</li>
+<li>成交额(万): 15681979244.0</li>
+<li>基金全称: A500ETF基金</li>
+<li>基金管理人: 华夏基金</li>
+<li>基金托管人: 工商银行</li>
+<li>成立日期: 2024-10-15</li>
+<li>管理费率: 0.15%</li>
+<li>托管费率: 0.05%</li>
+<li>跟踪指数: 中证A500指数</li>
+<li>投资范围: A股市场500只代表性股票</li>
+</ul>
+<h4>技术分析</h4>
+<ul>
+<li>振幅(%): 1.6935</li>
+<li>价格区间(%): 1.7171</li>
+<li>成交额分级: 极高</li>
+<li>涨跌分级: 微跌</li>
+<li>换手估算(%): 1282255.0486</li>
+<li>交易活跃度: 较活跃</li>
+<li>单日涨跌幅度: 1.371</li>
+</ul>
+<h4>投资建议</h4>
+<ul>
+<li>投资期限: 中长期(6-12个月)</li>
+<li>仓位建议: 建议仓位5-15%</li>
+<li>建仓策略: 可持有观望，关注趋势变化</li>
+<li>止损设置: 1.162</li>
+<li>止盈设置: 1.406</li>
+<li>重点关注: ['行业政策', '业绩表现', '市场情绪']</li>
+</ul>
+<h3>3. 可转债ETF博时 (sh511380)</h3>
+
+<div class="card">
+
+<p><strong>主题</strong>: 债券</p>
+
+</div>
+
+<h4>基础信息</h4>
+<ul>
+<li>最新价(元): 14.354</li>
+<li>涨跌幅: -0.63%</li>
+<li>涨跌额: -0.091</li>
+<li>最高价: 14.423</li>
+<li>最低价: 14.207</li>
+<li>成交量(手): 1075523671</li>
+<li>成交额(万): 15390482191.0</li>
+<li>基金全称: 可转债ETF博时</li>
+<li>基金管理人: 博时基金</li>
+<li>基金托管人: 工商银行</li>
+<li>成立日期: 2020-03-18</li>
+<li>管理费率: 0.30%</li>
+<li>托管费率: 0.10%</li>
+<li>跟踪指数: 中证可转债及可交换债券指数</li>
+<li>投资范围: 可转换债券</li>
+</ul>
+<h4>技术分析</h4>
+<ul>
+<li>振幅(%): 1.4953</li>
+<li>价格区间(%): 1.5048</li>
+<li>成交额分级: 极高</li>
+<li>涨跌分级: 微跌</li>
+<li>换手估算(%): 107220.8596</li>
+<li>交易活跃度: 较活跃</li>
+<li>单日涨跌幅度: 0.63</li>
+</ul>
+<h4>投资建议</h4>
+<ul>
+<li>投资期限: 中长期(6-12个月)</li>
+<li>仓位建议: 建议仓位5-15%</li>
+<li>建仓策略: 可持有观望，关注趋势变化</li>
+<li>止损设置: 13.636</li>
+<li>止盈设置: 16.507</li>
+<li>重点关注: ['行业政策', '业绩表现', '市场情绪']</li>
+</ul>
+<h2>投资策略建议</h2>
+
+<h3>积极策略</h3>
+<strong>建议ETF</strong>: 环保ETF, 黄金ETF
+<strong>理由</strong>: 市场活跃度高，关注表现突出的ETF
+
+<h2>风险提示</h2>
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-09 11:36:38</p>
+            <div class="qr-hint">
+                📱 扫码分享或收藏本文档
+            </div>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+        🌙
+    </button>
+
+    
+        <script>
+            // 主题切换
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // 重新加载页面以应用新主题
+                const url = new URL(window.location.href);
+                url.searchParams.set('theme', newTheme);
+                window.location.href = url.toString();
+            }
+
+            // 恢复主题设置
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+
+                // 添加平滑滚动
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 表格横向滚动提示
+            document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+                if (wrapper.scrollWidth > wrapper.clientWidth) {
+                    wrapper.style.position = 'relative';
+                    const hint = document.createElement('div');
+                    hint.innerHTML = '👈 左右滑动查看完整表格';
+                    hint.style.cssText = 'position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; pointer-events: none;';
+                    wrapper.appendChild(hint);
+
+                    setTimeout(() => {
+                        hint.style.opacity = '0';
+                        hint.style.transition = 'opacity 0.5s';
+                    }, 3000);
+                }
+            });
+        </script>
+        
+</body>
+</html>

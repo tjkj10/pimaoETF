@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="宏观环境分析报告 - 2026年2月6日 - 2026年2月6日">
+    <meta name="format-detection" content="telephone=no">
+    <title>宏观环境分析报告 - 2026年2月6日</title>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                font-size: 16px;
+                line-height: 1.8;
+                color: #333333;
+                background-color: #f5f5f5;
+                max-width: 100%;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            /* 头部样式 */
+            .header {
+                background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 20px 20px;
+                opacity: 0.3;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* 内容区域 */
+            .content {
+                padding: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            /* 标题样式 */
+            h1, h2, h3, h4 {
+                color: #333333;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 24px 0 16px 0;
+            }
+
+            h1 {
+                font-size: 22px;
+                border-bottom: 2px solid #07c160;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #07c160;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h2::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 20px;
+                background: #07c160;
+                border-radius: 2px;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #999999;
+            }
+
+            /* 段落和文本 */
+            p {
+                margin: 12px 0;
+                color: #666666;
+            }
+
+            strong, b {
+                color: #333333;
+                font-weight: 600;
+            }
+
+            /* 列表样式 */
+            ul, ol {
+                margin: 12px 0;
+                padding-left: 24px;
+            }
+
+            li {
+                margin: 8px 0;
+                color: #666666;
+            }
+
+            li::marker {
+                color: #07c160;
+            }
+
+            /* 表格样式 - 横向滚动 */
+            .table-wrapper {
+                overflow-x: auto;
+                margin: 16px 0;
+                border-radius: 8px;
+                border: 1px solid #e8e8e8;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+
+            th {
+                background: #f8f9fa;
+                color: #333333;
+                font-weight: 600;
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 2px solid #e8e8e8;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8e8e8;
+                color: #666666;
+                vertical-align: top;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover td {
+                background: #e8f5e9;
+            }
+
+            /* 特殊标签 */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+
+            .tag-primary {
+                background: #e8f5e9;
+                color: #07c160;
+            }
+
+            .tag-warning {
+                background: rgba(255, 149, 0, 0.1);
+                color: #ff9500;
+            }
+
+            .tag-danger {
+                background: rgba(250, 81, 81, 0.1);
+                color: #fa5151;
+            }
+
+            /* 信息卡片 */
+            .info-box {
+                background: #e8f5e9;
+                border-left: 4px solid #07c160;
+                padding: 16px;
+                border-radius: 0 8px 8px 0;
+                margin: 16px 0;
+            }
+
+            .warning-box {
+                background: rgba(255, 149, 0, 0.1);
+                border-left: 4px solid #ff9500;
+            }
+
+            .danger-box {
+                background: rgba(250, 81, 81, 0.1);
+                border-left: 4px solid #fa5151;
+            }
+
+            /* 分隔线 */
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 24px 0;
+            }
+
+            /* 代码块 */
+            code {
+                background: #f6f8fa;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'SF Mono', Monaco, monospace;
+                font-size: 14px;
+                color: #fa5151;
+            }
+
+            pre {
+                background: #f6f8fa;
+                padding: 16px;
+                border-radius: 8px;
+                overflow-x: auto;
+                margin: 16px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            pre code {
+                background: none;
+                padding: 0;
+                color: #333333;
+            }
+
+            /* 重点高亮 */
+            .highlight {
+                background: linear-gradient(120deg, #e8f5e9 0%, transparent 100%);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            /* 评分星星 */
+            .stars {
+                color: #ff9500;
+                letter-spacing: 2px;
+            }
+
+            /* 底部信息 */
+            .footer {
+                text-align: center;
+                padding: 30px 20px;
+                color: #999999;
+                font-size: 12px;
+            }
+
+            .footer .qr-hint {
+                margin-top: 10px;
+                padding: 10px;
+                background: #ffffff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            /* 主题切换按钮 */
+            .theme-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+            }
+
+            /* 快速导航 */
+            .quick-nav {
+                position: sticky;
+                top: 0;
+                background: #ffffff;
+                padding: 12px 16px;
+                margin: -20px -20px 20px -20px;
+                border-bottom: 1px solid #e0e0e0;
+                z-index: 10;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .quick-nav a {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-right: 8px;
+                background: #f5f5f5;
+                border-radius: 16px;
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+
+            .quick-nav a.active {
+                background: #07c160;
+                color: white;
+            }
+
+            /* 响应式优化 */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 15px;
+                }
+
+                .header h1 {
+                    font-size: 20px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .card {
+                    padding: 16px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                th, td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+            }
+
+            /* 打印样式 */
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .card {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+
+                .theme-toggle {
+                    display: none;
+                }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>宏观环境分析报告 - 2026年2月6日</h1>
+            <div class="subtitle">2026年2月6日 · 宏观分析报告</div>
+            <div class="badge">PiMao ETF</div>
+        </header>
+
+        <main class="content">
+            
+
+<h2>一、国际市场环境</h2>
+
+<h3>1.1 全球市场表现</h3>
+
+<h4>美股市场（隔夜）</h4>
+<ul>
+<li><strong>纳斯达克</strong>: 540.59点，跌幅-1.59%</li>
+<li><strong>道琼斯</strong>: 48908.72点，跌幅-1.20%</li>
+<li><strong>标普500</strong>: 跌幅-1.3%</li>
+</ul>
+<strong>特征</strong>:
+<ul>
+<li>科技股遭遇抛售，AI相关企业股价下跌</li>
+<li>亚马逊盘后暴跌超11%，宣布2000亿美元支出计划</li>
+<li>"抛售一切"情绪席卷全球市场</li>
+<li>投资者开始质疑持续上涨的各类资产</li>
+</ul>
+<h4>欧洲股市</h4>
+<ul>
+<li><strong>英国富时100</strong>: 10285.16，跌幅-0.23%</li>
+<li><strong>德国DAX30</strong>: 24426.68，跌幅-0.26%</li>
+<li><strong>法国CAC40</strong>: 8207.36，跌幅-0.37%</li>
+</ul>
+<h4>亚太市场</h4>
+<ul>
+<li><strong>日经225</strong>: 54253.68，涨幅+0.81%（逆势上涨）</li>
+<li><strong>恒生指数</strong>: 26559.95，跌幅-1.21%</li>
+<li><strong>恒生科技指数</strong>: 跌幅-1.11%</li>
+</ul>
+<h3>1.2 国际商品市场</h3>
+
+<h4>贵金属</h4>
+<ul>
+<li><strong>黄金</strong>: 大幅下跌，昨夜金价巨震</li>
+<li><strong>白银</strong>: 暴跌超14%，七日濒临腰斩</li>
+<li>芝商所(CME)将COMEX 100黄金期货初始保证金从8%上调至9%</li>
+</ul>
+<h4>加密货币</h4>
+<ul>
+<li><strong>比特币</strong>: 向下触及60000美元，时隔4月较高位跌去52%</li>
+<li>24小时58万人爆仓</li>
+<li>"大空头"警告比特币恐重演2022年崩盘模式</li>
+</ul>
+<h4>原油</h4>
+<ul>
+<li>美国国务院发布安全警告，敦促美国公民尽快离开伊朗</li>
+<li>地缘政治紧张对油价形成支撑</li>
+</ul>
+<h2>二、国内政策环境</h2>
+
+<h3>2.1 货币政策（中国人民银行）</h3>
+
+<h4>最新动态</h4>
+<ol>
+<li><strong>信贷市场工作会议</strong>（2026年2月5日）</li>
+</ol><ul>
+<li>中国人民银行召开2026年信贷市场工作会议</li>
+<li>强调加力支持重点领域和薄弱环节</li>
+<li>货币政策精准发力</li>
+</ul>
+<ol>
+<li><strong>宏观审慎工作会议</strong></li>
+</ol><ul>
+<li>中国人民银行召开2026年宏观审慎工作会议</li>
+<li>2025年四季度金融机构贷款投向统计报告发布</li>
+</ul>
+<ol>
+<li><strong>LPR利率</strong></li>
+</ol><ul>
+<li>2026年1月20日LPR公布（最新数据）</li>
+<li>政策保持稳健中性</li>
+</ul>
+<ol>
+<li><strong>人民币国际化</strong></li>
+</ol><ul>
+<li>与斯里兰卡中央银行签署人民币清算安排合作备忘录</li>
+<li>推进人民币国际化进程</li>
+</ul>
+<h3>2.2 财政政策与产业政策</h3>
+
+<h4>中药产业</h4>
+<ul>
+<li><strong>八部门发布政策</strong>: 中药工业未来五年发展规划</li>
+<li><strong>市场反应</strong>: 中药概念股集体走强</li>
+<li><strong>政策预期</strong>: 2026年有望触底回升</li>
+</ul>
+<h4>农业政策</h4>
+<ul>
+<li><strong>农业农村部</strong>: 深化农村集体产权制度改革</li>
+<li><strong>韩文秀</strong>: 推进农产品进口多元化，支持扩大优势特色农产品出口</li>
+<li><strong>AI+农业</strong>: 政策发出最强音，"AI+农业"迎来新蓝海</li>
+</ul>
+<h4>特高压建设</h4>
+<ul>
+<li><strong>国家电网</strong>: 1月投资同比增超35%</li>
+<li><strong>特高压</strong>: "八交四直"加速建设</li>
+<li><strong>投资机会</strong>: 相关产业链受益</li>
+</ul>
+<h4>量子科技</h4>
+<ul>
+<li><strong>重大突破</strong>: 我国量子科技研究取得新突破</li>
+<li><strong>量子网络</strong>: 走向现实可能</li>
+<li><strong>市场反应</strong>: 量子科技概念股盘中大幅拉升</li>
+</ul>
+<h3>2.3 金融监管</h3>
+
+<h4>融资保证金</h4>
+<ul>
+<li>交易所提高证券融资保证金比例</li>
+<li>防范杠杆风险</li>
+</ul>
+<h4>期货市场</h4>
+<ul>
+<li>芝商所多次调整白银保证金（第七次）</li>
+<li>国内期货1月新增超4000亿元资金</li>
+</ul>
+<h2>三、流动性分析</h2>
+
+<h3>3.1 市场资金面</h3>
+
+<h4>北向资金（沪港通/深港通）</h4>
+<ul>
+<li>2月6日数据暂未更新</li>
+<li>近期呈现波动状态</li>
+</ul>
+<h4>融资融券</h4>
+<ul>
+<li><strong>融资余额</strong>: 减少118.31亿（近期数据）</li>
+<li><strong>两融余额</strong>: 六连降</li>
+<li><strong>杠杆资金</strong>: 谨慎态度</li>
+</ul>
+<h4>债券市场</h4>
+<ul>
+<li><strong>地方债</strong>: 迎招标大日，供给扰动压力仍存</li>
+<li><strong>券商</strong>: 开年密集发债"补血"，融资规模超3100亿元</li>
+<li><strong>可转债</strong>: ETF逆势上涨+0.502%，成交活跃</li>
+</ul>
+<h3>3.2 利率环境</h3>
+
+<h4>LPR利率（2026年1月20日）</h4>
+<ul>
+<li>1年期LPR: 3.45%（维持稳定）</li>
+<li>5年期以上LPR: 4.20%（维持稳定）</li>
+</ul>
+<h4>国债逆回购</h4>
+<ul>
+<li>1天期GC001: 年化1.29%</li>
+<li>2天期GC002: 年化1.29%</li>
+<li>3天期GC003: 年化1.29%</li>
+</ul>
+<strong>判断</strong>: 流动性适中，利率保持稳定
+
+<h2>四、风险偏好评估</h2>
+
+<h3>4.1 市场情绪指标</h3>
+
+<h4>A股市场（2月6日）</h4>
+<ul>
+<li><strong>上证指数</strong>: 4065.58，跌幅-0.25%</li>
+<li><strong>深证成指</strong>: 13906.73，跌幅-0.33%</li>
+<li><strong>创业板指</strong>: 3236.46，跌幅-0.73%</li>
+<li><strong>沪深300</strong>: 4643.60，跌幅-0.57%</li>
+</ul>
+<strong>特征</strong>: 三大指数收跌，市场情绪偏弱
+
+<h4>ETF市场表现</h4>
+<ul>
+<li><strong>上涨ETF</strong>: 4只（15.38%）</li>
+<li><strong>下跌ETF</strong>: 22只（84.62%）</li>
+<li><strong>平均涨跌幅</strong>: -0.69%</li>
+</ul>
+<h3>4.2 板块轮动特征</h3>
+
+<h4>领涨板块</h4>
+<ul>
+<li><strong>周期板块</strong>: +2.641%（化工ETF）</li>
+<li><strong>环保板块</strong>: +0.986%</li>
+<li><strong>新能源板块</strong>: +0.731%（光伏ETF）</li>
+<li><strong>债券板块</strong>: +0.502%（可转债ETF）</li>
+</ul>
+<h4>领跌板块</h4>
+<ul>
+<li><strong>军工板块</strong>: -1.988%</li>
+<li><strong>消费板块</strong>: -1.947%（酒ETF）</li>
+<li><strong>黄金板块</strong>: -1.577%</li>
+<li><strong>房地产板块</strong>: -1.339%</li>
+</ul>
+<strong>观察</strong>:
+<ul>
+<li>周期、新能源逆势走强</li>
+<li>黄金、军工、消费跌幅较大</li>
+<li>可转债ETF资金大幅流入，避险情绪升温</li>
+</ul>
+<h3>4.3 全球风险偏好</h3>
+
+<h4>恐慌情绪</h4>
+<ul>
+<li>全球风险资产遭遇"抛售潮"</li>
+<li>股票、黄金、白银、比特币齐跌</li>
+<li>软件股、AI概念股大幅调整</li>
+</ul>
+<h4>避险需求</h4>
+<ul>
+<li>可转债ETF成交额1562亿，逆势上涨</li>
+<li>黄金虽跌但成交额巨大（1903亿），显示分歧</li>
+</ul>
+<h2>五、宏观环境综合评估</h2>
+
+<h3>5.1 经济增长</h3>
+<ul>
+<li><strong>国内</strong>: 政策支持力度加大，信贷资源重点流向重点领域</li>
+<li><strong>国际</strong>: 美股科技股调整，全球经济增长预期谨慎</li>
+</ul>
+<h3>5.2 通胀压力</h3>
+<ul>
+<li><strong>国内</strong>: 通胀压力温和，货币政策保持稳健</li>
+<li><strong>国际</strong>: 大宗商品价格下跌，通胀压力缓解</li>
+</ul>
+<h3>5.3 政策环境</h3>
+<ul>
+<li><strong>货币政策</strong>: 稳健中性，精准发力支持重点领域</li>
+<li><strong>财政政策</strong>: 产业政策积极（中药、农业、特高压、量子科技）</li>
+</ul>
+<h3>5.4 流动性</h3>
+<ul>
+<li><strong>整体</strong>: 适中偏宽松</li>
+<li><strong>利率</strong>: 稳定在低位</li>
+<li><strong>信用</strong>: 融资余额下降，杠杆资金谨慎</li>
+</ul>
+<h3>5.5 风险偏好</h3>
+<ul>
+<li><strong>等级</strong>: 中低</li>
+<li><strong>特征</strong>:</li>
+<li>全球风险资产遭遇抛售</li>
+<li>避险情绪升温</li>
+<li>市场波动加大</li>
+<li>资金流向防御性板块（可转债、红利）</li>
+</ul>
+<h2>六、宏观环境对ETF市场的影响</h2>
+
+<h3>6.1 负面影响</h3>
+<ol>
+<li><strong>全球市场联动</strong>: 美股科技股大跌，拖累国内科技板块</li>
+<li><strong>风险偏好下降</strong>: 军工、消费等高风险资产承压</li>
+<li><strong>流动性谨慎</strong>: 杠杆资金下降，市场增量资金有限</li>
+</ol>
+<h3>6.2 正面影响</h3>
+<ol>
+<li><strong>政策支持</strong>: 中药、特高压、量子科技等主题受益</li>
+<li><strong>避险需求</strong>: 可转债、红利低波等防御性品种受青睐</li>
+<li><strong>成本下降</strong>: 大宗商品价格下跌，降低部分企业成本</li>
+</ol>
+<h3>6.3 关注要点</h3>
+<ol>
+<li><strong>地缘政治</strong>: 伊朗局势，可能影响石油、黄金</li>
+<li><strong>政策落地</strong>: 八部门中药政策、特高压建设进度</li>
+<li><strong>科技突破</strong>: 量子科技、AI+农业产业化进展</li>
+<li><strong>流动性</strong>: 北向资金流向、融资余额变化</li>
+</ol>
+<h2>七、宏观环境等级评定</h2>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>等级</th>
+<th>说明</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>经济增长</td>
+<td>中</td>
+<td>政策支持力度加大，但外需偏弱</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>通胀压力</td>
+<td>低</td>
+<td>通胀温和，不构成掣肘</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>政策环境</td>
+<td>积极</td>
+<td>产业政策密集出台</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>流动性</td>
+<td>中</td>
+<td>适中偏宽松，但杠杆资金谨慎</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>风险偏好</td>
+<td>低</td>
+<td>全球避险情绪升温</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>综合评级</strong>: <strong>中性偏谨慎</strong>
+
+<h2>八、投资启示</h2>
+
+<h3>8.1 短期策略（1-2周）</h3>
+<ol>
+<li><strong>控制仓位</strong>: 建议整体仓位控制在60-70%</li>
+<li><strong>防御为主</strong>: 优先配置可转债、红利低波等防御性品种</li>
+<li><strong>规避高波动</strong>: 暂时规避军工、消费等高风险板块</li>
+</ol>
+<h3>8.2 中期策略（1-3个月）</h3>
+<ol>
+<li><strong>政策导向</strong>: 关注中药、特高压、量子科技等政策支持板块</li>
+<li><strong>估值修复</strong>: 关注超跌的新能源、科技板块</li>
+<li><strong>全球联动</strong>: 关注美股科技股走势对国内的影响</li>
+</ol>
+<h3>8.3 风险提示</h3>
+<ol>
+<li><strong>全球系统性风险</strong>: 美股继续大跌，拖累全球市场</li>
+<li><strong>地缘政治风险</strong>: 伊朗局势升级，影响能源价格</li>
+<li><strong>流动性风险</strong>: 杠杆资金持续流出，加剧市场波动</li>
+</ol>
+<hr>
+数据来源:
+<ul>
+<li>中国人民银行</li>
+<li>东方财富网</li>
+<li>上海证券交易所</li>
+<li>深圳证券交易所</li>
+</ul>
+生成时间: 2026-02-06
+报告有效期: 2026-02-06 至 2026-02-10
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-09 11:36:38</p>
+            <div class="qr-hint">
+                📱 扫码分享或收藏本文档
+            </div>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+        🌙
+    </button>
+
+    
+        <script>
+            // 主题切换
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // 重新加载页面以应用新主题
+                const url = new URL(window.location.href);
+                url.searchParams.set('theme', newTheme);
+                window.location.href = url.toString();
+            }
+
+            // 恢复主题设置
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+
+                // 添加平滑滚动
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 表格横向滚动提示
+            document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+                if (wrapper.scrollWidth > wrapper.clientWidth) {
+                    wrapper.style.position = 'relative';
+                    const hint = document.createElement('div');
+                    hint.innerHTML = '👈 左右滑动查看完整表格';
+                    hint.style.cssText = 'position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; pointer-events: none;';
+                    wrapper.appendChild(hint);
+
+                    setTimeout(() => {
+                        hint.style.opacity = '0';
+                        hint.style.transition = 'opacity 0.5s';
+                    }, 3000);
+                }
+            });
+        </script>
+        
+</body>
+</html>

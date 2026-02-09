@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="宏观经济环境分析报告 - 2026年2月8日">
+    <meta name="format-detection" content="telephone=no">
+    <title>宏观经济环境分析报告</title>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                font-size: 16px;
+                line-height: 1.8;
+                color: #333333;
+                background-color: #f5f5f5;
+                max-width: 100%;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            /* 头部样式 */
+            .header {
+                background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 20px 20px;
+                opacity: 0.3;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* 内容区域 */
+            .content {
+                padding: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            /* 标题样式 */
+            h1, h2, h3, h4 {
+                color: #333333;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 24px 0 16px 0;
+            }
+
+            h1 {
+                font-size: 22px;
+                border-bottom: 2px solid #07c160;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #07c160;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h2::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 20px;
+                background: #07c160;
+                border-radius: 2px;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #999999;
+            }
+
+            /* 段落和文本 */
+            p {
+                margin: 12px 0;
+                color: #666666;
+            }
+
+            strong, b {
+                color: #333333;
+                font-weight: 600;
+            }
+
+            /* 列表样式 */
+            ul, ol {
+                margin: 12px 0;
+                padding-left: 24px;
+            }
+
+            li {
+                margin: 8px 0;
+                color: #666666;
+            }
+
+            li::marker {
+                color: #07c160;
+            }
+
+            /* 表格样式 - 横向滚动 */
+            .table-wrapper {
+                overflow-x: auto;
+                margin: 16px 0;
+                border-radius: 8px;
+                border: 1px solid #e8e8e8;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+
+            th {
+                background: #f8f9fa;
+                color: #333333;
+                font-weight: 600;
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 2px solid #e8e8e8;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8e8e8;
+                color: #666666;
+                vertical-align: top;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover td {
+                background: #e8f5e9;
+            }
+
+            /* 特殊标签 */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+
+            .tag-primary {
+                background: #e8f5e9;
+                color: #07c160;
+            }
+
+            .tag-warning {
+                background: rgba(255, 149, 0, 0.1);
+                color: #ff9500;
+            }
+
+            .tag-danger {
+                background: rgba(250, 81, 81, 0.1);
+                color: #fa5151;
+            }
+
+            /* 信息卡片 */
+            .info-box {
+                background: #e8f5e9;
+                border-left: 4px solid #07c160;
+                padding: 16px;
+                border-radius: 0 8px 8px 0;
+                margin: 16px 0;
+            }
+
+            .warning-box {
+                background: rgba(255, 149, 0, 0.1);
+                border-left: 4px solid #ff9500;
+            }
+
+            .danger-box {
+                background: rgba(250, 81, 81, 0.1);
+                border-left: 4px solid #fa5151;
+            }
+
+            /* 分隔线 */
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 24px 0;
+            }
+
+            /* 代码块 */
+            code {
+                background: #f6f8fa;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'SF Mono', Monaco, monospace;
+                font-size: 14px;
+                color: #fa5151;
+            }
+
+            pre {
+                background: #f6f8fa;
+                padding: 16px;
+                border-radius: 8px;
+                overflow-x: auto;
+                margin: 16px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            pre code {
+                background: none;
+                padding: 0;
+                color: #333333;
+            }
+
+            /* 重点高亮 */
+            .highlight {
+                background: linear-gradient(120deg, #e8f5e9 0%, transparent 100%);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            /* 评分星星 */
+            .stars {
+                color: #ff9500;
+                letter-spacing: 2px;
+            }
+
+            /* 底部信息 */
+            .footer {
+                text-align: center;
+                padding: 30px 20px;
+                color: #999999;
+                font-size: 12px;
+            }
+
+            .footer .qr-hint {
+                margin-top: 10px;
+                padding: 10px;
+                background: #ffffff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            /* 主题切换按钮 */
+            .theme-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+            }
+
+            /* 快速导航 */
+            .quick-nav {
+                position: sticky;
+                top: 0;
+                background: #ffffff;
+                padding: 12px 16px;
+                margin: -20px -20px 20px -20px;
+                border-bottom: 1px solid #e0e0e0;
+                z-index: 10;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .quick-nav a {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-right: 8px;
+                background: #f5f5f5;
+                border-radius: 16px;
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+
+            .quick-nav a.active {
+                background: #07c160;
+                color: white;
+            }
+
+            /* 响应式优化 */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 15px;
+                }
+
+                .header h1 {
+                    font-size: 20px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .card {
+                    padding: 16px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                th, td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+            }
+
+            /* 打印样式 */
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .card {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+
+                .theme-toggle {
+                    display: none;
+                }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>宏观经济环境分析报告</h1>
+            <div class="subtitle">2026年2月8日 · 投资决策报告</div>
+            <div class="badge">非交易日资讯</div>
+        </header>
+
+        <main class="content">
+            
+
+<div class="card">
+
+<p><strong>报告日期</strong>：2026年2月8日（周日，非交易日）<br><strong>分析师</strong>：宏观分析师Agent<br><strong>报告类型</strong>：周末宏观简报</p>
+
+</div>
+
+<hr>
+<h2>执行摘要</h2>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>评估维度</th>
+<th>评级</th>
+<th>趋势</th>
+<th>关键要点</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>经济增长</td>
+<td><span class="stars">★★★☆☆</span></td>
+<td>偏弱</td>
+<td>1月PMI回落至49.3%，低于荣枯线</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>通胀水平</td>
+<td><span class="stars">★★★☆☆</span></td>
+<td>温和</td>
+<td>CPI同比0.5%回升，PPI同比-2.3%仍处负区间</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>政策环境</td>
+<td><span class="stars">★★★★☆</span></td>
+<td>宽松</td>
+<td>降准降息预期明确，货币政策保持适度宽松</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>流动性</td>
+<td><span class="stars">★★★★☆</span></td>
+<td>充裕</td>
+<td>结构性工具利率下调，资金面保持合理充裕</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>风险偏好</td>
+<td><span class="stars">★★★☆☆</span></td>
+<td>中性</td>
+<td>美股创新高，地缘政治风险仍存</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>综合评级</strong></td>
+<td><strong><span class="stars">★★★☆☆</span></strong></td>
+<td>-</td>
+<td>宏观环境中性偏积极，政策托底明确</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>一、经济增长评估</h2>
+
+<h3>1.1 最新经济数据</h3>
+
+<h4>制造业PMI（2026年1月）</h4>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th>环比变化</th>
+<th>状态</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td><strong>制造业PMI</strong></td>
+<td><strong>49.3%</strong></td>
+<td>↓ 0.8个百分点</td>
+<td>低于临界点</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>生产指数</td>
+<td>50.6%</td>
+<td>↓ 1.1个百分点</td>
+<td>仍处扩张区间</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>新订单指数</td>
+<td>49.2%</td>
+<td>↓ 1.6个百分点</td>
+<td>低于临界点</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>原材料库存指数</td>
+<td>47.4%</td>
+<td>↓ 0.4个百分点</td>
+<td>库存继续减少</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>从业人员指数</td>
+<td>48.1%</td>
+<td>↓ 0.1个百分点</td>
+<td>用工景气回落</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>按企业规模分类</strong>：
+<ul>
+<li>大型企业PMI：50.3%（扩张区间）</li>
+<li>中型企业PMI：48.7%（收缩区间）</li>
+<li>小型企业PMI：47.4%（收缩区间）</li>
+</ul>
+<strong>官方解读</strong>：部分制造业行业进入传统淡季，加之市场有效需求仍显不足，制造业景气水平有所回落。但高技术制造业PMI为52.0%，连续两个月位于52%以上，持续领跑。
+
+<h4>通胀数据（2026年1月）</h4>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>2026年1月</th>
+<th>前值（2025年12月）</th>
+<th>变化</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td><strong>CPI同比</strong></td>
+<td><strong>0.5%</strong></td>
+<td>0.1%</td>
+<td>↑ 回升0.4个百分点</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>PPI同比</strong></td>
+<td><strong>-2.3%</strong></td>
+<td>-2.3%</td>
+<td>→ 持平</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>数据解读</strong>：
+<ul>
+<li>CPI同比回升至0.5%，内需继续改善，居民消费价格水平有所回升</li>
+<li>PPI同比维持-2.3%，工业品价格仍处负增长区间，但降幅未进一步扩大</li>
+<li>主要原材料购进价格指数56.1%（上升3个百分点），出厂价格指数50.6%（近20个月首次升至临界点以上）</li>
+</ul>
+<h3>1.2 春节消费数据前瞻</h3>
+
+<div class="card">
+
+<p><strong>2026年春节特点</strong>：<br><ul><br><li>春节假期长达9天，被称为"史上最长春节档"</li><br><li>众信旅游数据显示计划出游人数较去年同期激增300%</li><br><li>预计旅游、电影、餐饮等消费数据将保持强劲</li><br></ul><br><hr><br><h2>二、货币政策与流动性</h2></p>
+
+</div>
+
+<h3>2.1 LPR利率（2026年1月20日）</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>期限</th>
+<th>利率</th>
+<th>变化</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>1年期LPR</td>
+<td>3.0%</td>
+<td>维持不变（连续8个月）</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>5年期以上LPR</td>
+<td>3.5%</td>
+<td>维持不变（连续8个月）</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>历史回顾</strong>：LPR上一次调整是在2025年5月，当时1年期和5年期以上LPR均下调了10个基点。
+
+<h3>2.2 央行政策表态</h3>
+
+<div class="card">
+
+<p><strong>邹澜副行长（2026年1月15日国新办发布会）</strong>：<br>&gt; "2026年降准降息还有一定空间"</p>
+
+<p><strong>降准空间分析</strong>：<br><ul><br><li>目前金融机构法定存款准备金率平均为6.3%</li><br><li>考虑5.0%的"隐性下限"，预计还有约1.3个百分点的降准空间</li><br><li>专家预计2026年可能降准1-2次（幅度0.5-1个百分点）</li><br></ul><br><strong>降息空间分析</strong>：<br><ul><br><li>外部约束：人民币汇率比较稳定，美元处于降息通道</li><br><li>内部约束：银行净息差已企稳（2025年连续两季度保持1.42%）</li><br><li>结构性货币政策工具利率已下调0.25个百分点</li><br></ul><br><h3>2.3 已实施政策（2026年1月）</h3><br><ol><br><li><strong>结构性降息</strong>：下调各类结构性货币政策工具利率0.25个百分点</li><br></ol><ul><br><li>各类再贷款一年期利率从1.5%下调至1.25%</li><br><li>自2026年1月19日起执行</li><br></ul><br><ol><br><li><strong>八项结构性政策举措</strong>：</li><br></ol><ul><br><li>增加支农支小再贷款额度5000亿元</li><br><li>单设民营企业再贷款1万亿元</li><br><li>科技创新和技术改造再贷款额度增至1.2万亿元</li><br></ul><br><h3>2.4 市场机构预期</h3></p>
+
+</div>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>机构</th>
+<th>预测</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>中信证券</td>
+<td>一季度可能实施0.5个百分点的降准，释放约1万亿元长期资金</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>东方金诚</td>
+<td>2026年可能降准1-2次，降息2次（幅度20-30个基点）</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>招联首席研究员董希淼</td>
+<td>春节前降准紧迫性下降，但降准仍是政策工具箱重要储备</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>三、政策环境跟踪</h2>
+
+<h3>3.1 两会政策预期（2026年3月）</h3>
+
+<div class="card">
+
+<p>2026年是"十五五"规划开局之年，地方两会已于2026年1-2月陆续召开。</p>
+
+<p><strong>主要经济大省GDP增速目标</strong>：</p>
+
+</div>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>省份</th>
+<th>GDP增速目标</th>
+<th>重点领域</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>北京</td>
+<td>5%左右</td>
+<td>人工智能+、数字经济</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>广东</td>
+<td>4.5%-5%</td>
+<td>新能源、新材料、低空经济</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>浙江</td>
+<td>5%以上</td>
+<td>新材料、新能源、集成电路</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>江苏</td>
+<td>5%左右</td>
+<td>高端制造、人工智能</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>山东</td>
+<td>5%以上</td>
+<td>高端装备、信息技术服务、新能源</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<strong>新能源政策</strong>：
+<ul>
+<li>2026年起新能源汽车免征购置税政策正式退坡，改为减半征收（税率5%）</li>
+<li>以旧换新补贴：新能源车最高补贴2万元（报废更新）或1.5万元（置换更新）</li>
+<li>技术门槛提高：插电混动/增程式车型纯电续航要求从43公里提升至100公里</li>
+</ul>
+<strong>科技创新政策</strong>：
+<ul>
+<li>"人工智能+"行动全面实施</li>
+<li>浙江明确AI核心产业营收增长20%以上</li>
+<li>重点布局：集成电路、人形机器人、低空经济、量子科技、6G通信</li>
+</ul>
+<h3>3.2 证监会最新政策（2026年2月）</h3>
+
+<div class="card">
+
+<p><strong>重大政策发布</strong>：<br><ol><br><li><strong>RWA监管框架出台</strong>（2026年2月6日）</li><br></ol><ul><br><li>首次正面定义RWA，明确监管框架</li><br><li>严格禁止未经批准的虚拟货币和人民币挂钩稳定币发行</li><br></ul><br><ol><br><li><strong>2026年资本市场五方面工作任务</strong>（1月15日系统工作会议）：</li><br></ol><ul><br><li>巩固市场稳中向好势头</li><br><li>深化投融资综合改革（启动创业板改革、科创板"1+6"政策）</li><br><li>提高服务高质量发展质效</li><br><li>提升监管执法有效性</li><br><li>促进上市公司价值成长</li><br></ul><br><ol><br><li><strong>战略投资者制度完善</strong>（1月30日征求意见）</li><br></ol><ul><br><li>六大类长期资金纳入战略投资者：社保基金、养老金、年金、保险资金、公募基金、银行理财</li><br><li>明确5%最低持股比例要求</li><br></ul><br><hr><br><h2>四、国际市场监控</h2></p>
+
+</div>
+
+<h3>4.1 美股市场</h3>
+
+<div class="card">
+
+<p><strong>道指突破5万点</strong>（2026年2月6日）：<br><ul><br><li>盘中首次突破50,000点整数关口</li><br><li>收盘点位：50,115.67点</li><br><li>当日涨幅：2.47%（大涨1,206.95点）</li><br><li>2026年累计涨幅：约4.3%</li><br></ul><br><strong>主要推动因素</strong>：<br><ul><br><li>科技股引领：英伟达涨7.87%，特斯拉涨3.50%</li><br><li>传统行业支撑：卡特彼勒涨超6%，高盛、摩根大通涨超4%</li><br><li>经济数据向好：密歇根大学消费者信心指数升至去年8月以来最高</li><br><li>通胀预期改善：短期通胀预期降至3.5%，为一年多来最低</li><br></ul><br><strong>历史意义</strong>：<br><ul><br><li>道指历史上首次突破5万点大关</li><br><li>从2024年5月首次站上4万点到突破5万点，是道指历史上最快完成1万点跨越（约21个月）</li><br></ul><br><h3>4.2 美联储政策</h3></p>
+
+<p><strong>2026年1月利率决议</strong>（1月28日）：<br><ul><br><li>维持联邦基金利率目标区间在3.50%-3.75%不变</li><br><li>投票结果：10票赞成，2票反对（两位理事主张降息25个基点）</li><br><li>这是美联储连续三次降息后首次暂停降息</li><br></ul><br><strong>鲍威尔关键表态</strong>：<br><ul><br><li>"经济再次以强劲势头让我们感到惊讶"</li><br><li>"3月降息不是基本情况"</li><br><li>暗示短期内不会降息，预计至少暂停到2026年6月</li><br></ul><br><strong>市场预期</strong>：<br><ul><br><li>2026年全年可能仅有1-2次降息，累计50个基点</li><br><li>下次更新经济预测（SEP）和点阵图的会议为3月17-18日</li><br></ul><br><h3>4.3 地缘政治风险</h3></p>
+
+<p><strong>2026年全球首要风险</strong>：地缘经济对抗（世界经济论坛《2026年全球风险报告》）</p>
+
+<p><strong>俄乌冲突</strong>：<br><ul><br><li>《新削减战略武器条约》(New START) 将于2026年2月到期，几乎确定无后续协议</li><br><li>俄军逐步显现优势，攻入第聂伯罗彼得罗夫斯克</li><br><li>特朗普多次尝试斡旋，但收效甚微</li><br></ul><br><strong>中东局势</strong>：<br><ul><br><li>加沙停火脆弱，持久和平依赖以色列撤军与"两国方案"推进</li><br><li>伊朗问题悬而未决，霍尔木兹海峡风险高企</li><br><li>若伊朗封锁霍尔木兹海峡，铝价可能短期暴涨20%-30%</li><br></ul><br><strong>美欧关系</strong>：<br><ul><br><li>特朗普"美国优先"政策实质化，对盟友实施关税大棒</li><br><li>比利时首相警告："美国正在用'大棒'反过来对付欧洲"</li><br><li>欧洲战略自主性短期内难以实现</li><br></ul><br><hr><br><h2>五、综合评估与展望</h2></p>
+
+</div>
+
+<h3>5.1 宏观环境综合评级：★★★☆☆（中性偏积极）</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>维度</th>
+<th>评级</th>
+<th>理由</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>经济增长</td>
+<td><span class="stars">★★★☆☆</span></td>
+<td>1月PMI回落至49.3%，但高技术制造业保持扩张</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>通胀水平</td>
+<td><span class="stars">★★★☆☆</span></td>
+<td>CPI温和回升，PPI仍处负区间但企稳</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>政策环境</td>
+<td><span class="stars">★★★★☆</span></td>
+<td>降准降息预期明确，政策托底意愿强</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>流动性</td>
+<td><span class="stars">★★★★☆</span></td>
+<td>结构性工具利率下调，资金面保持合理充裕</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>外部市场</td>
+<td><span class="stars">★★★☆☆</span></td>
+<td>美股创新高，但地缘政治风险仍存</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h3>5.2 对ETF市场的影响评估</h3>
+
+<div class="card">
+
+<p><strong>积极因素</strong>：<br><ol><br><li>货币政策宽松预期明确，流动性环境有利于权益市场</li><br><li>两会政策预期升温，科技、新能源等板块或迎催化</li><br><li>证监会改革深化，资本市场吸引力提升</li><br><li>春节消费数据强劲，内需复苏态势延续</li><br></ol><br><strong>风险因素</strong>：<br><ol><br><li>1月PMI低于荣枯线，经济基本面仍存压力</li><br><li>PPI持续负增长，企业盈利修复仍需时间</li><br><li>地缘政治风险升温，外部不确定性增加</li><br><li>美联储暂停降息，全球流动性环境边际收紧</li><br></ol><br><h3>5.3 重点关注方向</h3></p>
+
+</div>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>领域</th>
+<th>关注逻辑</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td><strong>科技成长</strong></td>
+<td>AI、半导体、人形机器人等政策催化预期强</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>新能源</strong></td>
+<td>政策退坡后关注技术迭代和龙头集中度提升</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>消费复苏</strong></td>
+<td>春节消费数据强劲，关注服务消费、以旧换新</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>高股息</strong></td>
+<td>低利率环境下，高股息资产吸引力提升</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>红利策略</strong></td>
+<td>政策鼓励分红回购，红利ETF配置价值凸显</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>六、数据来源</h2>
+
+<h3>内部数据引用</h3>
+本报告使用的内部数据：
+<ul>
+<li>ETF基础数据: etf-data-collector (top_etf_{date}.enhanced.csv)</li>
+</ul>
+<h3>外部数据来源</h3>
+
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>数据类型</th>
+<th>来源</th>
+<th>URL</th>
+<th>获取时间</th>
+<th>数据说明</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>PMI数据</td>
+<td>国家统计局</td>
+<td>https://www.stats.gov.cn/sj/zxfbhjd/202601/t20260131_1962416.html</td>
+<td>2026-02-08 09:30</td>
+<td>2026年1月制造业PMI</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>CPI/PPI数据</td>
+<td>国家统计局</td>
+<td>https://www.stats.gov.cn</td>
+<td>2026-02-08 09:45</td>
+<td>2026年1月通胀数据</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LPR利率</td>
+<td>中国人民银行</td>
+<td>https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125440/3876551/2026012008464316247/index.html</td>
+<td>2026-02-08 10:00</td>
+<td>2026年1月LPR报价</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>货币政策</td>
+<td>央行/邹澜讲话</td>
+<td>https://www.news.cn/20260115/d1d9da629fcd4da198b7a808cd5b2518/c.html</td>
+<td>2026-02-08 10:15</td>
+<td>2026年货币政策表态</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>美联储决议</td>
+<td>美联储</td>
+<td>https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm</td>
+<td>2026-02-08 10:30</td>
+<td>1月FOMC决议</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>美股数据</td>
+<td>Investopedia/MarketWatch</td>
+<td>https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-02062026-11901010</td>
+<td>2026-02-08 10:45</td>
+<td>道指突破5万点</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>两会预期</td>
+<td>新华社/证券时报</td>
+<td>https://m.10jqka.com.cn/20260204/c674537254.shtml</td>
+<td>2026-02-08 11:00</td>
+<td>地方两会政策方向</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>证监会政策</td>
+<td>证监会</td>
+<td>https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml</td>
+<td>2026-02-08 11:15</td>
+<td>2026年系统工作会议</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>地缘风险</td>
+<td>世界经济论坛</td>
+<td>https://cn.weforum.org/press/2026/01/global-risks-report-2026</td>
+<td>2026-02-08 11:30</td>
+<td>2026年全球风险报告</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2>七、免责声明</h2>
+
+<div class="card">
+
+<p>本报告仅供参考，不构成任何投资建议。投资者应根据自身风险承受能力和投资目标，独立做出投资决策。宏观经济数据存在滞后性，实际市场走势可能与分析预期存在偏差。</p>
+
+</div>
+
+<hr>
+<strong>报告生成时间</strong>：2026-02-08
+<strong>下次更新</strong>：2026-02-10（周二，交易日）
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-09 11:36:38</p>
+            <div class="qr-hint">
+                📱 扫码分享或收藏本文档
+            </div>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+        🌙
+    </button>
+
+    
+        <script>
+            // 主题切换
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // 重新加载页面以应用新主题
+                const url = new URL(window.location.href);
+                url.searchParams.set('theme', newTheme);
+                window.location.href = url.toString();
+            }
+
+            // 恢复主题设置
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+
+                // 添加平滑滚动
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 表格横向滚动提示
+            document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+                if (wrapper.scrollWidth > wrapper.clientWidth) {
+                    wrapper.style.position = 'relative';
+                    const hint = document.createElement('div');
+                    hint.innerHTML = '👈 左右滑动查看完整表格';
+                    hint.style.cssText = 'position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; pointer-events: none;';
+                    wrapper.appendChild(hint);
+
+                    setTimeout(() => {
+                        hint.style.opacity = '0';
+                        hint.style.transition = 'opacity 0.5s';
+                    }, 3000);
+                }
+            });
+        </script>
+        
+</body>
+</html>

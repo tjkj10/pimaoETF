@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="ETF板块深度分析报告 - 2026年2月6日 - 2026年2月6日">
+    <meta name="format-detection" content="telephone=no">
+    <title>ETF板块深度分析报告 - 2026年2月6日</title>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                font-size: 16px;
+                line-height: 1.8;
+                color: #333333;
+                background-color: #f5f5f5;
+                max-width: 100%;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            /* 头部样式 */
+            .header {
+                background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+                color: white;
+                padding: 30px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 20px 20px;
+                opacity: 0.3;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
+
+            .header .badge {
+                display: inline-block;
+                background: rgba(255,255,255,0.2);
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+
+            /* 内容区域 */
+            .content {
+                padding: 20px;
+            }
+
+            .card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            }
+
+            /* 标题样式 */
+            h1, h2, h3, h4 {
+                color: #333333;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 24px 0 16px 0;
+            }
+
+            h1 {
+                font-size: 22px;
+                border-bottom: 2px solid #07c160;
+                padding-bottom: 10px;
+                margin-top: 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: #07c160;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            h2::before {
+                content: '';
+                display: inline-block;
+                width: 4px;
+                height: 20px;
+                background: #07c160;
+                border-radius: 2px;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #999999;
+            }
+
+            /* 段落和文本 */
+            p {
+                margin: 12px 0;
+                color: #666666;
+            }
+
+            strong, b {
+                color: #333333;
+                font-weight: 600;
+            }
+
+            /* 列表样式 */
+            ul, ol {
+                margin: 12px 0;
+                padding-left: 24px;
+            }
+
+            li {
+                margin: 8px 0;
+                color: #666666;
+            }
+
+            li::marker {
+                color: #07c160;
+            }
+
+            /* 表格样式 - 横向滚动 */
+            .table-wrapper {
+                overflow-x: auto;
+                margin: 16px 0;
+                border-radius: 8px;
+                border: 1px solid #e8e8e8;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                min-width: 600px;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+
+            th {
+                background: #f8f9fa;
+                color: #333333;
+                font-weight: 600;
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 2px solid #e8e8e8;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8e8e8;
+                color: #666666;
+                vertical-align: top;
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tr:hover td {
+                background: #e8f5e9;
+            }
+
+            /* 特殊标签 */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+
+            .tag-primary {
+                background: #e8f5e9;
+                color: #07c160;
+            }
+
+            .tag-warning {
+                background: rgba(255, 149, 0, 0.1);
+                color: #ff9500;
+            }
+
+            .tag-danger {
+                background: rgba(250, 81, 81, 0.1);
+                color: #fa5151;
+            }
+
+            /* 信息卡片 */
+            .info-box {
+                background: #e8f5e9;
+                border-left: 4px solid #07c160;
+                padding: 16px;
+                border-radius: 0 8px 8px 0;
+                margin: 16px 0;
+            }
+
+            .warning-box {
+                background: rgba(255, 149, 0, 0.1);
+                border-left: 4px solid #ff9500;
+            }
+
+            .danger-box {
+                background: rgba(250, 81, 81, 0.1);
+                border-left: 4px solid #fa5151;
+            }
+
+            /* 分隔线 */
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 24px 0;
+            }
+
+            /* 代码块 */
+            code {
+                background: #f6f8fa;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-family: 'SF Mono', Monaco, monospace;
+                font-size: 14px;
+                color: #fa5151;
+            }
+
+            pre {
+                background: #f6f8fa;
+                padding: 16px;
+                border-radius: 8px;
+                overflow-x: auto;
+                margin: 16px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            pre code {
+                background: none;
+                padding: 0;
+                color: #333333;
+            }
+
+            /* 重点高亮 */
+            .highlight {
+                background: linear-gradient(120deg, #e8f5e9 0%, transparent 100%);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            /* 评分星星 */
+            .stars {
+                color: #ff9500;
+                letter-spacing: 2px;
+            }
+
+            /* 底部信息 */
+            .footer {
+                text-align: center;
+                padding: 30px 20px;
+                color: #999999;
+                font-size: 12px;
+            }
+
+            .footer .qr-hint {
+                margin-top: 10px;
+                padding: 10px;
+                background: #ffffff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            /* 主题切换按钮 */
+            .theme-toggle {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 20px;
+            }
+
+            /* 快速导航 */
+            .quick-nav {
+                position: sticky;
+                top: 0;
+                background: #ffffff;
+                padding: 12px 16px;
+                margin: -20px -20px 20px -20px;
+                border-bottom: 1px solid #e0e0e0;
+                z-index: 10;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .quick-nav a {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-right: 8px;
+                background: #f5f5f5;
+                border-radius: 16px;
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+
+            .quick-nav a.active {
+                background: #07c160;
+                color: white;
+            }
+
+            /* 响应式优化 */
+            @media (max-width: 480px) {
+                body {
+                    font-size: 15px;
+                }
+
+                .header h1 {
+                    font-size: 20px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .card {
+                    padding: 16px;
+                    border-radius: 10px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 17px;
+                }
+
+                th, td {
+                    padding: 10px 12px;
+                    font-size: 13px;
+                }
+            }
+
+            /* 打印样式 */
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .card {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+
+                .theme-toggle {
+                    display: none;
+                }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ETF板块深度分析报告 - 2026年2月6日</h1>
+            <div class="subtitle">2026年2月6日 · 板块分析报告</div>
+            <div class="badge">PiMao ETF</div>
+        </header>
+
+        <main class="content">
+            
+
+<h2>一、分析方法论</h2>
+
+<h3>1.1 分析维度</h3>
+<ul>
+<li><strong>基础数据分析</strong>: 价格、涨跌幅、成交量、成交额</li>
+<li><strong>技术分析</strong>: 振幅、量比、换手率（计算得出）</li>
+<li><strong>主题分析</strong>: 投资价值、风险提示、市场情绪</li>
+<li><strong>风险评估</strong>: 波动性、流动性、系统性风险</li>
+</ul>
+<h3>1.2 风险等级定义</h3>
+<ul>
+<li><strong>低风险</strong>: 振幅&lt;2%，换手率适中，成交额稳定</li>
+<li><strong>中风险</strong>: 振幅2-4%，换手率较高</li>
+<li><strong>高风险</strong>: 振幅&gt;4%，换手率高，价格波动大</li>
+</ul>
+<hr>
+<h2>二、ETF逐个深度分析</h2>
+
+<h3>1. 环保ETF (sh512580)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.3310元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>+0.986%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>950.72万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>12.62亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>3.64%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 低开高走，从1.2990元开盘涨至1.3460元高点</li>
+<li><strong>成交量</strong>: 放量上涨，买盘积极</li>
+<li><strong>振幅</strong>: 3.64%，属于中等波动</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 今日唯一涨幅超1%的板块ETF
+✅ 政策支持预期强烈（碳中和、环保产业政策）
+✅ 逆势上涨，具备防御属性
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 估值相对较高<br>⚠️ 成交额较其他主流ETF偏小<br>⚠️ 短期涨幅较大，注意回调风险</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐</li>
+<li><strong>建议</strong>: 短期关注，回调可小幅参与</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 1.300元</li>
+</ul>
+<hr>
+<h3>2. 恒生科技ETF (sh513130)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>0.6860元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.867%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>945024万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>649.14亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>2.03%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 低开低走，弱势明显</li>
+<li><strong>成交量</strong>: 巨额成交，市场分歧巨大</li>
+<li><strong>振幅</strong>: 2.03%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 成交额排名第4，流动性极佳
+✅ 港股科技股估值相对合理
+✅ 长期受益于科技产业发展
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 受美股科技股大跌拖累<br>⚠️ 全球AI概念股遭遇抛售<br>⚠️ 短期调整压力较大<br>⚠️ 汇率波动风险</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 观望为主，等待企稳信号</li>
+<li><strong>仓位</strong>: 不超过3%</li>
+<li><strong>止损价</strong>: 0.650元</li>
+</ul>
+<hr>
+<h3>3. A500指数ETF (sh560610)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.2010元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.332%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>19683万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>23.60亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.93%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 小幅下跌，相对抗跌</li>
+<li><strong>成交量</strong>: 成交活跃</li>
+<li><strong>振幅</strong>: 1.93%，波动较小</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ A500指数代表A股核心资产
+✅ 跌幅较小，显示抗跌性
+✅ 长期配置价值高
+✅ 分散投资，降低非系统性风险
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 短期市场调整压力<br>⚠️ 宽基指数受整体市场影响</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐</li>
+<li><strong>建议</strong>: 中长期配置标的</li>
+<li><strong>仓位</strong>: 10-15%</li>
+<li><strong>止损价</strong>: 1.150元</li>
+</ul>
+<hr>
+<h3>4. 红利低波ETF华泰柏瑞 (sh512890)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.1780元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.254%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>68211万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>80.37亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>0.76%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 极窄幅波动，稳定性强</li>
+<li><strong>成交量</strong>: 成交稳定</li>
+<li><strong>振幅</strong>: 0.76%，今日最低波动</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 波动率极低，防御属性最强
+✅ 高股息+低波动，适合防御
+✅ 市场弱势时表现突出
+✅ 成交额稳定，流动性好
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 上涨弹性有限<br>⚠️ 牛市中可能跑输成长板块</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐⭐</li>
+<li><strong>建议</strong>: 核心防御配置，必配品种</li>
+<li><strong>仓位</strong>: 15-20%</li>
+<li><strong>止损价</strong>: 1.120元</li>
+</ul>
+<hr>
+<h3>5. 基建ETF广发 (sh516970)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.2140元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.979%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>6388万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>7.80亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.23%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 震荡下跌</li>
+<li><strong>成交量</strong>: 成交一般</li>
+<li><strong>振幅</strong>: 1.23%，波动较小</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 受益于基建投资政策
+✅ 估值相对合理
+✅ 特高压建设加速
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 政策落地存在时滞<br>⚠️ 地方财政压力<br>⚠️ 成交额偏小，流动性一般</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 政策催化时关注</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 1.150元</li>
+</ul>
+<hr>
+<h3>6. 沪深300ETF华泰柏瑞 (sh510300)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>4.6490元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.641%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>88167万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>410.66亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.75%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 随大盘调整</li>
+<li><strong>成交量</strong>: 成交活跃，流动性极佳</li>
+<li><strong>振幅</strong>: 1.75%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ A股核心宽基指数
+✅ 流动性充裕，进出方便
+✅ 代表A股市场整体表现
+✅ 成交额排名第6
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 受整体市场影响<br>⚠️ 短期调整压力</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐</li>
+<li>**建议": 宽基指数核心配置</li>
+<li><strong>仓位</strong>: 10-15%</li>
+<li><strong>止损价</strong>: 4.400元</li>
+</ul>
+<hr>
+<h3>7. 房地产ETF (sh512200)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.5470元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-1.339%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>12803万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>19.89亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.29%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 震荡下行</li>
+<li><strong>成交量</strong>: 成交温和</li>
+<li><strong>振幅</strong>: 1.29%，波动较小</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 政策边际放松预期
+✅ 估值处于历史低位
+✅ 龙头企业受益于行业整合
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 行业基本面仍承压<br>⚠️ 销售数据持续疲软<br>⚠️ 政策效果有待观察<br>⚠️ 跌幅较大，短期规避</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐</li>
+<li><strong>建议</strong>: 短期回避，等待行业底部信号</li>
+<li><strong>仓位</strong>: 不超过3%</li>
+<li><strong>止损价</strong>: 1.450元</li>
+</ul>
+<hr>
+<h3>8. 香港证券ETF易方达 (sh513090)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>2.0420元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.970%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>247584万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>506.52亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.07%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 弱势下跌</li>
+<li><strong>成交量</strong>: 巨额成交</li>
+<li><strong>振幅</strong>: 1.07%，波动较小</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 成交额排名第5，流动性极佳
+✅ 受益于港股市场活跃
+✅ 券商板块周期性明显
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 港股市场调整<br>⚠️ 券商业绩受市场交易量影响<br>⚠️ 短期承压</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 观望为主</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 1.950元</li>
+</ul>
+<hr>
+<h3>9. 深证100ETF易方达 (sz159901)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>3.4270元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.667%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>6988万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>23.93亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>2.01%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 随大盘调整</li>
+<li><strong>成交量</strong>: 成交稳定</li>
+<li><strong>振幅</strong>: 2.01%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 深市核心宽基指数
+✅ 成长性优于上证指数
+✅ 流动性较好
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 受整体市场影响<br>⚠️ 成长股调整压力</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐</li>
+<li><strong>建议</strong>: 宽基指数配置选择</li>
+<li><strong>仓位</strong>: 5-10%</li>
+<li><strong>止损价</strong>: 3.250元</li>
+</ul>
+<hr>
+<h3>10. 科创50增强ETF (sh588460)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.6830元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.708%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>2263万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>3.81亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.57%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 震荡下跌</li>
+<li><strong>成交量</strong>: 成交偏小</li>
+<li><strong>振幅</strong>: 1.57%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 科创板核心资产
+✅ 科技创新主题
+✅ 增强型指数，力争超额收益
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 科技股调整压力大<br>⚠️ 估值偏高<br>⚠️ 流动性相对不足<br>⚠️ 受美股科技股大跌影响</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 等待科技板块企稳</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 1.550元</li>
+</ul>
+<hr>
+<h3>11. 科创50ETF (sh588000)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.4990元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.597%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>255383万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>383.08亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>2.51%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 震荡下跌</li>
+<li><strong>成交量</strong>: 巨额成交</li>
+<li><strong>振幅</strong>: 2.51%，波动较大</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 成交额排名第7，流动性好
+✅ 科创板核心指数
+✅ 科技创新代表
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 科技股整体承压<br>⚠️ 波动较大<br>⚠️ 受全球科技股调整影响</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 短期观望，中长期关注</li>
+<li><strong>仓位</strong>: 5-10%</li>
+<li><strong>止损价</strong>: 1.400元</li>
+</ul>
+<hr>
+<h3>12. 中证1000ETF (sh512100)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>3.2210元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.340%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>122174万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>395.31亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.73%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 相对抗跌</li>
+<li><strong>成交量</strong>: 成交活跃</li>
+<li><strong>振幅</strong>: 1.73%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 小盘股代表指数
+✅ 今日相对抗跌(-0.340%)
+✅ 成交额排名第8
+✅ 弹性较大，反弹先锋
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 小盘股波动大<br>⚠️ 流动性风险<br>⚠️ 业绩稳定性相对较弱</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐</li>
+<li><strong>建议</strong>: 攻守兼备配置</li>
+<li><strong>仓位</strong>: 5-10%</li>
+<li><strong>止损价</strong>: 3.000元</li>
+</ul>
+<hr>
+<h3>13. 黄金ETF (sh518880)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>10.3570元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-1.577%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>184128万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>1903.43亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>4.47%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 大幅波动</li>
+<li><strong>成交量</strong>: 巨额成交，分歧巨大</li>
+<li><strong>振幅</strong>: 4.47%，高波动</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 避险资产，长期配置价值
+✅ 地缘政治风险存在（伊朗局势）
+✅ 成交额巨大(1903亿)，市场关注度高
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 今日大幅下跌-1.577%<br>⚠️ 全球避险情绪降温<br>⚠️ 芝商所上调黄金保证金<br>⚠️ 短期波动剧烈<br>⚠️ 与美元、实际利率负相关</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 短期规避，等待企稳</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 9.800元</li>
+</ul>
+<hr>
+<h3>14. 医疗ETF (sh512170)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>0.3580元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.556%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>133714万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>47.84亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.39%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 弱势震荡</li>
+<li><strong>成交量</strong>: 成交稳定</li>
+<li><strong>振幅</strong>: 1.39%，波动较小</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 医疗需求长期增长
+✅ 人口老龄化趋势
+✅ 政策支持医疗创新
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 集采压力持续<br>⚠️ 行业整顿影响<br>⚠️ 估值消化需要时间</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 长期关注，短期谨慎</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 0.340元</li>
+</ul>
+<hr>
+<h3>15. 军工龙头ETF (sh512710)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>0.8380元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-1.988%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>52581万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>44.38亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>2.52%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 大幅下跌</li>
+<li><strong>成交量</strong>: 放量下跌</li>
+<li><strong>振幅</strong>: 2.52%，波动较大</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 国防现代化长期逻辑
+✅ 地缘政治风险支撑
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 今日跌幅最大(-1.988%)<br>⚠️ 地缘政治风险降温预期<br>⚠️ 获利回吐压力<br>⚠️ 短期规避</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐</li>
+<li><strong>建议</strong>: 短期回避</li>
+<li><strong>仓位</strong>: 不超过3%</li>
+<li><strong>止损价</strong>: 0.780元</li>
+</ul>
+<hr>
+<h3>16. A500ETF基金 (sh512050)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.2170元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.491%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>12269751万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>1496.35亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.59%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 小幅下跌</li>
+<li><strong>成交量</strong>: 成交额排名第1，流动性极好</li>
+<li><strong>振幅</strong>: 1.59%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 成交额排名第1(1496亿)
+✅ A500指数代表A股核心资产
+✅ 流动性最佳
+✅ 分散配置首选
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 受整体市场影响<br>⚠️ 跟踪误差风险</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐⭐</li>
+<li>**建议": 核心配置标的，首选品种</li>
+<li><strong>仓位</strong>: 15-20%</li>
+<li><strong>止损价</strong>: 1.150元</li>
+</ul>
+<hr>
+<h3>17. 恒生互联网ETF (sh513330)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>0.5000元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-1.186%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>729822万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>365.41亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>2.22%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 震荡下跌</li>
+<li><strong>成交量</strong>: 巨额成交</li>
+<li><strong>振幅</strong>: 2.22%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 港股互联网核心资产
+✅ 估值相对合理
+✅ 成交活跃
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 中概股监管风险<br>⚠️ 平台经济整顿余波<br>⚠️ 竞争加剧</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 观望为主</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 0.470元</li>
+</ul>
+<hr>
+<h3>18. 上证180ETF华夏 (sh510670)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.0020元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.792%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>2323万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>2.33亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.41%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 随大盘调整</li>
+<li><strong>成交量</strong>: 成交偏小</li>
+<li><strong>振幅</strong>: 1.41%，波动较小</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 上证180核心指数
+✅ 蓝筹股代表
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 成交额太小(2.33亿)<br>⚠️ 流动性不足<br>⚠️ 建议选择流动性更好的品种</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐</li>
+<li>**建议": 流动性不足，不建议配置</li>
+<li><strong>仓位</strong>: 不配置</li>
+</ul>
+<hr>
+<h3>19. 光伏ETF (sh515790)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.1020元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>+0.731%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>70167万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>76.92亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>4.68%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 逆势上涨</li>
+<li><strong>成交量</strong>: 放量上涨</li>
+<li><strong>振幅</strong>: 4.68%，高波动</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 今日涨幅第3(+0.731%)
+✅ 新能源长期逻辑
+✅ "太空光伏"概念升温
+✅ 产业链价格企稳
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 行业产能过剩<br>⚠️ 渗透率天花板担忧<br>⚠️ 高波动特征<br>⚠️ 短期超跌反弹</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐</li>
+<li><strong>建议</strong>: 短期关注，不追高</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 1.050元</li>
+</ul>
+<hr>
+<h3>20. 恒生中国企业ETF易方达 (sh510900)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.1380元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.437%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>40555万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>46.05亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.96%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 小幅下跌</li>
+<li><strong>成交量</strong>: 成交稳定</li>
+<li><strong>振幅</strong>: 1.96%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 港股国企代表
+✅ 估值低，分红率高
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 港股市场调整<br>⚠️ 国企改革进展缓慢</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li><strong>建议</strong>: 观望为主</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 1.080元</li>
+</ul>
+<hr>
+<h3>21. 可转债ETF博时 (sh511380)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>14.4260元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>+0.502%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>108308万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>1562.00亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.77%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 逆势上涨</li>
+<li><strong>成交量</strong>: 巨额成交</li>
+<li><strong>振幅</strong>: 1.77%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 今日涨幅第4(+0.502%)
+✅ 成交额排名第3(1562亿)
+✅ 避险属性强
+✅ 进可攻退可守
+✅ 资金大幅流入，避险情绪升温
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 受股市和债市双重影响<br>⚠️ 个券分化</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐⭐</li>
+<li>**建议": 核心防御配置，必配品种</li>
+<li><strong>仓位</strong>: 10-15%</li>
+<li><strong>止损价</strong>: 13.800元</li>
+</ul>
+<hr>
+<h3>22. 酒ETF (sh512690)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>0.5540元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-1.947%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>214391万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>119.21亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>2.51%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 大幅下跌</li>
+<li><strong>成交量</strong>: 放量下跌</li>
+<li><strong>振幅</strong>: 2.51%，波动较大</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 白酒龙头长期价值
+✅ 高端化趋势
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 今日跌幅第2(-1.947%)<br>⚠️ 消费复苏不及预期<br>⚠️ 库存压力<br>⚠️ 短期规避</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐</li>
+<li>**建议": 短期回避</li>
+<li><strong>仓位</strong>: 不超过3%</li>
+<li><strong>止损价</strong>: 0.520元</li>
+</ul>
+<hr>
+<h3>23. 传媒ETF (sh512980)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>1.1590元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-1.446%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>55688万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>64.42亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>3.78%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 震荡下跌</li>
+<li><strong>成交量</strong>: 放量下跌</li>
+<li><strong>振幅</strong>: 3.78%，高波动</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ AI+传媒应用前景
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 今日跌幅较大<br>⚠️ 高波动特征<br>⚠️ 前期涨幅较大，获利回吐</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐</li>
+<li>**建议": 短期规避</li>
+<li><strong>仓位</strong>: 不超过3%</li>
+<li><strong>止损价</strong>: 1.100元</li>
+</ul>
+<hr>
+<h3>24. 消费ETF (sz159928)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>0.7980元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-1.238%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>64427万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>51.49亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>1.64%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 震荡下跌</li>
+<li><strong>成交量</strong>: 成交稳定</li>
+<li><strong>振幅</strong>: 1.64%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 消费升级长期逻辑
+✅ 春节消费旺季预期
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 消费复苏乏力<br>⚠️ 居民消费意愿下降<br>⚠️ 短期承压</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li>**建议": 等待消费数据改善</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 0.750元</li>
+</ul>
+<hr>
+<h3>25. 化工ETF (sz159870)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>0.8940元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>+2.641%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>278697万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额</td>
+<td>248.11亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>5.58%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 强势上涨</li>
+<li><strong>成交量</strong>: 巨额成交</li>
+<li><strong>振幅</strong>: 5.58%，今日最高波动</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 今日涨幅第1(+2.641%)
+✅ 成交额第10(248亿)
+✅ 周期板块轮动
+✅ 原材料价格上涨预期
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 高波动特征<br>⚠️ 周期属性强<br>⚠️ 追高风险<br>⚠️ 持续性待观察</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐</li>
+<li>**建议": 不追高，观察持续性</li>
+<li><strong>仓位</strong>: 不超过5%</li>
+<li><strong>止损价</strong>: 0.850元</li>
+</ul>
+<hr>
+<h3>26. 创业板ETF易方达 (sz159915)</h3>
+
+<h4>基础信息</h4>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th></th>
+<th>指标</th>
+<th>数值</th>
+<th></th>
+</tr></thead><tbody>
+<tr>
+<td></td>
+<td>最新价</td>
+<td>3.2290元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>涨跌幅</td>
+<td>-0.278%</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交量</td>
+<td>87853万手</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>成交额:</td>
+<td>284.35亿元</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>振幅</td>
+<td>2.74%</td>
+<td></td>
+</tr>
+</tbody></table></div>
+<h4>技术分析</h4>
+<ul>
+<li><strong>价格走势</strong>: 相对抗跌</li>
+<li><strong>成交量</strong>: 成交活跃</li>
+<li><strong>振幅</strong>: 2.74%，波动适中</li>
+</ul>
+<h4>主题分析</h4>
+<strong>投资价值</strong>:
+✅ 创业板代表指数
+✅ 今日最抗跌(-0.278%)
+✅ 成长性突出
+✅ 流动性好
+
+<div class="card">
+
+<p><strong>风险提示</strong>:<br>⚠️ 估值偏高<br>⚠️ 成长股调整压力</p>
+
+</div>
+
+<h4>投资建议</h4>
+<ul>
+<li><strong>评级</strong>: ⭐⭐⭐⭐</li>
+<li>**建议": 成长性配置选择</li>
+<li><strong>仓位</strong>: 5-10%</li>
+<li><strong>止损价</strong>: 3.000元</li>
+</ul>
+<hr>
+<h2>三、综合投资建议</h2>
+
+<h3>3.1 推荐配置（核心+卫星）</h3>
+
+<h4>核心配置（60-70%）</h4>
+<ol>
+<li><strong>A500ETF基金 (sh512050)</strong> - 20%</li>
+</ol><ul>
+<li>理由: 流动性最佳，成交额第1</li>
+<li>作用: 核心持仓，分散风险</li>
+</ul>
+<ol>
+<li><strong>红利低波ETF (sh512890)</strong> - 20%</li>
+</ol><ul>
+<li>理由: 波动率最低，防御属性强</li>
+<li>作用: 防御盾牌，稳定收益</li>
+</ul>
+<ol>
+<li><strong>可转债ETF (sh511380)</strong> - 15%</li>
+</ol><ul>
+<li>理由: 逆势上涨，避险资金流入</li>
+<li>作用: 进可攻退可守</li>
+</ul>
+<ol>
+<li><strong>沪深300ETF (sh510300)</strong> - 15%</li>
+</ol><ul>
+<li>理由: A股核心宽基指数</li>
+<li>作用: 市场贝塔收益</li>
+</ul>
+<h4>卫星配置（30-40%）</h4>
+<ol>
+<li><strong>创业板ETF (sz159915)</strong> - 10%</li>
+</ol><ul>
+<li>理由: 相对抗跌，成长性突出</li>
+</ul>
+<ol>
+<li><strong>中证1000ETF (sh512100)</strong> - 10%</li>
+</ol><ul>
+<li>理由: 小盘股代表，弹性大</li>
+</ul>
+<ol>
+<li><strong>环保ETF (sh512580)</strong> - 5%</li>
+</ol><ul>
+<li>理由: 政策支持，逆势上涨</li>
+</ul>
+<ol>
+<li><strong>光伏ETF (sh515790)</strong> - 5%</li>
+</ol><ul>
+<li>理由: 新能源长期逻辑，短期超跌反弹</li>
+</ul>
+<h3>3.2 观望清单</h3>
+<ul>
+<li>恒生科技ETF: 等待科技板块企稳</li>
+<li>黄金ETF: 等待金价企稳</li>
+<li>化工ETF: 观察上涨持续性</li>
+</ul>
+<h3>3.3 回避清单</h3>
+<ul>
+<li>军工龙头ETF: 短期跌幅大，规避</li>
+<li>酒ETF: 消费疲软，短期回避</li>
+<li>房地产ETF: 行业底部未明</li>
+<li>传媒ETF: 高波动，获利回吐</li>
+</ul>
+<hr>
+<h2>四、风险提示</h2>
+
+<h3>4.1 市场风险</h3>
+<ul>
+<li>全球风险资产遭遇"抛售潮"</li>
+<li>美股科技股大跌拖累A股</li>
+<li>系统性风险上升</li>
+</ul>
+<h3>4.2 操作风险</h3>
+<ul>
+<li>追高化工、环保等短期热门品种</li>
+<li>重仓单一板块ETF</li>
+<li>忽视流动性风险</li>
+</ul>
+<h3>4.3 风控建议</h3>
+<ul>
+<li>单一ETF不超过20%</li>
+<li>整体仓位控制在60-70%</li>
+<li>设置止损位并严格执行</li>
+<li>保留现金应对突发风险</li>
+</ul>
+<hr>
+数据来源: top_etf_20260206.csv
+生成时间: 2026-02-06
+报告有效期: 2026-02-06 至 2026-02-10
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-09 11:36:38</p>
+            <div class="qr-hint">
+                📱 扫码分享或收藏本文档
+            </div>
+        </footer>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+        🌙
+    </button>
+
+    
+        <script>
+            // 主题切换
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                // 重新加载页面以应用新主题
+                const url = new URL(window.location.href);
+                url.searchParams.set('theme', newTheme);
+                window.location.href = url.toString();
+            }
+
+            // 恢复主题设置
+            document.addEventListener('DOMContentLoaded', function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+
+                // 添加平滑滚动
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 表格横向滚动提示
+            document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+                if (wrapper.scrollWidth > wrapper.clientWidth) {
+                    wrapper.style.position = 'relative';
+                    const hint = document.createElement('div');
+                    hint.innerHTML = '👈 左右滑动查看完整表格';
+                    hint.style.cssText = 'position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; pointer-events: none;';
+                    wrapper.appendChild(hint);
+
+                    setTimeout(() => {
+                        hint.style.opacity = '0';
+                        hint.style.transition = 'opacity 0.5s';
+                    }, 3000);
+                }
+            });
+        </script>
+        
+</body>
+</html>
