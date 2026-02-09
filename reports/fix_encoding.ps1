@@ -5,29 +5,28 @@ $htmlFiles = Get-ChildItem -Path . -Filter "*.html" -Recurse -File
 
 Write-Host "Found $($htmlFiles.Count) HTML files"
 
+$fixedCount = 0
 foreach ($file in $htmlFiles) {
     try {
-        # Read file content
-        $content = Get-Content -Path $file.FullName -Encoding UTF8 -Raw
+        # Read file content as UTF-8
+        $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
         
         # Store original content
         $originalContent = $content
         
-        # Replace garbled back button text
-        $content = $content -replace [char]0xE2 + [char]0x86 + [char]0x92 + '[^\w]*?[^<]*', '← 首页'
-        $content = $content -replace '鈫\?.*?', '← 首页'
-        $content = $content -replace '鈫\??[^<]*', '← 首页'
+        # Replace all variations of garbled back button text
+        $content = $content -replace '鈫\?棣栭〉', '← 首页'
+        $content = $content -replace '鈫\?杩斿洖棣栭〉', '← 返回首页'
         
         # If content changed, write back to file
         if ($content -ne $originalContent) {
             [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
             Write-Host "Fixed: $($file.FullName)"
-        } else {
-            Write-Host "No changes needed: $($file.FullName)"
+            $fixedCount++
         }
     } catch {
         Write-Host "Error fixing $($file.FullName): $_"
     }
 }
 
-Write-Host "Fix complete!"
+Write-Host "Fix complete! Fixed $fixedCount files."
