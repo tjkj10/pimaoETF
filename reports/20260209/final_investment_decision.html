@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF投资决策报告 - 20260209 - 招财猫团队报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        header .date {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        /* 返回按钮 - 固定在左上角 */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .back-button:hover {
+            transform: translateX(-3px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+            text-decoration: none;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .content h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        .content table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .content table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .content table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .content ul, .content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content strong {
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        .content code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+        }
+
+        .content pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .content blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 8px 14px;
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .content table {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回首页按钮 - 固定在左上角 -->
+    <a href="../index.html" class="back-button">← 返回首页</a>
+
+    <div class="container">
+        <header>
+            <h1>ETF投资决策报告 - 20260209</h1>
+            <div class="date">2026-02-09</div>
+        </header>
+
+        <div class="nav">
+            <a href="index.html">决策报告</a>
+            <a href="macro.html">宏观分析</a>
+            <a href="sector.html">板块分析</a>
+            <a href="review.html">复盘分析</a>
+        </div>
+
+        <div class="content">
+            <h1>ETF投资决策报告 - 2026年2月9日</h1><p><strong>报告编号</strong>: ETF-20260209-FINAL<br>
+<strong>生成时间</strong>: 2026-02-09 21:30:00<br>
+<strong>报告类型</strong>: 最终投资决策报告<br>
+<strong>报告人</strong>: 策略总监 (strategy-director)</p><p>---</p><h2>执行摘要</h2><h3>市场判断</h3><br>
+<ul><br>
+<li><strong>市场阶段</strong>: 强势突破期（复苏期爬坡阶段）</li>
+<li><strong>风险偏好</strong>: 中高（从昨日中性转为偏高）</li>
+<li><strong>建议仓位</strong>: 60-70%（较昨日提高10个百分点）</li>
+<li><strong>配置策略</strong>: 均衡配置，兼顾进攻与防御</li>
+</ul><h3>核心观点</h3><br>
+1. <strong>市场V型反转</strong>: 24只ETF全部上涨，平均涨幅+1.97%，从前日23跌3涨转为全面普涨<br>
+2. <strong>政策预期升温</strong>: 周末政策利好预期推动，两会政策预期升温<br>
+3. <strong>成长股领涨</strong>: 创业板+2.98%，科创50+3.09%，市场风格偏向成长<br>
+4. <strong>成交量放大</strong>: 沪深京三市成交额2.27万亿元，资金积极参与</p><p>---</p><h2>一、市场概况</h2><h3>1.1 指数表现</h3><table><br>
+<tr><br>
+<th>指数</th><br>
+<th>收盘点位</th><br>
+<th>涨跌幅</th><br>
+<th>表现评价</th><br>
+</tr><br>
+<tr><br>
+<td>上证指数</td><br>
+<td>4,123.09点</td><br>
+<td>+1.41%</td><br>
+<td>优秀，收复4100点</td><br>
+</tr><br>
+<tr><br>
+<td>深证成指</td><br>
+<td>14,208.44点</td><br>
+<td>+2.17%</td><br>
+<td>优秀</td><br>
+</tr><br>
+<tr><br>
+<td>创业板指</td><br>
+<td>3,332.77点</td><br>
+<td>+2.98%</td><br>
+<td>优秀，成长股强势</td><br>
+</tr><br>
+</table><h3>1.2 ETF市场统计</h3><ul><br>
+<li><strong>上涨ETF</strong>: 24只（100%）</li>
+<li><strong>下跌ETF</strong>: 0只</li>
+<li><strong>平均涨跌幅</strong>: +1.97%</li>
+<li><strong>成交额</strong>: 约6000亿元</li>
+</ul><p>---</p><h2>二、板块分析</h2><h3>2.1 领涨板块</h3><table><br>
+<tr><br>
+<th>排名</th><br>
+<th>板块</th><br>
+<th>涨跌幅</th><br>
+<th>驱动因素</th><br>
+<th>投资建议</th><br>
+</tr><br>
+<tr><br>
+<td>1</td><br>
+<td>传媒</td><br>
+<td>+4.31%</td><br>
+<td>AI概念+政策预期</td><br>
+<td>⚠️ 观望，预期推动</td><br>
+</tr><br>
+<tr><br>
+<td>2</td><br>
+<td>新能源/光伏</td><br>
+<td>+3.81%</td><br>
+<td>底部复苏+行业供需改善</td><br>
+<td>✅ 推荐，基本面驱动</td><br>
+</tr><br>
+<tr><br>
+<td>3</td><br>
+<td>黄金</td><br>
+<td>+3.50%</td><br>
+<td>避险升温+央行购金</td><br>
+<td>✅ 推荐，基本面驱动</td><br>
+</tr><br>
+<tr><br>
+<td>4</td><br>
+<td>科创50</td><br>
+<td>+3.09%</td><br>
+<td>科技成长领涨</td><br>
+<td>⚠️ 谨慎，预期推动</td><br>
+</tr><br>
+<tr><br>
+<td>5</td><br>
+<td>创业板</td><br>
+<td>+2.85%</td><br>
+<td>成长股强势</td><br>
+<td>✅ 推荐</td><br>
+</tr><br>
+</table><h3>2.2 板块轮动特征</h3><p>1. <strong>全面反转</strong>: 前日大跌板块（传媒-1.45%、黄金-1.58%）今日大幅反弹<br>
+2. <strong>成长领涨</strong>: 创业板、科创板表现强势<br>
+3. <strong>防御滞后</strong>: 红利低波(+0.26%)、消费(+0.12%)涨幅最小<br>
+4. <strong>避险与风险资产共涨</strong>: 黄金与成长股同时上涨</p><p>---</p><h2>三、驱动类型分析（核心风控）</h2><p>根据板块研究员的驱动类型识别框架：</p><h3>强基本面驱动（可推荐）✅</h3><br>
+<ul><br>
+<li><strong>光伏ETF (sh515790)</strong>: 行业复苏明确，供需改善</li>
+<li><strong>黄金ETF (sh518880)</strong>: 避险升温+央行购金</li>
+<li><strong>香港证券ETF (sh513090)</strong>: 港股回暖，南向资金流入</li>
+<li><strong>红利低波ETF (sh512890)</strong>: 防御配置</li>
+</ul><h3>预期推动（高风险，禁止买入）⚠️</h3><br>
+<ul><br>
+<li><strong>房地产ETF (sh512200)</strong>: 政策预期但无实际数据</li>
+<li><strong>科创50增强ETF (sh588460)</strong>: 科技政策预期但业绩待验证</li>
+<li><strong>传媒ETF (sh512980)</strong>: 技术反弹，缺乏强基本面支撑</li>
+</ul><h3>情绪推动（极高风险，建议回避）❌</h3><br>
+<ul><br>
+<li><strong>中证1000ETF (sh512100)</strong>: 风险偏好驱动，波动大</li>
+</ul><p>---</p><h2>四、投资建议</h2><h3>4.1 整体策略</h3><table><br>
+<tr><br>
+<th>维度</th><br>
+<th>昨日</th><br>
+<th>今日</th><br>
+<th>变化</th><br>
+</tr><br>
+<tr><br>
+<td>市场阶段</td><br>
+<td>震荡筑底</td><br>
+<td>强势突破</td><br>
+<td>转强</td><br>
+</tr><br>
+<tr><br>
+<td>风险偏好</td><br>
+<td>中性偏谨慎</td><br>
+<td>中高</td><br>
+<td>上升</td><br>
+</tr><br>
+<tr><br>
+<td>建议仓位</td><br>
+<td>50-60%</td><br>
+<td>60-70%</td><br>
+<td>+10%</td><br>
+</tr><br>
+<tr><br>
+<td>配置策略</td><br>
+<td>防御为主</td><br>
+<td>均衡配置</td><br>
+<td>进攻性增强</td><br>
+</tr><br>
+</table><h3>4.2 推荐配置</h3><p>#### 核心持仓（40%）</p><table><br>
+<tr><br>
+<th>ETF代码</th><br>
+<th>ETF名称</th><br>
+<th>仓位</th><br>
+<th>理由</th><br>
+</tr><br>
+<tr><br>
+<td>sh515790</td><br>
+<td>光伏ETF</td><br>
+<td>15%</td><br>
+<td>行业复苏，基本面驱动</td><br>
+</tr><br>
+<tr><br>
+<td>sh518880</td><br>
+<td>黄金ETF</td><br>
+<td>15%</td><br>
+<td>避险+央行购金，成交额居首</td><br>
+</tr><br>
+<tr><br>
+<td>sh510300</td><br>
+<td>沪深300ETF华泰柏瑞</td><br>
+<td>10%</td><br>
+<td>宽基指数，稳健配置</td><br>
+</tr><br>
+</table><p>#### 卫星配置（20-30%）</p><table><br>
+<tr><br>
+<th>ETF代码</th><br>
+<th>ETF名称</th><br>
+<th>仓位</th><br>
+<th>理由</th><br>
+</tr><br>
+<tr><br>
+<td>sz159915</td><br>
+<td>创业板ETF易方达</td><br>
+<td>10%</td><br>
+<td>成长股强势</td><br>
+</tr><br>
+<tr><br>
+<td>sh513090</td><br>
+<td>香港证券ETF</td><br>
+<td>10%</td><br>
+<td>港股回暖，南向资金流入</td><br>
+</tr><br>
+<tr><br>
+<td>sh513130</td><br>
+<td>恒生科技ETF</td><br>
+<td>10%</td><br>
+<td>港股科技，成交活跃</td><br>
+</tr><br>
+</table><p>#### 防御配置（10-20%）</p><table><br>
+<tr><br>
+<th>ETF代码</th><br>
+<th>ETF名称</th><br>
+<th>仓位</th><br>
+<th>理由</th><br>
+</tr><br>
+<tr><br>
+<td>sh511380</td><br>
+<td>可转债ETF博时</td><br>
+<td>10%</td><br>
+<td>防御+进攻，成交活跃</td><br>
+</tr><br>
+<tr><br>
+<td>sh512890</td><br>
+<td>红利低波ETF</td><br>
+<td>10%</td><br>
+<td>防御配置，高股息</td><br>
+</tr><br>
+</table><h3>4.3 禁止买入清单 ⛔</h3><table><br>
+<tr><br>
+<th>ETF代码</th><br>
+<th>ETF名称</th><br>
+<th>理由</th><br>
+</tr><br>
+<tr><br>
+<td>sh512200</td><br>
+<td>房地产ETF</td><br>
+<td>预期推动，缺乏实际数据支撑</td><br>
+</tr><br>
+<tr><br>
+<td>sh588460</td><br>
+<td>科创50增强ETF</td><br>
+<td>预期推动，业绩待验证</td><br>
+</tr><br>
+<tr><br>
+<td>sh512980</td><br>
+<td>传媒ETF</td><br>
+<td>技术反弹，缺乏强基本面支撑</td><br>
+</tr><br>
+<tr><br>
+<td>sh512100</td><br>
+<td>中证1000ETF</td><br>
+<td>情绪推动，波动过大</td><br>
+</tr><br>
+</table><p>---</p><h2>五、风险提示</h2><h3>5.1 主要风险</h3><p>1. <strong>获利回吐风险</strong>: 今日全线大涨，明日可能出现获利回吐<br>
+2. <strong>量能不继风险</strong>: 今日放量明显，明日若量能萎缩可能回调<br>
+3. <strong>外部冲击风险</strong>: 美股波动、地缘政治等外部风险<br>
+4. <strong>政策落空风险</strong>: 若两会政策不及预期，可能回调</p><h3>5.2 操作风险</h3><p>1. <strong>追高风险</strong>: 今日大涨后不宜追高<br>
+2. <strong>板块轮动风险</strong>: 领涨板块可能快速切换<br>
+3. <strong>仓位控制风险</strong>: 满仓操作风险较大</p><p>---</p><h2>六、明日操作策略</h2><h3>6.1 开盘策略</h3><p><strong>如果高开（+0.5%以上）</strong>:<br>
+<ul><br>
+<li>⚠️ 不追高，等待回调</li>
+<li>✅ 优先减仓今日涨幅较大的品种（传媒、光伏）</li>
+<li>❌ 不追涨短期涨幅大的品种</li>
+</ul><p><strong>如果低开（-0.5%以下）</strong>:<br>
+<ul><br>
+<li>✅ 逢低布局优质品种（光伏、黄金、创业板）</li>
+<li>✅ 分批买入，控制节奏</li>
+<li>✅ 优先配置基本面驱动品种</li>
+</ul><p><strong>如果平开（±0.5%以内）</strong>:<br>
+<ul><br>
+<li>✅ 观察开盘半小时走势</li>
+<li>✅ 重点关注成交量变化</li>
+<li>⏳ 等待方向明确后再操作</li>
+</ul><h3>6.2 关键操作提示</h3><p>1. ✅ <strong>逢高减仓</strong>: 今日涨幅较大的品种可适当减仓<br>
+2. ✅ <strong>逢低布局</strong>: 优质回调品种可逢低布局<br>
+3. ⚠️ <strong>不追高</strong>: 短期涨幅过大的品种不宜追高<br>
+4. ✅ <strong>控制仓位</strong>: 保持60-70%仓位，保留30-40%现金<br>
+5. ✅ <strong>关注成交量</strong>: 量能是关键，关注量能变化</p><p>---</p><h2>七、各分析师评分总结</h2><p>根据复盘分析师的评分：</p><table><br>
+<tr><br>
+<th>分析师</th><br>
+<th>评分</th><br>
+<th>评级</th><br>
+<th>主要问题</th><br>
+</tr><br>
+<tr><br>
+<td>ETF数据收集员</td><br>
+<td>95/100</td><br>
+<td>S</td><br>
+<td>表现优秀</td><br>
+</tr><br>
+<tr><br>
+<td>宏观分析师</td><br>
+<td>65/100</td><br>
+<td>C</td><br>
+<td>政策力度预判不足</td><br>
+</tr><br>
+<tr><br>
+<td>板块研究员</td><br>
+<td>55/100</td><br>
+<td>D</td><br>
+<td>传媒、黄金判断错误</td><br>
+</tr><br>
+<tr><br>
+<td>策略总监</td><br>
+<td>60/100</td><br>
+<td>C</td><br>
+<td>市场判断偏保守</td><br>
+</tr><br>
+</table><h3>系统性问题（P1级）</h3><p>1. <strong>对周末政策变化缺乏敏感性</strong><br>
+2. <strong>对市场情绪快速转变反应滞后</strong></p><p>改进计划本周内完成。</p><p>---</p><h2>八、免责声明</h2><p>本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p><p>---</p><p><strong>报告人</strong>: 策略总监 (strategy-director)<br>
+<strong>报告生成时间</strong>: 2026-02-09 21:30:00<br>
+<strong>下次报告时间</strong>: 2026-02-10（交易日）</p><p>---</p><p>*本报告由PiMao ETF投资分析系统生成*<br>
+</p>
+        </div>
+
+        <div class="footer">
+            <p>生成时间: 2026-02-09 21:53:52</p>
+            <p>由 招财猫团队 ETF 投资分析系统生成</p>
+        </div>
+    </div>
+</body>
+</html>
