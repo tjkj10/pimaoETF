@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="PiMao ETF宏观经济分析报告 - 2026年2月8日">
-    <title>宏观经济分析报告 - 2026年2月8日</title>
+    <title>宏观经济分析报告 - 2026年2月8日 | 招财猫团队</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -118,6 +118,30 @@
         }
         .summary-item .label { font-size: 12px; color: #999; margin-bottom: 4px; }
         .summary-item .value { font-size: 16px; font-weight: 600; color: #333; }
+        /* 返回按钮 - 固定在左上角 */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .back-button:hover {
+            transform: translateX(-3px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+            text-decoration: none;
+        }
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -137,6 +161,8 @@
     </style>
 </head>
 <body>
+    <!-- 返回首页按钮 - 固定在左上角 -->
+    <a href="../index.html" class="back-button">← 返回首页</a>
     <div class="container">
         <header class="header">
             <h1>宏观经济分析报告</h1>
@@ -387,7 +413,7 @@
         </main>
 
         <footer class="footer">
-            <p>PiMao ETF投资分析系统生成</p>
+            <p>招财猫团队报告</p>
             <p>分析师: 宏观分析师Agent</p>
         </footer>
     </div>
