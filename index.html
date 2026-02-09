@@ -494,7 +494,12 @@
     <!-- 返回顶部按钮 -->
     <button class="back-to-top" id="back-to-top" onclick="scrollToTop()">↑</button>
 
-    <script src="js/reports-config.js?v=2"></script>
+    <script>
+        // 动态加载配置文件，避免缓存问题
+        const script = document.createElement('script');
+        script.src = 'js/reports-config.js?v=' + new Date().getTime();
+        document.head.appendChild(script);
+    </script>
     <script>
         // 分页配置
         const ITEMS_PER_PAGE = 5;
