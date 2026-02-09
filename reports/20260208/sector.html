@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="PiMao ETF板块分析报告 - 2026年2月8日">
+    <title>ETF板块分析报告 - 2026年2月8日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 750px; margin: 0 auto; padding: 0; }
+        .header {
+            background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 22px; font-weight: 600; margin-bottom: 10px; }
+        .header .subtitle { font-size: 14px; opacity: 0.9; }
+        .header .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .nav {
+            background: #fff;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        .nav a {
+            display: inline-block;
+            padding: 6px 14px;
+            margin-right: 8px;
+            background: #f5f5f5;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #666;
+            text-decoration: none;
+        }
+        .nav a.active { background: #07c160; color: white; }
+        .content { padding: 16px; }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        h1, h2, h3 { color: #333; font-weight: 600; line-height: 1.4; margin: 20px 0 12px 0; }
+        h1 { font-size: 20px; border-bottom: 2px solid #07c160; padding-bottom: 10px; margin-top: 0; }
+        h2 { font-size: 17px; color: #07c160; display: flex; align-items: center; gap: 8px; }
+        h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: #07c160; border-radius: 2px; }
+        h3 { font-size: 15px; color: #666; }
+        p { margin: 10px 0; color: #666; }
+        strong { color: #333; }
+        ul, ol { margin: 10px 0; padding-left: 20px; }
+        li { margin: 6px 0; color: #666; }
+        .table-wrapper { overflow-x: auto; margin: 14px 0; border-radius: 8px; border: 1px solid #e8e8e8; -webkit-overflow-scrolling: touch; }
+        table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 13px; }
+        th { background: #f8f9fa; color: #333; font-weight: 600; padding: 10px 12px; text-align: left; border-bottom: 2px solid #e8e8e8; white-space: nowrap; }
+        td { padding: 10px 12px; border-bottom: 1px solid #e8e8e8; color: #666; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        .stars { color: #ff9500; letter-spacing: 2px; }
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #07c160;
+            padding: 14px;
+            border-radius: 0 8px 8px 0;
+            margin: 14px 0;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 4px;
+        }
+        .tag-success { background: #e8f5e9; color: #07c160; }
+        .tag-danger { background: #ffebee; color: #f44336; }
+        .tag-warning { background: #fff3e0; color: #ff9500; }
+        .heatmap-bar {
+            height: 24px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 4px 0;
+        }
+        .heatmap-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+        .heatmap-up { background: linear-gradient(90deg, #07c160, #4caf50); }
+        .heatmap-down { background: linear-gradient(90deg, #f44336, #ef5350); }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 14px 0;
+        }
+        .summary-item {
+            background: #f8f9fa;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .summary-item .label { font-size: 12px; color: #999; margin-bottom: 4px; }
+        .summary-item .value { font-size: 16px; font-weight: 600; color: #333; }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #999;
+            font-size: 12px;
+        }
+        @media (max-width: 480px) {
+            body { font-size: 15px; }
+            .header h1 { font-size: 18px; }
+            .content { padding: 12px; }
+            .card { padding: 16px; border-radius: 10px; }
+            h1 { font-size: 18px; }
+            h2 { font-size: 16px; }
+            th, td { padding: 8px 10px; font-size: 12px; }
+            .summary-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ETF板块分析报告</h1>
+            <div class="subtitle">2026年2月8日 · 板块分析</div>
+            <div class="badge">26只ETF全面分析</div>
+        </header>
+
+        <nav class="nav">
+            <a href="decision.html">投资决策</a>
+            <a href="sector.html" class="active">板块分析</a>
+            <a href="macro.html">宏观分析</a>
+            <a href="review.html">复盘分析</a>
+        </nav>
+
+        <main class="content">
+            <!-- 市场概况 -->
+            <div class="card">
+                <h1>市场概况</h1>
+
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <div class="label">上涨ETF数</div>
+                        <div class="value" style="color:#07c160">3只</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="label">下跌ETF数</div>
+                        <div class="value" style="color:#f44336">23只</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="label">平均涨跌幅</div>
+                        <div class="value" style="color:#f44336">-0.68%</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="label">分析ETF数量</div>
+                        <div class="value">26只</div>
+                    </div>
+                </div>
+
+                <h3>涨跌幅分布</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>区间</th><th>ETF</th><th>涨跌幅</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="tag tag-success">领涨</span></td><td>化工ETF</td><td style="color:#07c160">+2.641%</td></tr>
+                            <tr><td><span class="tag tag-success">上涨</span></td><td>环保ETF</td><td style="color:#07c160">+0.986%</td></tr>
+                            <tr><td><span class="tag tag-success">上涨</span></td><td>光伏ETF</td><td style="color:#07c160">+0.731%</td></tr>
+                            <tr><td><span class="tag tag-danger">领跌</span></td><td>军工龙头ETF</td><td style="color:#f44336">-1.988%</td></tr>
+                            <tr><td><span class="tag tag-danger">领跌</span></td><td>酒ETF</td><td style="color:#f44336">-1.947%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 板块热力图 -->
+            <div class="card">
+                <h2>板块热力图</h2>
+
+                <h3>涨幅榜</h3>
+                <div style="margin:10px 0;">
+                    <div style="display:flex; align-items:center; margin:6px 0;">
+                        <span style="width:80px;">化工ETF</span>
+                        <div class="heatmap-bar" style="flex:1;">
+                            <div class="heatmap-fill heatmap-up" style="width:90%;"></div>
+                        </div>
+                        <span style="width:60px; text-align:right; color:#07c160; font-weight:600;">+2.64%</span>
+                    </div>
+                    <div style="display:flex; align-items:center; margin:6px 0;">
+                        <span style="width:80px;">环保ETF</span>
+                        <div class="heatmap-bar" style="flex:1;">
+                            <div class="heatmap-fill heatmap-up" style="width:35%;"></div>
+                        </div>
+                        <span style="width:60px; text-align:right; color:#07c160; font-weight:600;">+0.99%</span>
+                    </div>
+                    <div style="display:flex; align-items:center; margin:6px 0;">
+                        <span style="width:80px;">光伏ETF</span>
+                        <div class="heatmap-bar" style="flex:1;">
+                            <div class="heatmap-fill heatmap-up" style="width:25%;"></div>
+                        </div>
+                        <span style="width:60px; text-align:right; color:#07c160; font-weight:600;">+0.73%</span>
+                    </div>
+                </div>
+
+                <h3>跌幅榜</h3>
+                <div style="margin:10px 0;">
+                    <div style="display:flex; align-items:center; margin:6px 0;">
+                        <span style="width:80px;">军工ETF</span>
+                        <div class="heatmap-bar" style="flex:1;">
+                            <div class="heatmap-fill heatmap-down" style="width:70%;"></div>
+                        </div>
+                        <span style="width:60px; text-align:right; color:#f44336; font-weight:600;">-1.99%</span>
+                    </div>
+                    <div style="display:flex; align-items:center; margin:6px 0;">
+                        <span style="width:80px;">酒ETF</span>
+                        <div class="heatmap-bar" style="flex:1;">
+                            <div class="heatmap-fill heatmap-down" style="width:68%;"></div>
+                        </div>
+                        <span style="width:60px; text-align:right; color:#f44336; font-weight:600;">-1.95%</span>
+                    </div>
+                    <div style="display:flex; align-items:center; margin:6px 0;">
+                        <span style="width:80px;">黄金ETF</span>
+                        <div class="heatmap-bar" style="flex:1;">
+                            <div class="heatmap-fill heatmap-down" style="width:55%;"></div>
+                        </div>
+                        <span style="width:60px; text-align:right; color:#f44336; font-weight:600;">-1.58%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ETF评级表 -->
+            <div class="card">
+                <h2>ETF综合评级</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>名称</th>
+                                <th>涨跌幅</th>
+                                <th>评分</th>
+                                <th>评级</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>sz159870</td>
+                                <td>化工ETF</td>
+                                <td style="color:#07c160">+2.641%</td>
+                                <td>78.5</td>
+                                <td><span class="tag tag-success">B</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh512580</td>
+                                <td>环保ETF</td>
+                                <td style="color:#07c160">+0.986%</td>
+                                <td>72.3</td>
+                                <td><span class="tag tag-success">B</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh515790</td>
+                                <td>光伏ETF</td>
+                                <td style="color:#07c160">+0.731%</td>
+                                <td>71.8</td>
+                                <td><span class="tag tag-success">B</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh511380</td>
+                                <td>可转债ETF</td>
+                                <td style="color:#07c160">+0.502%</td>
+                                <td>75.2</td>
+                                <td><span class="tag tag-success">B</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh512890</td>
+                                <td>红利低波ETF</td>
+                                <td style="color:#f44336">-0.254%</td>
+                                <td>70.5</td>
+                                <td><span class="tag tag-success">B</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh512710</td>
+                                <td>军工龙头ETF</td>
+                                <td style="color:#f44336">-1.988%</td>
+                                <td>55.5</td>
+                                <td><span class="tag tag-danger">D</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh512200</td>
+                                <td>房地产ETF</td>
+                                <td style="color:#f44336">-1.339%</td>
+                                <td>58.5</td>
+                                <td><span class="tag tag-danger">D</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box">
+                    <strong>评级说明:</strong><br>
+                    S(90-100): 强烈推荐 | A(80-89): 推荐 | B(70-79): 可考虑<br>
+                    C(60-69): 观望 | D(<60): 回避
+                </div>
+            </div>
+
+            <!-- 成交额排行 -->
+            <div class="card">
+                <h2>成交额TOP10</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>排名</th><th>ETF名称</th><th>成交额(万)</th><th>活跃度</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>黄金ETF</td><td>19,034,273</td><td><span class="tag tag-success">极高</span></td></tr>
+                            <tr><td>2</td><td>可转债ETF</td><td>15,620,021</td><td><span class="tag tag-success">极高</span></td></tr>
+                            <tr><td>3</td><td>A500ETF基金</td><td>14,963,499</td><td><span class="tag tag-success">极高</span></td></tr>
+                            <tr><td>4</td><td>恒生科技ETF</td><td>6,491,412</td><td><span class="tag tag-success">极高</span></td></tr>
+                            <tr><td>5</td><td>香港证券ETF</td><td>5,065,170</td><td><span class="tag tag-success">极高</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>数据来源: inputs/20260208/top_etf_20260208.csv</p>
+        </footer>
+    </div>
+</body>
+</html>

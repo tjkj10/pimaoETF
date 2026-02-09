@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="PiMao ETF复盘分析报告 - 2026年2月8日">
+    <title>复盘分析报告 - 2026年2月8日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 750px; margin: 0 auto; padding: 0; }
+        .header {
+            background: linear-gradient(135deg, #07c160 0%, #05a050 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 22px; font-weight: 600; margin-bottom: 10px; }
+        .header .subtitle { font-size: 14px; opacity: 0.9; }
+        .header .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .nav {
+            background: #fff;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        .nav a {
+            display: inline-block;
+            padding: 6px 14px;
+            margin-right: 8px;
+            background: #f5f5f5;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #666;
+            text-decoration: none;
+        }
+        .nav a.active { background: #07c160; color: white; }
+        .content { padding: 16px; }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        h1, h2, h3 { color: #333; font-weight: 600; line-height: 1.4; margin: 20px 0 12px 0; }
+        h1 { font-size: 20px; border-bottom: 2px solid #07c160; padding-bottom: 10px; margin-top: 0; }
+        h2 { font-size: 17px; color: #07c160; display: flex; align-items: center; gap: 8px; }
+        h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: #07c160; border-radius: 2px; }
+        h3 { font-size: 15px; color: #666; }
+        p { margin: 10px 0; color: #666; }
+        strong { color: #333; }
+        ul, ol { margin: 10px 0; padding-left: 20px; }
+        li { margin: 6px 0; color: #666; }
+        .table-wrapper { overflow-x: auto; margin: 14px 0; border-radius: 8px; border: 1px solid #e8e8e8; -webkit-overflow-scrolling: touch; }
+        table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 13px; }
+        th { background: #f8f9fa; color: #333; font-weight: 600; padding: 10px 12px; text-align: left; border-bottom: 2px solid #e8e8e8; white-space: nowrap; }
+        td { padding: 10px 12px; border-bottom: 1px solid #e8e8e8; color: #666; vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #07c160;
+            padding: 14px;
+            border-radius: 0 8px 8px 0;
+            margin: 14px 0;
+        }
+        .warning-box { background: #fff3e0; border-left-color: #ff9500; }
+        .danger-box { background: #ffebee; border-left-color: #f44336; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 4px;
+        }
+        .tag-success { background: #e8f5e9; color: #07c160; }
+        .tag-warning { background: #fff3e0; color: #ff9500; }
+        .tag-danger { background: #ffebee; color: #f44336; }
+        .problem-item {
+            background: #ffebee;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 12px 0;
+            border-left: 4px solid #f44336;
+        }
+        .problem-item h4 { color: #f44336; margin: 0 0 8px 0; font-size: 15px; }
+        .improvement-item {
+            background: #e8f5e9;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 12px 0;
+            border-left: 4px solid #07c160;
+        }
+        .improvement-item h4 { color: #07c160; margin: 0 0 8px 0; font-size: 15px; }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 8px 0;
+        }
+        .check-item::before {
+            content: '✓';
+            color: #07c160;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #999;
+            font-size: 12px;
+        }
+        @media (max-width: 480px) {
+            body { font-size: 15px; }
+            .header h1 { font-size: 18px; }
+            .content { padding: 12px; }
+            .card { padding: 16px; border-radius: 10px; }
+            h1 { font-size: 18px; }
+            h2 { font-size: 16px; }
+            th, td { padding: 8px 10px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ETF投资决策复盘报告</h1>
+            <div class="subtitle">2026年2月8日 · 严格复盘</div>
+            <div class="badge">批判性分析</div>
+        </header>
+
+        <nav class="nav">
+            <a href="decision.html">投资决策</a>
+            <a href="sector.html">板块分析</a>
+            <a href="macro.html">宏观分析</a>
+            <a href="review.html" class="active">复盘分析</a>
+        </nav>
+
+        <main class="content">
+            <!-- 复盘概述 -->
+            <div class="card">
+                <h1>复盘概述</h1>
+
+                <div class="info-box warning-box">
+                    <strong>复盘原则：</strong>批判性复盘分析，直面问题，不留情面。发现问题，分析原因，给出方案，跟踪改进。
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>项目</th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>复盘日期</td>
+                                <td>2026年2月8日（周日，非交易日）</td>
+                            </tr>
+                            <tr>
+                                <td>数据基准</td>
+                                <td>2月6日（周五）收盘数据</td>
+                            </tr>
+                            <tr>
+                                <td>对比范围</td>
+                                <td>2月7日决策 vs 2月8日决策</td>
+                            </tr>
+                            <tr>
+                                <td>复盘Agent</td>
+                                <td>strategy-director（策略总监）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 决策一致性 -->
+            <div class="card">
+                <h2>决策一致性检查</h2>
+
+                <h3>仓位建议变化</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>建议仓位</th>
+                                <th>风险偏好</th>
+                                <th>市场判断</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2月7日</td>
+                                <td>60-70%</td>
+                                <td>中（回升）</td>
+                                <td>外围改善，A股企稳</td>
+                            </tr>
+                            <tr>
+                                <td>2月8日</td>
+                                <td>50-60%</td>
+                                <td>中（偏谨慎）</td>
+                                <td>震荡筑底，风格切换</td>
+                            </tr>
+                            <tr style="background:#fff3e0;">
+                                <td><strong>变化</strong></td>
+                                <td style="color:#f44336;"><strong>↓下调10%</strong></td>
+                                <td>偏谨慎</td>
+                                <td>从乐观转谨慎</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="problem-item">
+                    <h4>❌ 问题1: 仓位建议下调缺乏充分逻辑支撑</h4>
+                    <p><strong>矛盾点：</strong></p>
+                    <ul>
+                        <li>两日基于同一数据（2月6日收盘数据）</li>
+                        <li>宏观环境未发生实质性变化（均为非交易日）</li>
+                        <li>美股突破5万点的利好在7日报告中已被充分反映</li>
+                        <li>8日报告下调仓位的理由（"两会前保持谨慎"）在7日报告中同样存在</li>
+                    </ul>
+
+                    <p><strong>根本原因：</strong></p>
+                    <ul>
+                        <li>情绪化调整：可能受"23只ETF下跌"的盘面数据影响，过度悲观</li>
+                        <li>缺乏一致性框架：没有明确的仓位决策模型，导致同一数据得出不同结论</li>
+                        <li>过度解读短期波动：将单日的板块轮动过度解读为风格切换信号</li>
+                    </ul>
+                </div>
+
+                <div class="improvement-item"
+                    >h4>✅ 改进方案</h4>
+                    <div class="check-item">[立即执行] 建立明确的仓位决策矩阵，基于PMI、流动性、政策、外部市场四个维度评分</div>
+                    <div class="check-item">[本周内] 制定仓位调整触发条件（如PMI突破荣枯线、降准落地等）</div>
+                    <div class="check-item">[本周内] 同一数据周期内，仓位建议应保持逻辑一致性</div>
+                </div>
+            </div>
+
+            <!-- 推荐ETF对比 -->
+            <div class="card">
+                <h2>推荐ETF变化分析</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ETF代码</th>
+                                <th>ETF名称</th>
+                                <th>2月7日</th>
+                                <th>2月8日</th>
+                                <th>问题</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>sh512050</td>
+                                <td>A500ETF</td>
+                                <td>⭐⭐⭐⭐⭐ 20%</td>
+                                <td>⭐⭐⭐ 5%</td>
+                                <td><span class="tag tag-danger">大幅降级</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh511380</td>
+                                <td>可转债ETF</td>
+                                <td>⭐⭐⭐⭐⭐ 15%</td>
+                                <td>⭐⭐⭐⭐⭐ 20%</td>
+                                <td><span class="tag tag-success">合理</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh512890</td>
+                                <td>红利低波ETF</td>
+                                <td>⭐⭐⭐⭐⭐ 20%</td>
+                                <td>⭐⭐⭐⭐⭐ 20%</td>
+                                <td><span class="tag tag-success">一致</span></td>
+                            </tr>
+                            <tr>
+                                <td>sz159915</td>
+                                <td>创业板ETF</td>
+                                <td>⭐⭐⭐⭐⭐ 5%</td>
+                                <td>未推荐</td>
+                                <td><span class="tag tag-warning">剔除</span></td>
+                            </tr>
+                            <tr>
+                                <td>sh512100</td>
+                                <td>中证1000ETF</td>
+                                <td>⭐⭐⭐⭐⭐ 5%</td>
+                                <td>未推荐</td>
+                                <td><span class="tag tag-warning">剔除</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="problem-item"
+                    >h4>❌ 问题2: A500ETF基金评级大幅下调缺乏充分理由</h4>
+                    <p><strong>2月7日</strong>：A500ETF基金作为第一核心推荐，仓位20%，理由"流动性最佳，成交额第1"</p>
+                    <p><strong>2月8日</strong>：降级为卫星配置，仓位仅5%，理由未明确说明</p>
+                    <p><strong>数据事实</strong>：</p>
+                    <ul>
+                        <li>2月6日成交额：A500ETF基金149.6亿，排名第一</li>
+                        <li>涨跌幅：-0.491%，跑赢市场平均（-0.68%）</li>
+                        <li>基本面无任何变化（非交易日）</li>
+                    </ul>
+                    <p><strong>批评</strong>：这种大幅调整缺乏数据支撑，可能反映决策框架的不稳定性。</p>
+                </div>
+            </div>
+
+            <!-- 总体评估 -->
+            <div class="card"
+                >h2>总体评估与建议</h2>
+
+                <h3>主要问题总结</h3>
+                <ol>
+                    <li><strong>仓位决策缺乏一致性框架</strong> - 同一数据得出不同结论</li>
+                    <li><strong>ETF评级调整缺乏数据支撑</strong> - A500ETF基金降级缺乏依据</li>
+                    <li><strong>情绪化因素干扰决策</strong> - 可能受短期盘面影响</li>
+                </ol>
+
+                <h3>改进建议</h3>
+                <div class="improvement-item"
+                    >h4>短期措施（本周内）</h4>
+                    <div class="check-item">建立仓位决策矩阵，量化评分体系</div>
+                    <div class="check-item">制定明确的ETF评级调整触发条件</div>
+                    <div class="check-item">建立决策日志，记录每次调整的依据</div>
+                </div>
+
+                <div class="improvement-item"
+                    >h4>长期措施（本月内）</h4>
+                    <div class="check-item">建立决策一致性检查机制（review-analyst自动化）</div>
+                    <div class="check-item">完善风险控制体系，避免情绪化决策</div>
+                    <div class="check-item">定期回测决策有效性，优化决策模型</div>
+                </div>
+
+                <div class="info-box"
+                    <strong>复盘结论：</strong><br>
+                    本次复盘发现策略总监Agent在仓位建议和ETF评级方面存在不一致性问题，需要建立更严格的决策框架和一致性检查机制。建议立即实施改进措施，确保投资决策的稳定性和可追溯性。
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer"
+            >p>PiMao ETF投资分析系统生成</p>
+            <p>复盘Agent: review-analyst</p>
+        </footer>
+    </div>
+</body>
+</html>
