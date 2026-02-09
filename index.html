@@ -84,6 +84,8 @@
             align-items: center;
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            text-decoration: none;
+            color: inherit;
         }
 
         .date-item:hover {
@@ -202,6 +204,13 @@
             font-weight: 500;
         }
 
+        /* 加载状态 */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
         /* 空状态 */
         .empty-state {
             text-align: center;
@@ -246,11 +255,11 @@
                 <h2>数据概览</h2>
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <div class="stat-value">1</div>
+                        <div class="stat-value" id="stat-days">-</div>
                         <div class="stat-label">报告日期</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-value">4</div>
+                        <div class="stat-value" id="stat-types">4</div>
                         <div class="stat-label">报告类型</div>
                     </div>
                     <div class="stat-item">
@@ -261,64 +270,16 @@
             </div>
 
             <!-- 最新报告 -->
-            <div class="card">
+            <div class="card" id="latest-card" style="display: none;">
                 <h2>最新报告</h2>
-                <div class="date-item" style="background: #e8f5e9; border: 1px solid #07c160;">
-                    <div class="date-info">
-                        <div class="date-title">2026年2月8日</div>
-                        <div class="date-meta">周日 · 非交易日资讯汇总</div>
-                        <div class="report-types">
-                            <span class="report-tag">投资决策</span>
-                            <span class="report-tag">板块分析</span>
-                            <span class="report-tag">宏观分析</span>
-                            <span class="report-tag">复盘分析</span>
-                        </div>
-                    </div>
-                    <span class="date-badge badge-latest">最新</span>
-                </div>
-
-                <div class="latest-preview">
-                    <div class="preview-title">📊 核心观点</div>
-                    <div class="preview-content">
-                        市场阶段：震荡筑底，风格切换期<br>
-                        建议仓位：50-60%（防御为主）<br>
-                        推荐：可转债ETF、红利低波ETF
-                    </div>
-                    <a href="reports/20260208/decision.html" class="preview-link">查看详情 →</a>
-                </div>
+                <div id="latest-content"></div>
             </div>
 
             <!-- 历史报告列表 -->
             <div class="card">
                 <h2>历史报告</h2>
-                <div class="date-list">
-                    <a href="reports/20260208/index.html" style="text-decoration: none; color: inherit;">
-                        <div class="date-item">
-                            <div class="date-info">
-                                <div class="date-title">2026年2月8日</div>
-                                <div class="date-meta">4份报告 · 非交易日</div>
-                            </div>
-                            <span class="date-badge badge-archive">查看</span>
-                        </div>
-                    </a>
-
-                    <!-- 更多日期会自动添加在这里 -->
-                    <!--
-                    <a href="reports/20260207/index.html" style="text-decoration: none; color: inherit;">
-                        <div class="date-item">
-                            <div class="date-info">
-                                <div class="date-title">2026年2月7日</div>
-                                <div class="date-meta">4份报告 · 非交易日</div>
-                            </div>
-                            <span class="date-badge badge-archive">查看</span>
-                        </div>
-                    </a>
-                    -->
-                </div>
-
-                <div class="empty-state" style="display: none;">
-                    <div class="empty-icon">📈</div>
-                    <p>更多历史报告将陆续添加</p>
+                <div id="report-list" class="loading">
+                    正在加载报告列表...
                 </div>
             </div>
 
@@ -343,5 +304,102 @@
             <p>© 2026 All Rights Reserved</p>
         </footer>
     </div>
+
+    <script src="js/reports-config.js"></script>
+    <script>
+
+        // 格式化日期
+        function formatChineseDate(dateStr) {
+            const year = dateStr.substring(0, 4);
+            const month = dateStr.substring(4, 6);
+            const day = dateStr.substring(6, 8);
+            const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+            return `${year}年${monthNames[parseInt(month) - 1]}${parseInt(day)}日`;
+        }
+
+        // 生成报告类型标签HTML
+        function generateReportTags(types) {
+            if (!types || types.length === 0) return '';
+            return types.map(type => `<span class="report-tag">${type}</span>`).join('');
+        }
+
+        // 渲染报告列表
+        function renderReports() {
+            const listContainer = document.getElementById('report-list');
+            const latestCard = document.getElementById('latest-card');
+            const latestContent = document.getElementById('latest-content');
+            const statDays = document.getElementById('stat-days');
+
+            if (reportsConfig.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📈</div>
+                        <p>暂无报告</p>
+                    </div>
+                `;
+                statDays.textContent = '0';
+                return;
+            }
+
+            // 更新统计
+            statDays.textContent = reportsConfig.length;
+
+            // 生成历史报告列表
+            let listHtml = '<div class="date-list">';
+            reportsConfig.forEach((report, index) => {
+                const isLatest = index === 0;
+                const badgeClass = isLatest ? 'badge-latest' : 'badge-archive';
+                const badgeText = isLatest ? '最新' : '查看';
+                const formattedDate = formatChineseDate(report.date);
+
+                listHtml += `
+                    <a href="reports/${report.date}/index.html" class="date-item" style="text-decoration: none; color: inherit;">
+                        <div class="date-info">
+                            <div class="date-title">${formattedDate}</div>
+                            <div class="date-meta">${report.meta}</div>
+                            <div class="report-types">
+                                ${generateReportTags(report.types)}
+                            </div>
+                        </div>
+                        <span class="date-badge ${badgeClass}">${badgeText}</span>
+                    </a>
+                `;
+            });
+            listHtml += '</div>';
+            listContainer.innerHTML = listHtml;
+
+            // 生成最新报告预览
+            if (reportsConfig.length > 0) {
+                const latest = reportsConfig[0];
+                const formattedDate = formatChineseDate(latest.date);
+
+                latestContent.innerHTML = `
+                    <div class="date-item" style="background: #e8f5e9; border: 1px solid #07c160;">
+                        <div class="date-info">
+                            <div class="date-title">${formattedDate}</div>
+                            <div class="date-meta">${latest.meta}</div>
+                            <div class="report-types">
+                                ${generateReportTags(latest.types)}
+                            </div>
+                        </div>
+                        <span class="date-badge badge-latest">最新</span>
+                    </div>
+                    <div class="latest-preview">
+                        <div class="preview-title">📊 查看详细分析</div>
+                        <div class="preview-content">
+                            包含${latest.types.join('、')}等全面分析内容
+                        </div>
+                        <a href="reports/${latest.date}/index.html" class="preview-link">查看详情 →</a>
+                    </div>
+                `;
+                latestCard.style.display = 'block';
+            }
+        }
+
+        // 页面加载时执行
+        document.addEventListener('DOMContentLoaded', function() {
+            renderReports();
+        });
+    </script>
 </body>
 </html>
