@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="PiMao ETF投资分析系统 - 2026年2月10日复盘分析报告">
+    <meta name="format-detection" content="telephone=no">
+    <title>复盘分析报告 - 2026年2月10日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 750px; margin: 0 auto; padding: 0; }
+
+        .header {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header h1 { font-size: 22px; font-weight: 600; margin-bottom: 10px; }
+        .header .subtitle { font-size: 14px; opacity: 0.9; }
+
+        .nav {
+            background: #fff;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 6px 14px;
+            margin-right: 8px;
+            background: #f5f5f5;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .nav a.active { background: #fa709a; color: white; }
+
+        .content { padding: 16px; }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        h1 { font-size: 20px; color: #fa709a; margin-bottom: 15px; border-bottom: 2px solid #fa709a; padding-bottom: 10px; }
+        h2 { font-size: 17px; color: #333; margin: 20px 0 10px 0; }
+        h3 { font-size: 15px; color: #666; margin: 15px 0 8px 0; }
+
+        .table-wrapper { overflow-x: auto; margin: 14px 0; border-radius: 8px; border: 1px solid #e8e8e8; }
+        table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 13px; }
+        th { background: #f8f9fa; color: #333; font-weight: 600; padding: 10px 12px; text-align: left; border-bottom: 2px solid #e8e8e8; }
+        td { padding: 10px 12px; border-bottom: 1px solid #e8e8e8; color: #666; }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 4px;
+        }
+
+        .tag-success { background: #e8f5e9; color: #07c160; }
+        .tag-warning { background: #fff3e0; color: #ff9500; }
+        .tag-danger { background: #ffebee; color: #f44336; }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 14px 0;
+        }
+
+        .summary-item {
+            background: #f8f9fa;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .summary-item .label { font-size: 12px; color: #999; }
+        .summary-item .value { font-size: 18px; font-weight: 600; color: #333; }
+
+        .score-card {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 14px 0;
+        }
+
+        .score-card .score { font-size: 32px; font-weight: 700; }
+        .score-card .label { font-size: 12px; opacity: 0.9; }
+
+        .analyst-card {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #fa709a;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #fa709a;
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 13px;
+        }
+
+        .back-button:hover { text-decoration: none; }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 { font-size: 18px; }
+            .content { padding: 12px; }
+            .card { padding: 16px; }
+            .summary-grid { grid-template-columns: 1fr; }
+            .back-button { top: 10px; left: 10px; padding: 6px 12px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-button">← 首页</a>
+    <div class="container">
+        <header class="header">
+            <h1>复盘分析报告</h1>
+            <div class="subtitle">2026年2月10日 · 复盘分析</div>
+        </header>
+
+        <nav class="nav">
+            <a href="decision.html">投资决策</a>
+            <a href="sector.html">板块分析</a>
+            <a href="macro.html">宏观分析</a>
+            <a href="review.html" class="active">复盘分析</a>
+        </nav>
+
+        <main class="content">
+            <!-- 复盘概述 -->
+            <div class="card">
+                <h1>复盘概述</h1>
+
+                <div class="score-card">
+                    <div class="score">60<span style="font-size:18px;">/100</span></div>
+                    <div class="label">整体复盘评分 · 及格</div>
+                </div>
+
+                <ul>
+                    <li><strong>复盘日期</strong>: 2026年2月9日</li>
+                    <li><strong>复盘点</strong>: 26只重点ETF表现</li>
+                    <li><strong>参考基准</strong>: 沪深300指数</li>
+                </ul>
+            </div>
+
+            <!-- 指数表现对比 -->
+            <div class="card">
+                <h2>指数表现对比</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>指数</th><th>昨日预测</th><th>今日实际</th><th>评价</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>上证指数</td><td>震荡偏强</td><td style="color:#07c160">+1.41%</td><td>偏保守</td></tr>
+                            <tr><td>深证成指</td><td>震荡偏强</td><td style="color:#07c160">+2.17%</td><td>偏保守</td></tr>
+                            <tr><td>创业板指</td><td>震荡偏强</td><td style="color:#07c160">+2.98%</td><td>偏保守</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="color:#f44336; font-weight:600;">⚠️ 市场实际表现强于预测，判断偏保守</p>
+            </div>
+
+            <!-- 板块轮动复盘 -->
+            <div class="card">
+                <h2>板块轮动复盘</h2>
+
+                <h3>昨日预测 vs 今日实际</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>预测领涨</th><th>实际领涨</th><th>准确性</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>新能源（光伏）</td><td>科技（芯片、AI）</td><td><span class="tag tag-warning">部分准确</span></td></tr>
+                            <tr><td>黄金</td><td>黄金</td><td><span class="tag tag-success">准确</span></td></tr>
+                            <tr><td>创业板</td><td>创业板</td><td><span class="tag tag-success">准确</span></td></tr>
+                            <tr><td>房地产（回避）</td><td>传媒（爆发）</td><td><span class="tag tag-danger">误判</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>主线判断复盘</h3>
+                <div class="analyst-card" style="background:#fff3e0; border-left-color:#ff9500;">
+                    <strong>昨日判断</strong>: 新能源+黄金双主线<br>
+                    <strong>今日实际</strong>: 科技成长+传媒题材<br>
+                    <strong>偏差原因</strong>: 对AI应用爆发预期不足、对春节档传媒题材忽视
+                </div>
+            </div>
+
+            <!-- ETF推荐验证 -->
+            <div class="card">
+                <h2>ETF推荐验证</h2>
+
+                <h3>推荐买入ETF验证</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>ETF代码</th><th>ETF名称</th><th>昨日建议</th><th>今日涨跌幅</th><th>验证</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>sh515790</td><td>光伏ETF</td><td>推荐</td><td style="color:#07c160">+4.045%</td><td>✅准确</td></tr>
+                            <tr><td>sh518880</td><td>黄金ETF</td><td>推荐</td><td style="color:#07c160">+3.739%</td><td>✅准确</td></tr>
+                            <tr><td>sz159915</td><td>创业板ETF</td><td>推荐</td><td style="color:#07c160">+2.849%</td><td>✅准确</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>回避ETF验证</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>ETF代码</th><th>ETF名称</th><th>昨日建议</th><th>今日涨跌幅</th><th>验证</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>sh512200</td><td>房地产ETF</td><td>回避</td><td style="color:#07c160">+1.88%</td><td><span class="tag tag-warning">偏差</span></td></tr>
+                            <tr><td>sh512980</td><td>传媒ETF</td><td>回避</td><td style="color:#07c160">+4.394%</td><td><span class="tag tag-danger">严重误判</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>遗漏机会分析</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>ETF代码</th><th>ETF名称</th><th>今日涨跌幅</th><th>遗漏原因</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>sz159995</td><td>芯片ETF</td><td style="color:#07c160">+3.514%</td><td>对科技主线判断不足</td></tr>
+                            <tr><td>sz159819</td><td>人工智能ETF</td><td style="color:#07c160">+4.063%</td><td>对AI应用爆发预期不足</td></tr>
+                            <tr><td>sz159855</td><td>影视ETF</td><td style="color:#07c160">+6.893%</td><td>对春节档题材忽视</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 分析师评分 -->
+            <div class="card">
+                <h2>分析师评分</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>分析师</th><th>评分</th><th>评级</th><th>主要问题</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>ETF数据收集员</td><td><strong>98/100</strong></td><td><span class="tag tag-success">S级</span></td><td>表现优秀</td></tr>
+                            <tr><td>宏观分析师</td><td><strong>75/100</strong></td><td><span class="tag tag-warning">B级</span></td><td>对科技爆发预判不足</td></tr>
+                            <tr><td>板块研究员</td><td><strong>50/100</strong></td><td><span class="tag tag-danger">D级</span></td><td>科技、传媒判断严重失误</td></tr>
+                            <tr><td>策略总监</td><td><strong>60/100</strong></td><td><span class="tag tag-warning">C级</span></td><td>主线判断失误</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>系统性问题</h3>
+                <div class="analyst-card" style="background:#ffebee; border-left-color:#f44336;">
+                    <strong>P0级问题</strong>: 科技主线识别失败<br>
+                    <small>未识别AI、芯片、云计算成为市场最强主线，错过主要收益机会</small>
+                </div>
+
+                <div class="analyst-card" style="background:#fff3e0; border-left-color:#ff9500;">
+                    <strong>P1级问题</strong>: 题材炒作忽视<br>
+                    <small>完全忽视传媒、影视等题材炒作机会</small>
+                </div>
+            </div>
+
+            <!-- 明日策略调整 -->
+            <div class="card">
+                <h2>明日策略调整</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>调整项</th><th>昨日</th><th>今日</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>核心主线</td><td>新能源+黄金</td><td><strong>科技成长</strong></td></tr>
+                            <tr><td>建议仓位</td><td>50-60%</td><td><strong>60-75%</strong></td></tr>
+                            <tr><td>风险偏好</td><td>中等偏谨慎</td><td><strong>中等偏积极</strong></td></tr>
+                            <tr><td>科技配置</td><td>10-15%</td><td><strong>40-50%</strong></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>改进计划</h3>
+                <ul>
+                    <li>加强科技板块研究，建立板块评分体系</li>
+                    <li>建立题材热度监测指标</li>
+                    <li>优化主线识别模型，提高对新兴主线的敏感度</li>
+                </ul>
+            </div>
+
+            <!-- 总结 -->
+            <div class="card">
+                <h2>总结与展望</h2>
+
+                <h3>复盘总结</h3>
+                <ul>
+                    <li><strong>整体表现</strong>: 60分（及格）</li>
+                    <li><strong>准确度</strong>: 板块判断50分，ETF推荐70分</li>
+                    <li><strong>主要问题</strong>: 科技主线识别失败</li>
+                    <li><strong>改进方向</strong>: 加强科技研究，建立主线识别模型</li>
+                </ul>
+
+                <h3>明日展望</h3>
+                <ul>
+                    <li><strong>市场判断</strong>: 震荡上行，科技延续强势</li>
+                    <li><strong>风险提示</strong>: 警惕科技板块回调</li>
+                    <li><strong>操作建议</strong>: 逢低布局科技主线，不追高</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>PiMao ETF投资分析系统生成</p>
+            <p>生成时间: 2026-02-10</p>
+        </footer>
+    </div>
+</body>
+</html>
