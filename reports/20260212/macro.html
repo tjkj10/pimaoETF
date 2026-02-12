@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宏观市场环境分析报告 - 20260212 - 招财猫团队报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        header .date {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        /* 返回按钮 - 固定在左上角 */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .back-button:hover {
+            transform: translateX(-3px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+            text-decoration: none;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .content h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        .content table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .content table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .content table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .content ul, .content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content strong {
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        .content code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+        }
+
+        .content pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .content blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 8px 14px;
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .content table {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回首页按钮 - 固定在左上角 -->
+    <a href="../../index.html" class="back-button">← 返回首页</a>
+
+    <div class="container">
+        <header>
+            <h1>宏观市场环境分析报告 - 20260212</h1>
+            <div class="date">2026-02-12</div>
+        </header>
+
+        <div class="nav"><a href="index.html">决策报告</a>
+            <a href="macro.html">宏观分析</a>
+            <a href="sector.html">板块分析</a>
+            <a href="review.html">复盘分析</a></div>
+
+        <div class="content">
+            <h1>宏观经济环境分析</h1><p><strong>日期</strong>: 2026年02月12日<br>
+<strong>数据类型</strong>: 收盘数据<br>
+<strong>生成时间</strong>: 2026-02-12 18:55:55</p><h2>一、宏观经济指标</h2><h3>1.1 核心指标</h3><br>
+<ul><br>
+<li><strong>GDP增速</strong>: 当前季度GDP同比增长 X.X%</li>
+<li><strong>CPI</strong>: 居民消费价格指数 X.X%</li>
+<li><strong>PPI</strong>: 工业生产者出厂价格指数 X.X%</li>
+<li><strong>PMI</strong>: 制造业采购经理指数 X.X%</li>
+</ul><h3>1.2 趋势分析</h3><br>
+<ul><br>
+<li>经济整体呈 [上升/稳定/下行] 趋势</li>
+<li>通胀水平 [可控/偏高/偏低]</li>
+<li>工业生产 [活跃/平稳/放缓]</li>
+</ul><p><br>
+<h2>二、货币政策环境</h2><h3>2.1 利率环境</h3><br>
+<ul><br>
+<li>LPR利率水平</li>
+<li>存款准备金率</li>
+<li>央行公开市场操作</li>
+</ul><h3>2.2 流动性状况</h3><br>
+<ul><br>
+<li>M2货币供应量增速</li>
+<li>社会融资规模</li>
+<li>市场流动性宽松程度</li>
+</ul><h2>三、财政政策动向</h2><h3>3.1 财政政策方向</h3><br>
+<ul><br>
+<li>积极财政政策力度</li>
+<li>减税降费措施</li>
+<li>政府投资方向</li>
+</ul><h3>3.2 产业政策</h3><br>
+<ul><br>
+<li>资本市场相关政策</li>
+<li>行业扶持/监管政策</li>
+<li>经济转型方向</li>
+</ul><p><br>
+<h2>三、国际市场环境</h2><h3>3.1 美联储政策</h3><br>
+<ul><br>
+<li>加息/降息周期</li>
+<li>对全球市场的影响</li>
+</ul><h3>3.2 地缘政治</h3><br>
+<ul><br>
+<li>主要风险点</li>
+<li>对国内市场的影响</li>
+</ul><h3>3.3 大宗商品</h3><br>
+<ul><br>
+<li>原油价格</li>
+<li>黄金价格</li>
+<li>对相关板块的影响</li>
+</ul><h2>四、综合评估与建议</h2><h3>4.1 宏观环境评分</h3><br>
+<ul><br>
+<li>当前宏观环境: [正面/中性/负面]</li>
+<li>建议仓位: [高/中/低]</li>
+</ul><h3>4.2 关注要点</h3><ul><br>
+<li>需要重点关注的宏观指标</li>
+<li>潜在风险点</li>
+<li>机会识别</li>
+</ul><p><br>
+---<br>
+*本报告由 Pimao ETF 投资分析系统自动生成*<br>
+</p>
+        </div>
+
+        <div class="footer">
+            <p>生成时间: 2026-02-12 20:43:54</p>
+            <p>由 招财猫团队 ETF 投资分析系统生成</p>
+        </div>
+    </div>
+</body>
+</html>
